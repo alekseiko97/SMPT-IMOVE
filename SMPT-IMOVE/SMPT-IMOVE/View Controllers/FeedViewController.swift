@@ -20,8 +20,11 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btn_Scale.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
+        btn_Event.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3);
         btn_Event.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
+        btn_Map.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         btn_Map.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
+        btn_Training.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3);
         btn_Training.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
         // Do any additional setup after loading the view.
     }
