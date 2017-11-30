@@ -31,10 +31,23 @@ class User {
     
     
     
-    func addNewFriend(friend: User){
+    func addNewFriend(friend: User) -> Bool{
     
-       
-        
+        if self.friends.contains(where: { user -> Bool in
+            if user.email == friend.email {
+                return true
+            }
+            else {
+                return false
+            }
+        })
+        {
+        return false
+        }
+        else{
+            self.friends.append(friend)
+            return true
+        }
     }
     
     func setWeight(weight: Int){
