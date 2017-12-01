@@ -18,6 +18,7 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var lbl_Humidity: UILabel!
     @IBOutlet weak var lbl_windSpeed: UILabel!
     @IBOutlet weak var lbl_ClothingAdvice: UILabel!
+    @IBOutlet weak var iv_weatherDisplayer: UIImageView!
     
     let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
     
