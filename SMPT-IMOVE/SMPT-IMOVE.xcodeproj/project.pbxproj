@@ -23,6 +23,7 @@
 		F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */; };
 		F56825811FCFFBF500AA7232 /* SMPT_IMOVETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56825801FCFFBF500AA7232 /* SMPT_IMOVETests.swift */; };
 		F568258C1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */; };
+		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 		F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568259C1FD0337B00AA7232 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		F56825871FCFFBF500AA7232 /* SMPT-IMOVEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMPT-IMOVEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPT_IMOVEUITests.swift; sourceTree = "<group>"; };
 		F568258D1FCFFBF500AA7232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		F568259C1FD0337B00AA7232 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
 				F568256D1FCFFBF500AA7232 /* ViewController.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
+				F599529C1FD031320038202D /* WeatherGetter.swift */,
 				C1A099BB1FD0363400C2A2EE /* User.swift */,
 				C142AB4A1FD141DD00B6478F /* Route.swift */,
 				C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */,
@@ -299,6 +302,7 @@
 			files = (
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
+				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
