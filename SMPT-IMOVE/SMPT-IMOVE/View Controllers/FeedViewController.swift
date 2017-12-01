@@ -16,6 +16,10 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var btn_Event: UIButton!
     @IBOutlet weak var btn_Map: UIButton!
     @IBOutlet weak var btn_Training: UIButton!
+    @IBOutlet weak var lbl_Temp: UILabel!
+    @IBOutlet weak var lbl_Humidity: UILabel!
+    @IBOutlet weak var lbl_windSpeed: UILabel!
+    @IBOutlet weak var lbl_ClothingAdvice: UILabel!
     
     let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
     
