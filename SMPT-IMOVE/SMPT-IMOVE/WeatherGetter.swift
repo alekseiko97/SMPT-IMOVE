@@ -8,73 +8,52 @@
 
 import Foundation
 
+protocol WeatherGetterDelegate {
+    func didGetWeather(weather: Weather)
+    func didNotGetWeather(error: NSError)
+}
+
 class WeatherGetter {
     
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "06db44f389d2172e9b1096cdce7b051c"
     
+    private var delegate: WeatherGetterDelegate
+    
+    init(delegate: WeatherGetterDelegate) {
+        self.delegate = delegate
+    }
+    
     func getWeatherInfo(city: String) {
         
-        // *** 1 ***
         let session = URLSession.shared
-        
-        // *** 2 ***
+
         let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
         
-        // *** 3 ***
         let dataTask = session.dataTask(with: weatherRequestURL as URL) {
             (data: Data?, response: URLResponse?, error: Error?) in
-            // *** 4 ***
             if let error = error {
-                // Case 1: Error
-                // We got some kind of error while trying to get data from the server.
                 print("Error:\n\(error)")
             }
-                // *** 5 ***
             else {
-                // Case 2: Success
-                // We got a response from the server!
-                
                 do {
-                    // Try to convert that data into a Swift dictionary
-                    let weather = try JSONSerialization.jsonObject(
+                    let weatherData = try JSONSerialization.jsonObject(
                         with: data!,
                         options: .mutableContainers) as! [String: AnyObject]
+
+                    let weather = Weather(weatherData: weatherData)
                     
-                    // If we made it to this point, we've successfully converted the
-                    // JSON-formatted weather data into a Swift dictionary.
-                    // Let's print its contents to the debug console.
-                    print("Date and time: \(weather["dt"]!)")
-                    print("City: \(weather["name"]!)")
-                    
-                    print("Longitude: \(weather["coord"]!["lon"]!!)")
-                    print("Latitude: \(weather["coord"]!["lat"]!!)")
-                    
-                    print("Weather ID: \((weather["weather"]![0]! as! [String:AnyObject])["id"]!)")
-                    print("Weather main: \((weather["weather"]![0]! as! [String:AnyObject])["main"]!)")
-                    print("Weather description: \((weather["weather"]![0]! as! [String:AnyObject])["description"]!)")
-                    print("Weather icon ID: \((weather["weather"]![0]! as! [String:AnyObject])["icon"]!)")
-                    
-                    print("Temperature: \(weather["main"]!["temp"]!!)")
-                    print("Humidity: \(weather["main"]!["humidity"]!!)")
-                    print("Pressure: \(weather["main"]!["pressure"]!!)")
-                    
-                    print("Cloud cover: \(weather["clouds"]!["all"]!!)")
-                    
-                    print("Wind direction: \(weather["wind"]!["deg"]!!) degrees")
-                    print("Wind speed: \(weather["wind"]!["speed"]!!)")
-                    
-                    print("Country: \(weather["sys"]!["country"]!!)")
-                    print("Sunrise: \(weather["sys"]!["sunrise"]!!)")
-                    print("Sunset: \(weather["sys"]!["sunset"]!!)")
+                    // Now that we have the Weather struct, let's notify the view controller,
+                    // which will use it to display the weather to the user.
+                    self.delegate.didGetWeather(weather: weather)
                 }
                 catch let jsonError as NSError {
                     // An error occurred while trying to convert the data into a Swift dictionary.
-                    print("JSON error description: \(jsonError.description)")
+                    self.delegate.didNotGetWeather(error: jsonError)
                 }
+                
             }
         }
-        // *** 6 ***
         dataTask.resume()
     }
 }

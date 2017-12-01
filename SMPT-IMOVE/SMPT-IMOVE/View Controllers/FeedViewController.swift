@@ -10,7 +10,7 @@ import UIKit
 
 var WeatherDetails = [Weather]()
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, WeatherGetterDelegate {
 
     @IBOutlet weak var btn_Scale: UIButton!
     @IBOutlet weak var btn_Event: UIButton!
@@ -21,10 +21,9 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var lbl_windSpeed: UILabel!
     @IBOutlet weak var lbl_ClothingAdvice: UILabel!
     
-    let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
+    var weather: WeatherGetter!
     
-    private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
-    private let openWeatherMapAPIKey = "d68d6cde2375a71f8308d555ee7a401c"
+    let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,27 +33,54 @@ class FeedViewController: UIViewController {
         btn_Training.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
         // Do any additional setup after loading the view.
         
-        let weather = WeatherGetter()
-        weather.getWeatherInfo(city: "Eindhoven")
         lbl_Temp.text = ""
         lbl_Humidity.text = ""
         lbl_windSpeed.text = ""
         lbl_ClothingAdvice.text = ""
+        
+        weather = WeatherGetter(delegate: self)
+        weather.getWeatherInfo(city: "Eindhoven")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func didGetWeather(weather: Weather) {
+        DispatchQueue.main.async() {
+            self.lbl_Temp.text = "\(Int(round(weather.tempCelsius)))°"
+            self.lbl_Humidity.text = "\(weather.humidity)%"
+            self.lbl_windSpeed.text = "\(weather.windSpeed) m/s"
+            self.lbl_ClothingAdvice.text = "YEAAHHBOOIII"
+        }
     }
-    */
+    
+    func didNotGetWeather(error: NSError) {
+        DispatchQueue.main.async() {
+            self.showSimpleAlert(title: "Can't get the weather",
+                                 message: "The weather service isn't responding.")
+            //print("ERROR, Weather service is not responding.")
+        }
+        print("didNotGetWeather error: \(error)")
+    }
+    
+    func showSimpleAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:  .default,
+            handler: nil
+        )
+        alert.addAction(okAction)
+        present(
+            alert,
+            animated: true,
+            completion: nil
+        )
+    }
 }
