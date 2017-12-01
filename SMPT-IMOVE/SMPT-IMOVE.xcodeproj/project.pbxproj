@@ -20,6 +20,8 @@
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
 		F54B67541FD16919007CFD70 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67531FD16919007CFD70 /* POI.swift */; };
+		F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67551FD17AE4007CFD70 /* VCMapView.swift */; };
+		F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
 		F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256D1FCFFBF500AA7232 /* ViewController.swift */; };
 		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SMPT-IMOVE.entitlements"; sourceTree = "<group>"; };
 		F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
 		F54B67531FD16919007CFD70 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		F54B67551FD17AE4007CFD70 /* VCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Eindhoven.gpx; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F568256D1FCFFBF500AA7232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +155,9 @@
 				F56825991FD032AF00AA7232 /* View Controllers */,
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
 				F568256D1FCFFBF500AA7232 /* ViewController.swift */,
+				F54B67551FD17AE4007CFD70 /* VCMapView.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
+				F54B67531FD16919007CFD70 /* POI.swift */,
 				C1A099BB1FD0363400C2A2EE /* User.swift */,
 				C142AB4A1FD141DD00B6478F /* Route.swift */,
 				C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */,
@@ -160,7 +166,7 @@
 				C142AB501FD1455F00B6478F /* Quote.swift */,
 				C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */,
 				C1A099C11FD045A700C2A2EE /* Event.swift */,
-				F54B67531FD16919007CFD70 /* POI.swift */,
+				F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */,
 				F56825721FCFFBF500AA7232 /* Assets.xcassets */,
 				F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */,
 				F56825771FCFFBF500AA7232 /* Info.plist */,
@@ -316,6 +322,7 @@
 			files = (
 				F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */,
 				F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */,
+				F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */,
 				F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +360,7 @@
 				C142AB4B1FD141DD00B6478F /* Route.swift in Sources */,
 				C1A099C21FD045A700C2A2EE /* Event.swift in Sources */,
 				C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */,
+				F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */,
 				F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */,
 				C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */,
 				C142AB511FD1455F00B6478F /* Quote.swift in Sources */,

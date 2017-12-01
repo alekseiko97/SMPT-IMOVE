@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate,  UITableViewDataSource{
+class MapViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource{
    
     //MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -22,10 +22,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.delegate = self
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
+        mapView.addAnnotation(POI(title: "Park", identifier: 1, coordinate: CLLocationCoordinate2D(latitude: 51.460321, longitude: 5.512456), type: .Park))
+        mapView.addAnnotation(POI(title: "Event", identifier: 2, coordinate: CLLocationCoordinate2D(latitude: 51.450596, longitude: 5.462545), type: .Event))
+        mapView.addAnnotation(POI(title: "DAF Museum", identifier: 3, coordinate: CLLocationCoordinate2D(latitude: 51.437301, longitude: 5.490603), type: .Sight))
 
     }
     

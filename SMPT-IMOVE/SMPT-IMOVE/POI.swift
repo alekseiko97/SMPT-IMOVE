@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-enum TypeOfPOI
+enum TypeOfPOI: String
 {
     case Park
     case Object
@@ -37,4 +37,30 @@ class POI: NSObject, MKAnnotation {
     super.init()
     }
     
+    
+    func mapItem() -> MKMapItem {
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        
+        return mapItem
+    }
+    
+    func setPicture() -> UIImage
+    {
+        switch type {
+        case .Park:
+            return #imageLiteral(resourceName: "Park")
+        case .Event:
+            return #imageLiteral(resourceName: "Event")
+        case .Friend:
+            return #imageLiteral(resourceName: "Friend")
+        case .Sight:
+            return #imageLiteral(resourceName: "Sight")
+        default:
+            return #imageLiteral(resourceName: "Default pin")
+        }
+    }
 }
+
+
