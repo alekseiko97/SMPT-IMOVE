@@ -15,18 +15,20 @@ class Event {
     var eventName: String
     var description: String
     var date: Date
-    var time: String
+    var time: String//probably will be changed
     var usersParticipating: [User]
-    var location: CLLocationCoordinate2D
+    var locationCoordinates: CLLocationCoordinate2D
+    var locationName: String
    
     
-    init(name:String, description:String, date:Date,time:String,location:CLLocationCoordinate2D){
+    init(name:String, description:String, date:Date,time:String,locCoord:CLLocationCoordinate2D,locName: String){
         self.eventName = name
         self.description = description
         self.date = date
         self.time = time
         self.usersParticipating = []
-        self.location = location
+        self.locationCoordinates = locCoord
+        self.locationName = locName
         
     }
     

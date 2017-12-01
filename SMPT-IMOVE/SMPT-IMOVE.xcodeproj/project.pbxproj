@@ -11,7 +11,8 @@
 		C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */; };
 		C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4E1FD144F300B6478F /* Object_Exercise.swift */; };
 		C142AB511FD1455F00B6478F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB501FD1455F00B6478F /* Quote.swift */; };
-		C16C212F1FD17DB400A7D385 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C212E1FD17DB400A7D385 /* EventRow.swift */; };
+		C16C21311FD1877700A7D385 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C21301FD1877700A7D385 /* EventTableViewController.swift */; };
+		C16C21331FD187B600A7D385 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C21321FD187B600A7D385 /* EventTableViewCell.swift */; };
 		C1A099BC1FD0363400C2A2EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BB1FD0363400C2A2EE /* User.swift */; };
 		C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BD1FD043DB00C2A2EE /* Exercise.swift */; };
 		C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */; };
@@ -49,7 +50,8 @@
 		C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournal.swift; sourceTree = "<group>"; };
 		C142AB4E1FD144F300B6478F /* Object_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_Exercise.swift; sourceTree = "<group>"; };
 		C142AB501FD1455F00B6478F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		C16C212E1FD17DB400A7D385 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		C16C21301FD1877700A7D385 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		C16C21321FD187B600A7D385 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		C1A099BB1FD0363400C2A2EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C1A099BD1FD043DB00C2A2EE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOfDifficulty.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		F568255F1FCFFBF500AA7232 = {
 			isa = PBXGroup;
 			children = (
+				C16C21321FD187B600A7D385 /* EventTableViewCell.swift */,
 				F568256A1FCFFBF500AA7232 /* SMPT-IMOVE */,
 				F568257F1FCFFBF500AA7232 /* SMPT-IMOVETests */,
 				F568258A1FCFFBF500AA7232 /* SMPT-IMOVEUITests */,
@@ -123,7 +126,7 @@
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
 				F568256D1FCFFBF500AA7232 /* ViewController.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
-				C16C212E1FD17DB400A7D385 /* EventRow.swift */,
+				C16C21301FD1877700A7D385 /* EventTableViewController.swift */,
 				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
 				C1A099BB1FD0363400C2A2EE /* User.swift */,
 				C142AB4A1FD141DD00B6478F /* Route.swift */,
@@ -302,8 +305,9 @@
 			files = (
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
-				C16C212F1FD17DB400A7D385 /* EventRow.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
+				C16C21311FD1877700A7D385 /* EventTableViewController.swift in Sources */,
+				C16C21331FD187B600A7D385 /* EventTableViewCell.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
 				C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */,

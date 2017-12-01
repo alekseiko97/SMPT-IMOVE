@@ -7,21 +7,15 @@
 //
 
 import UIKit
-import  CoreLocation
+import CoreLocation
+import MapKit
 
 class EventViewController: UIViewController, CLLocationManagerDelegate {
     
     var events : [Event] = []
-    //var lat = 51.441716
-    //var long = 5.467684
     
     let eindhoven = CLLocationCoordinate2DMake(51.441716, 5.467684)
-    
-    //func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-      //  let location:CLLocationCoordinate2D = manager.location!.coordinate
-        //lat = (location.latitude)
-        //long = (location.longitude)
-    //}
+
     func createNewEvent(){
      let date = Date()
         //the date is current, need to be changed so a user can set it
@@ -29,14 +23,18 @@ class EventViewController: UIViewController, CLLocationManagerDelegate {
         let hour = calend.component(.hour, from: date)
         let minutes = calend.component(.minute, from: date)
        
+        //first try to create an object of Event, later needs to try with data from the fields
         let newEvent = Event(
             name: "Event 1",
             description: "Running and doing exercises",
-            date: date, time: "12: 30",
-            location: eindhoven)
+            date: date,
+            time: "12: 30",
+            locCoord: eindhoven,
+            locName: "Central Park")
         events.append(newEvent)
         print(events.count)
     }
+   
     
     
     

@@ -16,6 +16,6 @@ class Quote: CustomStringConvertible {
     }
     
     var description: String {
-        return "\(quote))"
+        return "\(quote)"
     }
 }
