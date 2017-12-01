@@ -80,7 +80,7 @@
         <!--Map-->
         <scene sceneID="3ai-Fi-bZl">
             <objects>
-                <viewController id="L37-Iu-GfO" sceneMemberID="viewController">
+                <viewController id="L37-Iu-GfO" customClass="MapViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lBK-p7-TjU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,9 @@
                         <viewLayoutGuide key="safeArea" id="AtB-lA-4yA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="nOW-bx-sYX"/>
+                    <connections>
+                        <outlet property="mapView" destination="TyS-0c-jsU" id="Bab-Or-IXF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqo-M0-sWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
