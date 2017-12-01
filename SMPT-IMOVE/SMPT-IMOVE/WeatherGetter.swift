@@ -87,10 +87,6 @@ struct Weather {
     let pressure: Int
     let cloudCover: Int
     let windSpeed: Double
-    
-    // These properties are optionals because OpenWeatherMap doesn't provide:
-    // - a value for wind direction when the wind speed is negligible
-    // - rain info when there is no rainfall
     let windDirection: Double?
     let rainfallInLast3Hours: Double?
     
