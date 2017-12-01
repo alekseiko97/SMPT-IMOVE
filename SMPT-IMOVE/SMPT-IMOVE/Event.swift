@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import  CoreLocation
 import UIKit
 class Event {
     
@@ -17,15 +17,17 @@ class Event {
     var date: Date
     var time: String
     var users: [User]
+    var location: CLLocationCoordinate2D
+   
     
-    
-    init(name:String, description:String, date:Date,time:String){
+    init(name:String, description:String, date:Date,time:String,location:CLLocationCoordinate2D ){
         
         self.eventName = name
         self.description = description
         self.date = date
         self.time = time
         self.users = []
+        self.location = location
     }
     
 }

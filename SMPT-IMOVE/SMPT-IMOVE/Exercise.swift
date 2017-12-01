@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class Exercise{
+class Exercise {
     
     var exerciseName: String
     var muscleGroup: String
