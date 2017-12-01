@@ -42,13 +42,10 @@ class WeatherGetter {
                         options: .mutableContainers) as! [String: AnyObject]
 
                     let weather = Weather(weatherData: weatherData)
-                    
-                    // Now that we have the Weather struct, let's notify the view controller,
-                    // which will use it to display the weather to the user.
+
                     self.delegate.didGetWeather(weather: weather)
                 }
                 catch let jsonError as NSError {
-                    // An error occurred while trying to convert the data into a Swift dictionary.
                     self.delegate.didNotGetWeather(error: jsonError)
                 }
                 
