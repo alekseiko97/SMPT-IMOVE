@@ -16,18 +16,32 @@ class Event {
     var description: String
     var date: Date
     var time: String
-    var users: [User]
+    var usersParticipating: [User]
     var location: CLLocationCoordinate2D
    
     
-    init(name:String, description:String, date:Date,time:String,location:CLLocationCoordinate2D ){
-        
+    init(name:String, description:String, date:Date,time:String,location:CLLocationCoordinate2D){
         self.eventName = name
         self.description = description
         self.date = date
         self.time = time
-        self.users = []
+        self.usersParticipating = []
         self.location = location
+        
+    }
+    
+    func addUserToTheEvent(user:User){
+        
+        self.usersParticipating.append(user)
+    }
+    
+    func showAllUsersForTheEvent() -> Int {
+        return self.usersParticipating.count
+        
+    }
+    
+    func removeUserFromTheEvent(user:User){
+        
     }
     
 }
