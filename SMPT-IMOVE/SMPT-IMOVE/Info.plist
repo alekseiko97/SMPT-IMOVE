@@ -53,5 +53,10 @@
 	<string>App wants to know your current location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App wants to know your current location</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

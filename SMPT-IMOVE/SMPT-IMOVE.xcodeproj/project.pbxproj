@@ -22,6 +22,10 @@
 		F54B67541FD16919007CFD70 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67531FD16919007CFD70 /* POI.swift */; };
 		F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67551FD17AE4007CFD70 /* VCMapView.swift */; };
 		F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */; };
+		F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */; };
+		F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */; };
+		F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */; };
+		F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
 		F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256D1FCFFBF500AA7232 /* ViewController.swift */; };
 		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
@@ -30,6 +34,7 @@
 		F56825811FCFFBF500AA7232 /* SMPT_IMOVETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56825801FCFFBF500AA7232 /* SMPT_IMOVETests.swift */; };
 		F568258C1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */; };
 		F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568259C1FD0337B00AA7232 /* FeedViewController.swift */; };
+		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,10 @@
 		F54B67531FD16919007CFD70 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		F54B67551FD17AE4007CFD70 /* VCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Eindhoven.gpx; sourceTree = "<group>"; };
+		F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
+		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
+		F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
+		F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournalViewController.swift; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F568256D1FCFFBF500AA7232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPT_IMOVEUITests.swift; sourceTree = "<group>"; };
 		F568258D1FCFFBF500AA7232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F568259C1FD0337B00AA7232 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +128,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F54B67521FD1627D007CFD70 /* Table View Cells */ = {
+		F519DBA21FD1861E005B785C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */,
+				F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */,
+				F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */,
 				F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */,
 			);
-			path = "Table View Cells";
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		F568255F1FCFFBF500AA7232 = {
@@ -158,6 +171,7 @@
 				F54B67551FD17AE4007CFD70 /* VCMapView.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
 				F54B67531FD16919007CFD70 /* POI.swift */,
+				F599529C1FD031320038202D /* WeatherGetter.swift */,
 				C1A099BB1FD0363400C2A2EE /* User.swift */,
 				C142AB4A1FD141DD00B6478F /* Route.swift */,
 				C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */,
@@ -195,9 +209,11 @@
 		F56825991FD032AF00AA7232 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F519DBA21FD1861E005B785C /* TableViewCells */,
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
 				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
+				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -351,18 +367,23 @@
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
+				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
+				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
+				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
+				F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */,
 				C142AB4B1FD141DD00B6478F /* Route.swift in Sources */,
 				C1A099C21FD045A700C2A2EE /* Event.swift in Sources */,
 				C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */,
 				F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */,
 				F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */,
 				C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */,
+				F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */,
 				C142AB511FD1455F00B6478F /* Quote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
