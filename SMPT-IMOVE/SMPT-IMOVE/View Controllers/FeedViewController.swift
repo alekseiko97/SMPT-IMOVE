@@ -8,6 +8,8 @@
 
 import UIKit
 
+var WeatherDetails = [Weather]()
+
 class FeedViewController: UIViewController {
 
     @IBOutlet weak var btn_Scale: UIButton!
@@ -17,6 +19,9 @@ class FeedViewController: UIViewController {
     
     let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
     
+    private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
+    private let openWeatherMapAPIKey = "d68d6cde2375a71f8308d555ee7a401c"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btn_Scale.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
@@ -24,6 +29,9 @@ class FeedViewController: UIViewController {
         btn_Map.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
         btn_Training.tintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
         // Do any additional setup after loading the view.
+        
+        let weather = WeatherGetter()
+        weather.getWeatherInfo(city: "Eindhoven")
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,5 +49,4 @@ class FeedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
