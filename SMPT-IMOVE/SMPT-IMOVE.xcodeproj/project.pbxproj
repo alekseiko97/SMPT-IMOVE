@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DB9E1FD14465005B785C /* WorkoutViewController.swift */; };
 		C142AB4B1FD141DD00B6478F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4A1FD141DD00B6478F /* Route.swift */; };
 		C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */; };
 		C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4E1FD144F300B6478F /* Object_Exercise.swift */; };
@@ -16,6 +15,10 @@
 		C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BD1FD043DB00C2A2EE /* Exercise.swift */; };
 		C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */; };
 		C1A099C21FD045A700C2A2EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099C11FD045A700C2A2EE /* Event.swift */; };
+		F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DB9E1FD14465005B785C /* WorkoutViewController.swift */; };
+		F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */; };
+		F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */; };
+		F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
 		F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256D1FCFFBF500AA7232 /* ViewController.swift */; };
 		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
@@ -23,8 +26,8 @@
 		F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */; };
 		F56825811FCFFBF500AA7232 /* SMPT_IMOVETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56825801FCFFBF500AA7232 /* SMPT_IMOVETests.swift */; };
 		F568258C1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */; };
-		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 		F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568259C1FD0337B00AA7232 /* FeedViewController.swift */; };
+		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F519DB9E1FD14465005B785C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		C142AB4A1FD141DD00B6478F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournal.swift; sourceTree = "<group>"; };
 		C142AB4E1FD144F300B6478F /* Object_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_Exercise.swift; sourceTree = "<group>"; };
@@ -54,6 +56,10 @@
 		C1A099BD1FD043DB00C2A2EE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOfDifficulty.swift; sourceTree = "<group>"; };
 		C1A099C11FD045A700C2A2EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F519DB9E1FD14465005B785C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
+		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
+		F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F568256D1FCFFBF500AA7232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +73,8 @@
 		F56825871FCFFBF500AA7232 /* SMPT-IMOVEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SMPT-IMOVEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPT_IMOVEUITests.swift; sourceTree = "<group>"; };
 		F568258D1FCFFBF500AA7232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		F568259C1FD0337B00AA7232 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F519DBA21FD1861E005B785C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */,
+				F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */,
+				F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		F568255F1FCFFBF500AA7232 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +176,7 @@
 		F56825991FD032AF00AA7232 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F519DBA21FD1861E005B785C /* TableViewCells */,
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 			);
@@ -302,16 +319,19 @@
 			files = (
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
+				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
+				F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */,
 				C142AB4B1FD141DD00B6478F /* Route.swift in Sources */,
 				C1A099C21FD045A700C2A2EE /* Event.swift in Sources */,
 				C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */,
 				C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */,
+				F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */,
 				C142AB511FD1455F00B6478F /* Quote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
