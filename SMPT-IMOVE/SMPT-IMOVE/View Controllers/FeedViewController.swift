@@ -36,6 +36,10 @@ class FeedViewController: UIViewController {
         
         let weather = WeatherGetter()
         weather.getWeatherInfo(city: "Eindhoven")
+        lbl_Temp.text = ""
+        lbl_Humidity.text = ""
+        lbl_windSpeed.text = ""
+        lbl_ClothingAdvice.text = ""
     }
 
     override func didReceiveMemoryWarning() {
