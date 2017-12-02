@@ -68,10 +68,7 @@ struct Weather {
     let mainWeather: String
     let weatherDescription: String
     let weatherIconID: String
-    
-    // OpenWeatherMap reports temperature in Kelvin,
-    // which is why we provide celsius and fahrenheit
-    // computed properties.
+
     private let temp: Double
     var tempCelsius: Double {
         get {

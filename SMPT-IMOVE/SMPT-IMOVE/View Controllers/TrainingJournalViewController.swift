@@ -8,11 +8,26 @@
 
 import UIKit
 
-class TrainingJournalViewController: UIViewController {
-
+class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = MapTrainingJournalTableViewCell()
+        return(cell)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let MTJTVC = MapTrainingJournalTableViewCell()
+        if MTJTVC.isSelected == true
+        {
+            //performSegue(withIdentifier: mapSegue, sender: <#T##Any?#>)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +36,7 @@ class TrainingJournalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
