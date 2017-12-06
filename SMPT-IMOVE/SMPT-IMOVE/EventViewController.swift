@@ -22,7 +22,6 @@ class EventViewController: UIViewController, CLLocationManagerDelegate {
         let calend = Calendar.current
         let hour = calend.component(.hour, from: date)
         let minutes = calend.component(.minute, from: date)
-       
         //first try to create an object of Event, later needs to try with data from the fields
         let newEvent = Event(
             name: "Event 1",
@@ -35,11 +34,6 @@ class EventViewController: UIViewController, CLLocationManagerDelegate {
         print(events.count)
     }
    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
