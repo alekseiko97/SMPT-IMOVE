@@ -22,9 +22,9 @@ class TrackDrawer: NSObject, XMLParserDelegate {
     private var boundaries = [CLLocationCoordinate2D]()
     
     //Create a polygon for each string there is in fileNames
-    func getPolygons() -> [MKPolygon]? {
+    func getPolygons() -> [MKPolyline]? {
         //The list that will be returned
-        var polyList: [MKPolygon] = [MKPolygon]()
+        var polyList: [MKPolyline] = [MKPolyline]()
         
         for fileName in fileNames! {
             //Reset the list so it won't have the points from the previous polygon
@@ -51,7 +51,7 @@ class TrackDrawer: NSObject, XMLParserDelegate {
                 print ("Failed to parse the following file: \(fileName).gpx")
             }
             //Create the polygon with the points generated from the parsing process
-            polyList.append(MKPolygon(coordinates: &boundaries, count: boundaries.count))
+            polyList.append(MKPolyline(coordinates: &boundaries, count: boundaries.count))
             
         }
         return polyList
