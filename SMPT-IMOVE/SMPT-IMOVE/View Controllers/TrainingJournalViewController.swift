@@ -9,24 +9,56 @@
 import UIKit
 
 class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    //Will be the users data from database
+    let MapTrainingTest = ["Map Test"]
+    let WorkoutTest = ["Workout Test"]
+    let WeightTest = ["Weight Test"]
+    
+    let MapTrainingCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "MapTrainingCell")
+    let WorkoutTrainingCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "WorkoutTrainingCell")
+    let WeightTrainingCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "WeightCell")
+
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return 3
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = MapTrainingJournalTableViewCell()
-        return(cell)
+        if(indexPath.row == 0)
+        {
+            MapTrainingCell.textLabel?.text = MapTrainingTest[0]
+            return(MapTrainingCell)
+        }
+        
+        else if(indexPath.row == 1)
+        {
+            WorkoutTrainingCell.textLabel?.text = WorkoutTest[0]
+            return(WorkoutTrainingCell)
+        }
+        else
+        {
+            WeightTrainingCell.textLabel?.text = WeightTest[0]
+            return(WeightTrainingCell)
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let MTJTVC = MapTrainingJournalTableViewCell()
-        if MTJTVC.isSelected == true
+        if MapTrainingCell.isSelected == true
         {
             //performSegue(withIdentifier: mapSegue, sender: <#T##Any?#>)
+        }
+        if WorkoutTrainingCell.isSelected == true
+        {
+            //performSegue(withIdentifier: workoutSegue, sender: Any?)
+        }
+        if WeightTrainingCell.isSelected == true
+        {
+            //performSegue(withIdentifier: weightSegue, sender: <#T##Any?#>)
         }
         // Do any additional setup after loading the view.
     }
