@@ -486,6 +486,9 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="DIN-O2-zkL"/>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="LN3-4O-ccX" id="gDp-ua-Rqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pjf-ic-icn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
