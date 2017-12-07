@@ -391,18 +391,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You walked &lt;x&gt; km on &lt;date&gt;!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-VJ-hxh">
-                                                    <rect key="frame" x="15" y="11" width="237" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You walked &lt;x&gt; km on &lt;date&gt;!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-VJ-hxh">
+                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-Zv-RCR">
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-Zv-RCR">
                                                     <rect key="frame" x="15" y="35" width="313" height="154"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </mapView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iIc-Zv-RCR" firstAttribute="bottom" secondItem="mUH-x5-npr" secondAttribute="bottomMargin" id="CMs-yd-IJI"/>
+                                                <constraint firstItem="iIc-Zv-RCR" firstAttribute="trailing" secondItem="mUH-x5-npr" secondAttribute="trailingMargin" id="Di4-PW-9NI"/>
+                                                <constraint firstItem="9aM-VJ-hxh" firstAttribute="leading" secondItem="mUH-x5-npr" secondAttribute="leadingMargin" id="cF4-EO-EWC"/>
+                                                <constraint firstItem="9aM-VJ-hxh" firstAttribute="top" secondItem="mUH-x5-npr" secondAttribute="topMargin" id="kch-Xg-Sil"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9aM-VJ-hxh" secondAttribute="trailing" id="ljB-XD-eVz"/>
+                                                <constraint firstItem="iIc-Zv-RCR" firstAttribute="leading" secondItem="mUH-x5-npr" secondAttribute="leadingMargin" id="uAu-7N-p4a"/>
+                                                <constraint firstItem="iIc-Zv-RCR" firstAttribute="top" secondItem="9aM-VJ-hxh" secondAttribute="bottom" constant="3" id="zZ0-lR-z6O"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
