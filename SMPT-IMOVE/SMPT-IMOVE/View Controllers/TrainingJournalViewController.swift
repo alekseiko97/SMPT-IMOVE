@@ -50,15 +50,15 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         if MapTrainingCell.isSelected == true
         {
-            //performSegue(withIdentifier: mapSegue, sender: <#T##Any?#>)
+            performSegue(withIdentifier: mapSegue, sender: <#T##Any?#>)
         }
         if WorkoutTrainingCell.isSelected == true
         {
-            //performSegue(withIdentifier: workoutSegue, sender: Any?)
+            performSegue(withIdentifier: workoutSegue, sender: Any?)
         }
         if WeightTrainingCell.isSelected == true
         {
-            //performSegue(withIdentifier: weightSegue, sender: <#T##Any?#>)
+            performSegue(withIdentifier: weightSegue, sender: <#T##Any?#>)
         }
         // Do any additional setup after loading the view.
     }
