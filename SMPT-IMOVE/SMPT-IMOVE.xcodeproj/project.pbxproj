@@ -20,6 +20,12 @@
 		F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */; };
 		F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */; };
 		F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */; };
+		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
+		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
+		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
+		F54B67541FD16919007CFD70 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67531FD16919007CFD70 /* POI.swift */; };
+		F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67551FD17AE4007CFD70 /* VCMapView.swift */; };
+		F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
 		F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256D1FCFFBF500AA7232 /* ViewController.swift */; };
 		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
@@ -62,6 +68,14 @@
 		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournalViewController.swift; sourceTree = "<group>"; };
+		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SMPT-IMOVE.entitlements"; sourceTree = "<group>"; };
+		F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
+		F54B67531FD16919007CFD70 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		F54B67551FD17AE4007CFD70 /* VCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Eindhoven.gpx; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F568256D1FCFFBF500AA7232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +125,18 @@
 				F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */,
 				F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */,
 				F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */,
+				F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		F54B674B1FD151B2007CFD70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F54B674D1FD156C4007CFD70 /* MapKit.framework */,
+				F54B674C1FD151B3007CFD70 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F568255F1FCFFBF500AA7232 = {
@@ -121,6 +146,7 @@
 				F568257F1FCFFBF500AA7232 /* SMPT-IMOVETests */,
 				F568258A1FCFFBF500AA7232 /* SMPT-IMOVEUITests */,
 				F56825691FCFFBF500AA7232 /* Products */,
+				F54B674B1FD151B2007CFD70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,10 +163,13 @@
 		F568256A1FCFFBF500AA7232 /* SMPT-IMOVE */ = {
 			isa = PBXGroup;
 			children = (
+				F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */,
 				F56825991FD032AF00AA7232 /* View Controllers */,
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
 				F568256D1FCFFBF500AA7232 /* ViewController.swift */,
+				F54B67551FD17AE4007CFD70 /* VCMapView.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
+				F54B67531FD16919007CFD70 /* POI.swift */,
 				F599529C1FD031320038202D /* WeatherGetter.swift */,
 				C1A099BB1FD0363400C2A2EE /* User.swift */,
 				C142AB4A1FD141DD00B6478F /* Route.swift */,
@@ -150,6 +179,7 @@
 				C142AB501FD1455F00B6478F /* Quote.swift */,
 				C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */,
 				C1A099C11FD045A700C2A2EE /* Event.swift */,
+				F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */,
 				F56825721FCFFBF500AA7232 /* Assets.xcassets */,
 				F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */,
 				F56825771FCFFBF500AA7232 /* Info.plist */,
@@ -180,6 +210,7 @@
 			children = (
 				F519DBA21FD1861E005B785C /* TableViewCells */,
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
+				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 			);
@@ -255,6 +286,17 @@
 					F56825671FCFFBF500AA7232 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					F568257B1FCFFBF500AA7232 = {
 						CreatedOnToolsVersion = 9.1;
@@ -295,6 +337,7 @@
 			files = (
 				F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */,
 				F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */,
+				F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */,
 				F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
+				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
@@ -328,12 +372,15 @@
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
+				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
 				F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */,
 				C142AB4B1FD141DD00B6478F /* Route.swift in Sources */,
 				C1A099C21FD045A700C2A2EE /* Event.swift in Sources */,
 				C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */,
+				F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */,
+				F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */,
 				C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */,
 				F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */,
 				C142AB511FD1455F00B6478F /* Quote.swift in Sources */,
@@ -503,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SMPT-IMOVE/SMPT-IMOVE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "SMPT-IMOVE/Info.plist";
@@ -519,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SMPT-IMOVE/SMPT-IMOVE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "SMPT-IMOVE/Info.plist";
