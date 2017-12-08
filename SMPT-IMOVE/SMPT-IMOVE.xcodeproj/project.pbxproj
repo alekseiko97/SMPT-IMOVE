@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12689EB1FDA7A3D009B4B49 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */; };
+		C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */; };
 		C142AB4B1FD141DD00B6478F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4A1FD141DD00B6478F /* Route.swift */; };
 		C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */; };
 		C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4E1FD144F300B6478F /* Object_Exercise.swift */; };
 		C142AB511FD1455F00B6478F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB501FD1455F00B6478F /* Quote.swift */; };
+		C1955B3A1FD94F8500FAEA2B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */; };
+		C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */; };
 		C1A099BC1FD0363400C2A2EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BB1FD0363400C2A2EE /* User.swift */; };
 		C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BD1FD043DB00C2A2EE /* Exercise.swift */; };
 		C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */; };
 		C1A099C21FD045A700C2A2EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099C11FD045A700C2A2EE /* Event.swift */; };
+		C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B9174C1FD169100021FE3E /* EventViewController.swift */; };
 		F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DB9E1FD14465005B785C /* WorkoutViewController.swift */; };
 		F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */; };
 		F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */; };
@@ -56,14 +61,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
+		C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		C142AB4A1FD141DD00B6478F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournal.swift; sourceTree = "<group>"; };
 		C142AB4E1FD144F300B6478F /* Object_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_Exercise.swift; sourceTree = "<group>"; };
 		C142AB501FD1455F00B6478F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSingleViewController.swift; sourceTree = "<group>"; };
 		C1A099BB1FD0363400C2A2EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C1A099BD1FD043DB00C2A2EE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOfDifficulty.swift; sourceTree = "<group>"; };
 		C1A099C11FD045A700C2A2EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C1B9174C1FD169100021FE3E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		F519DB9E1FD14465005B785C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,6 +181,11 @@
 				F568256D1FCFFBF500AA7232 /* ViewController.swift */,
 				F54B67551FD17AE4007CFD70 /* VCMapView.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
+				C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */,
+				C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */,
+				C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */,
+				C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */,
+				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
 				F54B67531FD16919007CFD70 /* POI.swift */,
 				F599529C1FD031320038202D /* WeatherGetter.swift */,
 				C1A099BB1FD0363400C2A2EE /* User.swift */,
@@ -366,10 +381,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1955B3A1FD94F8500FAEA2B /* EventTableViewCell.swift in Sources */,
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
+				C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */,
 				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
@@ -378,8 +395,11 @@
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
+				C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */,
+				C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
 				F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */,
+				C12689EB1FDA7A3D009B4B49 /* ExerciseTableViewController.swift in Sources */,
 				C142AB4B1FD141DD00B6478F /* Route.swift in Sources */,
 				C1A099C21FD045A700C2A2EE /* Event.swift in Sources */,
 				C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */,
