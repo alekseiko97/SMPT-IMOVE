@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl_Exercise: UILabel!
     
 
 }

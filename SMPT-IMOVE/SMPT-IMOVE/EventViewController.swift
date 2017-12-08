@@ -73,7 +73,6 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         cell.lbl_EventName.text = String(describing: events[indexPath.row].eventName)
         cell.lbl_Location.text = String(describing: events[indexPath.row].locationName)
         cell.lbl_Date.text = events[indexPath.row].getDateAsString()
-        cell.lbl_Time.text = events[indexPath.row].getTimeAsString()
         cell.lbl_Description.text = String(describing: events[indexPath.row].description)
         return cell;
     }

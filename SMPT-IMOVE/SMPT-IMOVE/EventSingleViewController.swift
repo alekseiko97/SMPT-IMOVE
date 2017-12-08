@@ -25,6 +25,7 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
     @IBOutlet weak var timeEvent: UILabel!
     @IBOutlet weak var workoutEvent: UILabel!
     
+    @IBOutlet weak var workoutTableView: UITableView!
     
     
     
