@@ -206,6 +206,7 @@
 		F568256A1FCFFBF500AA7232 /* SMPT-IMOVE */ = {
 			isa = PBXGroup;
 			children = (
+				F5F9AA871FDABFAC0053B8A6 /* Firebase */,
 				F5F9AA841FDABEFF0053B8A6 /* Enums */,
 				F5F9AA831FDABEC90053B8A6 /* Models */,
 				F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */,
@@ -294,6 +295,13 @@
 				C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */,
 			);
 			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		F5F9AA871FDABFAC0053B8A6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
