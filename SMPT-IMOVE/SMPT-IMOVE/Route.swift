@@ -9,7 +9,7 @@
 import Foundation
 import  CoreLocation
 import UIKit
-class Route{
+class Route {
     
     var nameRoute: String?
     var kmRoute: Double?
