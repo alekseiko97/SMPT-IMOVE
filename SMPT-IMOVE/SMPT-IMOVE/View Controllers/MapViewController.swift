@@ -18,6 +18,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     // Location manager
     let manager = CLLocationManager()
     var routes = [Route]()
+    var selectedrow: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,10 +28,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         loadPOI()
-        //mapView.addOverlays(trackDrawer.getPolyline()!)
-        routes.append(Route(nameR: "Route 1", kmR: 7.2))
-        routes.append(Route(nameR: "Route 2", kmR: 8.8))
-//        addRoute()
+        routes.append(Route(nameR: "TestRoute", kmR: 7.2))
     }
     
     func loadPOI()
@@ -75,7 +73,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         }
         
         cell.routeLabel.text = routes[indexPath.row].nameRoute
-        let km = String(format:"%f", routes[indexPath.row].kmRoute!)
+        let km = String(routes[indexPath.row].kmRoute)
         cell.kmLabel.text = km
         
         return cell
@@ -89,6 +87,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         renderer.strokeColor = .black
         renderer.lineWidth = 3
         return renderer
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedrow = indexPath.row
+        performSegue(withIdentifier: "routeSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "routeSegue"
+        {
+           
+            let destVC = segue.destination as! RouteViewController
+            destVC.route = routes[selectedrow]
+               
+        }
+        
     }
     
 
