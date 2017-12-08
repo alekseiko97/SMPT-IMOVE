@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 class User {
     
-    var username: String?
-    var email: String?
+    var username: String
+    var email: String
     var password: String?
     var profilePicture: UIImage?
     var weight: Int?
