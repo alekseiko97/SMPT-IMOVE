@@ -24,7 +24,4 @@ class Exercise {
         self.difficulty = difficulty
         
     }
-    
-    
-    
 }
