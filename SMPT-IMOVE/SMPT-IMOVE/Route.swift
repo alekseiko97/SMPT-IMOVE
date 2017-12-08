@@ -7,21 +7,25 @@
 //
 
 import Foundation
-import  CoreLocation
+import MapKit
 import UIKit
 class Route{
     
     var nameRoute: String?
     var kmRoute: Double?
+    var trackDrawer: TrackDrawer
+    //var polyline: MKPolyline
     var events: [Event]
-    var location: CLLocationCoordinate2D
     
-    init(nameR: String, kmR:Double, location:CLLocationCoordinate2D ){
+    init(nameR: String, kmR:Double){
         self.nameRoute = nameR
         self.kmRoute = kmR
+        self.trackDrawer = TrackDrawer(fileName: nameR)
+        //self.polyline = trackDrawer.getPolyline()!
         self.events = []
-        self.location = location
     }
+    
+
     
     
     

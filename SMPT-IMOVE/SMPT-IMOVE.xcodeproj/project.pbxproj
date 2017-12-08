@@ -28,6 +28,7 @@
 		F52A00291FD97A0700B38CE1 /* Waypoint_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */; };
 		F52A002B1FD97A1B00B38CE1 /* Route_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */; };
 		F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */; };
+		F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5333B261FD9884C004BE914 /* RouteViewController.swift */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
@@ -85,6 +86,7 @@
 		F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Waypoint_u.gpx; sourceTree = "<group>"; };
 		F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Route_u.gpx; sourceTree = "<group>"; };
 		F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Track_u.gpx; sourceTree = "<group>"; };
+		F5333B261FD9884C004BE914 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -248,6 +250,7 @@
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 				F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */,
+				F5333B261FD9884C004BE914 /* RouteViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
+				F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */,
 				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,

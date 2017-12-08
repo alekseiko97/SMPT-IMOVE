@@ -17,9 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     
     // Location manager
     let manager = CLLocationManager()
-    let routes = [Route]()
-    var trackDrawer = TrackDrawer(fileNames: ["TestRoute"])
-
+    var routes = [Route]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +27,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         loadPOI()
-        mapView.addOverlays(trackDrawer.getPolygons()!)
+        //mapView.addOverlays(trackDrawer.getPolyline()!)
+        routes.append(Route(nameR: "Route 1", kmR: 7.2))
+        routes.append(Route(nameR: "Route 2", kmR: 8.8))
 //        addRoute()
     }
     
@@ -56,6 +56,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: \(error)")
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -86,29 +91,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         return renderer
     }
     
-//    func addRoute() {
-//
-//        //let Path = Bundle.main.path(forResource: "test_route", ofType: "gpx") // Not sure on this part
-//        let thePath = Bundle.main.path(forResource: "Eindhoven", ofType: "gpx")
-//        let pointsArray = NSArray(contentsOfFile: thePath!)
-//
-//        let pointsCount = pointsArray!.count
-//
-//        var pointsToUse: [CLLocationCoordinate2D] = []
-//
-//        for i in 0...pointsCount-1 {
-//            let p = CGPointFromString(pointsArray![i] as! String)
-//            pointsToUse += [CLLocationCoordinate2DMake(CLLocationDegrees(p.x), CLLocationDegrees(p.y))]
-//        }
-//
-//        let myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsCount)
-//
-//        self.mapView.add(myPolyline)
-//    }
+
     
     
-    
-    
+
     
 
 }
