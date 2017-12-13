@@ -25,20 +25,27 @@
 		F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */; };
 		F519DBA81FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */; };
 		F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */; };
+		F52A001D1FD9708F00B38CE1 /* Eindhoven.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A001C1FD9708E00B38CE1 /* Eindhoven.gpx */; };
+		F52A00211FD972CA00B38CE1 /* TestRoute.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00201FD972CA00B38CE1 /* TestRoute.gpx */; };
+		F52A00231FD9797800B38CE1 /* Waypoint.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00221FD9797800B38CE1 /* Waypoint.gpx */; };
+		F52A00251FD9799F00B38CE1 /* Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00241FD9799F00B38CE1 /* Route.gpx */; };
+		F52A00271FD979C800B38CE1 /* Track.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00261FD979C800B38CE1 /* Track.gpx */; };
+		F52A00291FD97A0700B38CE1 /* Waypoint_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */; };
+		F52A002B1FD97A1B00B38CE1 /* Route_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */; };
+		F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
 		F54B67541FD16919007CFD70 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67531FD16919007CFD70 /* POI.swift */; };
 		F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67551FD17AE4007CFD70 /* VCMapView.swift */; };
-		F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
-		F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256D1FCFFBF500AA7232 /* ViewController.swift */; };
 		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
 		F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56825721FCFFBF500AA7232 /* Assets.xcassets */; };
 		F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */; };
 		F56825811FCFFBF500AA7232 /* SMPT_IMOVETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56825801FCFFBF500AA7232 /* SMPT_IMOVETests.swift */; };
 		F568258C1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */; };
 		F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568259C1FD0337B00AA7232 /* FeedViewController.swift */; };
+		F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574A7511FD9493E0026EFBE /* TrackDrawer.swift */; };
 		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 		F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +86,14 @@
 		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournalViewController.swift; sourceTree = "<group>"; };
+		F52A001C1FD9708E00B38CE1 /* Eindhoven.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Eindhoven.gpx; sourceTree = "<group>"; };
+		F52A00201FD972CA00B38CE1 /* TestRoute.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestRoute.gpx; sourceTree = "<group>"; };
+		F52A00221FD9797800B38CE1 /* Waypoint.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Waypoint.gpx; sourceTree = "<group>"; };
+		F52A00241FD9799F00B38CE1 /* Route.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Route.gpx; sourceTree = "<group>"; };
+		F52A00261FD979C800B38CE1 /* Track.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Track.gpx; sourceTree = "<group>"; };
+		F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Waypoint_u.gpx; sourceTree = "<group>"; };
+		F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Route_u.gpx; sourceTree = "<group>"; };
+		F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Track_u.gpx; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -86,10 +101,8 @@
 		F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
 		F54B67531FD16919007CFD70 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		F54B67551FD17AE4007CFD70 /* VCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
-		F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Eindhoven.gpx; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F568256D1FCFFBF500AA7232 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F56825701FCFFBF500AA7232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F56825721FCFFBF500AA7232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F56825751FCFFBF500AA7232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +114,7 @@
 		F568258B1FCFFBF500AA7232 /* SMPT_IMOVEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPT_IMOVEUITests.swift; sourceTree = "<group>"; };
 		F568258D1FCFFBF500AA7232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F568259C1FD0337B00AA7232 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F574A7511FD9493E0026EFBE /* TrackDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDrawer.swift; sourceTree = "<group>"; };
 		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,12 +148,29 @@
 		F519DBA21FD1861E005B785C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */,
 				F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */,
 				F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */,
 				F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */,
 				F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */,
+				C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		F52A001A1FD9680100B38CE1 /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				F52A00201FD972CA00B38CE1 /* TestRoute.gpx */,
+				F52A001C1FD9708E00B38CE1 /* Eindhoven.gpx */,
+				F52A00221FD9797800B38CE1 /* Waypoint.gpx */,
+				F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */,
+				F52A00241FD9799F00B38CE1 /* Route.gpx */,
+				F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */,
+				F52A00261FD979C800B38CE1 /* Track.gpx */,
+				F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */,
+			);
+			path = GPX;
 			sourceTree = "<group>";
 		};
 		F54B674B1FD151B2007CFD70 /* Frameworks */ = {
@@ -175,28 +206,14 @@
 		F568256A1FCFFBF500AA7232 /* SMPT-IMOVE */ = {
 			isa = PBXGroup;
 			children = (
+				F5F9AA871FDABFAC0053B8A6 /* Firebase */,
+				F5F9AA841FDABEFF0053B8A6 /* Enums */,
+				F5F9AA831FDABEC90053B8A6 /* Models */,
 				F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */,
+				F52A001A1FD9680100B38CE1 /* GPX */,
 				F56825991FD032AF00AA7232 /* View Controllers */,
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
-				F568256D1FCFFBF500AA7232 /* ViewController.swift */,
-				F54B67551FD17AE4007CFD70 /* VCMapView.swift */,
 				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
-				C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */,
-				C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */,
-				C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */,
-				C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */,
-				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
-				F54B67531FD16919007CFD70 /* POI.swift */,
-				F599529C1FD031320038202D /* WeatherGetter.swift */,
-				C1A099BB1FD0363400C2A2EE /* User.swift */,
-				C142AB4A1FD141DD00B6478F /* Route.swift */,
-				C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */,
-				C1A099BD1FD043DB00C2A2EE /* Exercise.swift */,
-				C142AB4E1FD144F300B6478F /* Object_Exercise.swift */,
-				C142AB501FD1455F00B6478F /* Quote.swift */,
-				C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */,
-				C1A099C11FD045A700C2A2EE /* Event.swift */,
-				F54B67571FD17FF0007CFD70 /* Eindhoven.gpx */,
 				F56825721FCFFBF500AA7232 /* Assets.xcassets */,
 				F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */,
 				F56825771FCFFBF500AA7232 /* Info.plist */,
@@ -225,14 +242,66 @@
 		F56825991FD032AF00AA7232 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F5F9AA851FDABF330053B8A6 /* TableViewControllers */,
+				F5F9AA821FDABE5D0053B8A6 /* MapViews */,
 				F519DBA21FD1861E005B785C /* TableViewCells */,
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
 				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 				F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */,
+				C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */,
+				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F5F9AA821FDABE5D0053B8A6 /* MapViews */ = {
+			isa = PBXGroup;
+			children = (
+				F54B67551FD17AE4007CFD70 /* VCMapView.swift */,
+			);
+			path = MapViews;
+			sourceTree = "<group>";
+		};
+		F5F9AA831FDABEC90053B8A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F574A7511FD9493E0026EFBE /* TrackDrawer.swift */,
+				F54B67531FD16919007CFD70 /* POI.swift */,
+				F599529C1FD031320038202D /* WeatherGetter.swift */,
+				C1A099BB1FD0363400C2A2EE /* User.swift */,
+				C142AB4A1FD141DD00B6478F /* Route.swift */,
+				C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */,
+				C1A099BD1FD043DB00C2A2EE /* Exercise.swift */,
+				C142AB501FD1455F00B6478F /* Quote.swift */,
+				C1A099C11FD045A700C2A2EE /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5F9AA841FDABEFF0053B8A6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C142AB4E1FD144F300B6478F /* Object_Exercise.swift */,
+				C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		F5F9AA851FDABF330053B8A6 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		F5F9AA871FDABFAC0053B8A6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,10 +422,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52A00231FD9797800B38CE1 /* Waypoint.gpx in Resources */,
+				F52A002B1FD97A1B00B38CE1 /* Route_u.gpx in Resources */,
+				F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */,
 				F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */,
+				F52A00291FD97A0700B38CE1 /* Waypoint_u.gpx in Resources */,
+				F52A00251FD9799F00B38CE1 /* Route.gpx in Resources */,
+				F52A00271FD979C800B38CE1 /* Track.gpx in Resources */,
 				F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */,
-				F54B67581FD17FF0007CFD70 /* Eindhoven.gpx in Resources */,
+				F52A001D1FD9708F00B38CE1 /* Eindhoven.gpx in Resources */,
 				F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */,
+				F52A00211FD972CA00B38CE1 /* TestRoute.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,8 +460,8 @@
 				C1955B3A1FD94F8500FAEA2B /* EventTableViewCell.swift in Sources */,
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
-				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
+				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
 				C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */,
 				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,

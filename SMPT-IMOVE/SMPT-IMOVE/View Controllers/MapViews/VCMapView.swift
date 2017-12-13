@@ -8,7 +8,7 @@
 
 import MapKit
 
-extension MapViewController: MKMapViewDelegate {
+extension MapViewController {
     
     // 1
     func mapView(_ mapView: MKMapView,

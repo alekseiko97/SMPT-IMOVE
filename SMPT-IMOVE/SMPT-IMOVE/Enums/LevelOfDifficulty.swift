@@ -9,8 +9,6 @@
 import Foundation
 
 enum LevelOfDifficulty: String {
-    
-    
     case Easy
     case Challenging
     case Hard
