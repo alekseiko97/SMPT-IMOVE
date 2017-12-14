@@ -14,8 +14,7 @@ class User {
     var email: String
     var password: String?
     var profilePicture: UIImage?
-    var weight: Int?
-    var lastWeight: Int?
+    var weight : Weight?
     var goal: String?
     var friends: [User]
     var exercises: [Exercise]
@@ -25,16 +24,18 @@ class User {
         self.username = name
         self.email = email
         self.friends = []
-        self.weight = 0
         self.exercises = []
     }
     
-    
-
-    func setWeight(newWeight: Int){
-        
-        self.weight = newWeight
+    init(name:String, email:String, weight:Weight) {
+        self.username = name
+        self.email = email
+        self.weight = weight
+        self.friends = []
+        self.exercises = []
     }
     
-    
+    func setWeight(newWeight:Double) {
+        self.weight = Weight(currentWeight: newWeight)
+    }
 }
