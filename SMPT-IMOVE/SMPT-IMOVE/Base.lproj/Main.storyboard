@@ -1601,7 +1601,7 @@
         <!--Weight-->
         <scene sceneID="cng-er-xH9">
             <objects>
-                <viewController title="Weight" id="3sR-Qa-0Cr" sceneMemberID="viewController">
+                <viewController title="Weight" id="3sR-Qa-0Cr" customClass="WeightViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWO-91-Rhc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1673,6 +1673,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lbl_CurrentWeight" destination="NCc-I8-CHw" id="k3i-4c-zTS"/>
+                        <outlet property="lbl_LastWeight" destination="gor-vC-IOb" id="aNv-6l-dX6"/>
+                        <outlet property="lbl_MontlyAverage" destination="TGi-Oi-xfS" id="0u5-L7-ed4"/>
+                        <outlet property="lbl_WeeklyAverage" destination="UDa-du-mdb" id="DcZ-tf-f4K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqk-RE-0Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
