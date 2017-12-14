@@ -1,5 +1,5 @@
 //
-//  WeightViewController.swift
+//  AddWeightViewController.swift
 //  SMPT-IMOVE
 //
 //  Created by Fhict on 14/12/2017.
@@ -8,24 +8,17 @@
 
 import UIKit
 
-class WeightViewController: UIViewController {
+class AddWeightViewController: UIViewController {
     
-    @IBOutlet weak var lbl_CurrentWeight: UILabel!
-    @IBOutlet weak var lbl_LastWeight: UILabel!
-    @IBOutlet weak var lbl_WeeklyAverage: UILabel!
-    @IBOutlet weak var lbl_MontlyAverage: UILabel!
+    @IBOutlet weak var tb_NewWeight: UITextField!
+    @IBOutlet weak var tb_NewWeightDecimal: UITextField!
     
     var user : User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Get user from firebase
+        //Get user from db
         user = User(name: "Roos", email: "roos@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
-        lbl_CurrentWeight.text = String(format: "%.1f", (user?.weight?.currentWeight)!)
-        // Get last weight from user database
-        lbl_LastWeight.text = String(format: "%.1f", 57.6)
-        lbl_WeeklyAverage.text = String(format: "%.1f", Weight.calcWeeklyAverage())
-        //lbl_MontlyAverage.text = String(format: "%.1f", Weight.calcMonthlyAverage())
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +27,20 @@ class WeightViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToWeight(segue: UIStoryboardSegue) {}
+    @IBAction func btn_SubmitWeight(_ sender: Any) {
+        if (tb_NewWeight.text! != "" && tb_NewWeightDecimal.text! != "") {
+            var weight : Double
+            weight = Double(tb_NewWeight.text!)!
+            weight += (Double(tb_NewWeightDecimal.text!)! / 10)
+            print(weight)
+        }
+        else if (tb_NewWeight.text! != "") {
+            var weight : Double
+            weight = Double(tb_NewWeight.text!)!
+            print(weight)
+        }
+        else { print("Stop that you stupid") }
+    }
     
 
     /*
