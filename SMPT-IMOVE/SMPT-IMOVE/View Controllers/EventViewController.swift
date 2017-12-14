@@ -28,7 +28,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     func CreateNewEvent(){
         let firstEvent = Event(
             name: "Strong legs",
-            description: "Running and doing exercises",
+            evDescription: "Running and doing exercises",
             date: Date(timeIntervalSince1970: 1512835200),//using time converter,
             locCoord: eindhoven2,
             locName: "Stadswandelpark")
@@ -36,7 +36,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         
         let secondEvent = Event(
             name: "Running",
-            description: "Running competition",
+            evDescription: "Running competition",
             date: Date(timeIntervalSince1970: 1512906323),//using time converter,
             locCoord: eindhoven3,
             locName: "Jacob Oppenheimerpark")
@@ -44,7 +44,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         
         let thirdEvent = Event(
             name: "Group competition",
-            description: "Using bench and doing exercises",
+            evDescription: "Using bench and doing exercises",
             date: Date(timeIntervalSince1970: 1513103400),//using time converter,
             locCoord: eindhoven,
             locName: "Philips Stadium")
@@ -76,7 +76,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         cell.lbl_EventName.text = String(describing: events[indexPath.row].eventName)
         cell.lbl_Location.text = String(describing: events[indexPath.row].locationName)
         cell.lbl_Date.text = events[indexPath.row].getDateAsString() + " " +  events[indexPath.row].getTimeAsString()
-        cell.lbl_Description.text = String(describing: events[indexPath.row].description)
+        cell.lbl_Description.text = String(describing: events[indexPath.row].eventDescription)
         return cell;
     }
 
@@ -87,7 +87,6 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //let selectedrow = self.eventTableView.indexPathForSelectedRow?.row ?? 0
-
         if segue.identifier == "openEvent" {
              let newViewController = segue.destination as? EventSingleViewController
        

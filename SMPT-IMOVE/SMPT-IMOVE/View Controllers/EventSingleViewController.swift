@@ -12,10 +12,8 @@ import MapKit
 
 class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate, UITableViewDelegate,UITableViewDataSource {
     
-     let manager = CLLocationManager()
-     var userChoseEvent: Event?
-   
     
+
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var dateEvent: UILabel!
     @IBOutlet weak var mapLocation: MKMapView!
@@ -24,12 +22,21 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
     @IBOutlet weak var workoutEvent: UILabel!
     @IBOutlet weak var workoutTableView: UITableView!
     
-    //examples for exercises
-    var exercises: [String] = ["Bench exercises", "Running exercises","Breath exercises"]
+    let manager = CLLocationManager()
+    var userChoseEvent: Event?
+    var workExrc: [Exercise] = []
     
-    
+    //creating instance of exercise to add for an event
+    var newExercise1 = Exercise(exercName: "Bench exercise", muscleGroup: "muscle", keyPoints: "for example", difficulty: LevelOfDifficulty.Hard)
+    var newExercise2 = Exercise(exercName: "Mixed exercise", muscleGroup: "muscle", keyPoints: "for example", difficulty: LevelOfDifficulty.Challenging)
+    var newExercise3 = Exercise(exercName: "Breath exercise", muscleGroup: "muscle", keyPoints: "for example", difficulty: LevelOfDifficulty.Easy)
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        workExrc.append(newExercise1)//append the exercise to the workout exercise of the event
+        workExrc.append(newExercise2)
+        workExrc.append(newExercise3)
        
         //assigning the information of the event to the labels of the screen
         if let showEvent = userChoseEvent {
@@ -38,19 +45,22 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
             self.dateEvent.text = showEvent.getDateAsString()
             self.locationEvent.text = String(showEvent.locationName)
             self.mapLocation.addAnnotation(POI(title: showEvent.locationName, identifier: 1, coordinate:showEvent.locationCoordinates, type: .Park))
+            
+            showEvent.workoutExercises = workExrc
+           
         }
-        workoutTableView.delegate = self
-        workoutTableView.dataSource = self
+            workoutTableView.delegate = self
+            workoutTableView.dataSource = self
         
-        mapLocation.delegate = self
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
-        zoomToEvent()
+            mapLocation.delegate = self
+            manager.delegate = self
+            manager.desiredAccuracy = kCLLocationAccuracyBest
+            manager.requestAlwaysAuthorization()
+            manager.startUpdatingLocation()
+            zoomToEvent()
+        
     }
    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
        let location = locations[0]
        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 5000, 5000)
        mapLocation.setRegion(region, animated: true)
@@ -68,14 +78,13 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercises.count
+        return workExrc.count
     }
     
     func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : ExerciseTableViewCell = workoutTableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath) as! ExerciseTableViewCell
-        cell.lbl_Exercise.text = String(describing:exercises[indexPath.row])
+        cell.lbl_Exercise.text = String(describing:workExrc[indexPath.row].exerciseName)
         return cell;
-}
-
+    }
 
 }
