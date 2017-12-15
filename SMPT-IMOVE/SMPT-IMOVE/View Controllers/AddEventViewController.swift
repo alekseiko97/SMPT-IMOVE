@@ -55,20 +55,31 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
             if let error = error {
                 print("Unable to Reverse Geocode Location (\(error))")
             } else {
-                print(#function, placemarks?.first?.compactAddress ?? "Default")
-                
-                let newEvent = Event(
-                    name: String(describing: self.tb_eventName.text),
-                    evDescription: "Running and doing exercises",//will be taken from the user input
-                    date: self.dateTimePicker.date,//taken from the datepicker
-                    locCoord:  self.eventCoordinates,
-                    locName: placemarks?.first?.compactAddress ?? "Default")
-                self.eventsList.append(newEvent)
-                print(newEvent.description)
+               // print(#function, placemarks?.first?.compactAddress ?? "Default")
+                if (self.tb_eventName.text?.isEmpty ?? true)!  {
+                    self.createAlert(title: "Alert", message: "Please fill in all the fields!")
+                }
+                else {
+                    let newEvent = Event(
+                        name: String(describing: self.tb_eventName.text),
+                        evDescription: "Running and doing exercises",//will be taken from the user input
+                        date: self.dateTimePicker.date,//taken from the datepicker
+                        locCoord:  self.eventCoordinates,
+                        locName: placemarks?.first?.compactAddress ?? "Default")
+                    self.eventsList.append(newEvent)
+                    print(newEvent.description)
+                }
             }
         }
     }
-    
+    //if the field event name is empty,an alert message is shown
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+        alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert,animated:true, completion: nil)
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]

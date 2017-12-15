@@ -17,12 +17,10 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     
     @IBOutlet weak var eventTableView: UITableView!
     
-    
     // lattitudes and longitutes for 3 events location
     let eindhoven = CLLocationCoordinate2DMake(51.441955, 5.467501)
     let eindhoven2 = CLLocationCoordinate2DMake(51.426622, 5.481357)
     let eindhoven3 = CLLocationCoordinate2DMake(51.441722, 5.445506)
-    
     
     //creating new 3 Event objects
     func CreateNewEvent(){
@@ -52,7 +50,6 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     }
    
     override func viewDidLoad() {
-       
         super.viewDidLoad()
         eventTableView.delegate = self
         eventTableView.dataSource = self
@@ -86,11 +83,9 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let selectedrow = self.eventTableView.indexPathForSelectedRow?.row ?? 0
         if segue.identifier == "openEvent" {
              let newViewController = segue.destination as? EventSingleViewController
-       
-            newViewController?.userChoseEvent = events[selectedrow]
+             newViewController?.userChoseEvent = events[selectedrow]
         }
     }
 }

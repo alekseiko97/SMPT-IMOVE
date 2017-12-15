@@ -50,14 +50,12 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
         }
             workoutTableView.delegate = self
             workoutTableView.dataSource = self
-        
             mapLocation.delegate = self
             manager.delegate = self
             manager.desiredAccuracy = kCLLocationAccuracyBest
             manager.requestAlwaysAuthorization()
             manager.startUpdatingLocation()
             zoomToEvent()
-        
     }
    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        let location = locations[0]
