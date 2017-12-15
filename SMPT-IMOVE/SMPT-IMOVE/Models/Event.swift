@@ -46,7 +46,7 @@ class Event: CustomStringConvertible {
         return self.usersParticipating.count
         
     }
-    
+
     func removeUserFromTheEvent(user:User){
         
     }
@@ -69,6 +69,6 @@ class Event: CustomStringConvertible {
     
 
     var description: String {
-        return "\" name event: \(eventName) details: \(eventDescription) when: \(date) users: \(usersParticipating.count) location: \(locationCoordinates) place: \(locationName) number of exercises: \(workoutExercises.count)\("\n")"
+        return "name event: \(eventName)\("\n")details: \(eventDescription)\("\n")when: \(date)\("\n")users: \(usersParticipating.count)\("\n")location: \(locationCoordinates)\("\n")place: \(locationName)\("\n")number of exercises: \(workoutExercises.count)\("\n")"
     }
 }

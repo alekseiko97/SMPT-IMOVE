@@ -12,7 +12,6 @@ import MapKit
 
 class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate, UITableViewDelegate,UITableViewDataSource {
     
-    
 
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var dateEvent: UILabel!
@@ -26,7 +25,7 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
     var userChoseEvent: Event?
     var workExrc: [Exercise] = []
     
-    //creating instance of exercise to add for an event
+    //creating instance of exercises to add to the event
     var newExercise1 = Exercise(exercName: "Bench exercise", muscleGroup: "muscle", keyPoints: "for example", difficulty: LevelOfDifficulty.Hard)
     var newExercise2 = Exercise(exercName: "Mixed exercise", muscleGroup: "muscle", keyPoints: "for example", difficulty: LevelOfDifficulty.Challenging)
     var newExercise3 = Exercise(exercName: "Breath exercise", muscleGroup: "muscle", keyPoints: "for example", difficulty: LevelOfDifficulty.Easy)
@@ -72,7 +71,6 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
         mapLocation.setRegion(region, animated: true)
     }
 
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
