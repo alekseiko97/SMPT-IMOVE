@@ -10,6 +10,7 @@ import UIKit
 
 class AddEventViewController: UIViewController {
     @IBOutlet weak var tb_DateTime: UITextField!
+    @IBOutlet weak var tb_Description: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

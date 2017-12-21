@@ -847,9 +847,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tb_DateTime" destination="w8I-lO-aTC" id="h3p-yA-grB"/>
+                        <outlet property="tb_Description" destination="HBG-9K-X11" id="7Ag-Fp-Yrc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM6-QQ-Jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nfy-dm-ShX">
+                    <connections>
+                        <outlet property="delegate" destination="efN-ZU-bMG" id="ohq-Ei-bhG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2028" y="-1290.4047976011996"/>
         </scene>
