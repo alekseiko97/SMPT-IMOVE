@@ -31,6 +31,7 @@ extension CLPlacemark {
 }
 class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var tb_descriptionEvent: UITextField!
     @IBOutlet weak var tb_eventName: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tb_DateTime: UITextField!
@@ -62,7 +63,7 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
                 else {
                     let newEvent = Event(
                         name: String(describing: self.tb_eventName.text),
-                        evDescription: "Running and doing exercises",//will be taken from the user input
+                        evDescription:String(describing: self.tb_descriptionEvent.text),
                         date: self.dateTimePicker.date,//taken from the datepicker
                         locCoord:  self.eventCoordinates,
                         locName: placemarks?.first?.compactAddress ?? "Default")
