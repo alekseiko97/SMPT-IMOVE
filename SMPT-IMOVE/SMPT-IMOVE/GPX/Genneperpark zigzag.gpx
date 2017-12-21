@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Endomondo.com" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <author>
+      <name>Jonas Heijerman</name>
+    </author>
+    <link href="http://www.endomondo.com">
+      <text>Endomondo</text>
+    </link>
+    <time>2017-12-14T10:28:32Z</time>
+  </metadata>
+  <trk>
+    <name>Genneperpark zigzag</name>
+    <src>http://www.endomondo.com/</src>
+    <link href="https://www.endomondo.com/routes/1205008">
+      <text>Genneperpark zigzag</text>
+    </link>
+    <type>RUNNING</type>
+    <trkseg>
+      <trkpt lat="51.4236709754754" lon="5.4687237739563"/>
+      <trkpt lat="51.4252230377666" lon="5.470483303070071"/>
+      <trkpt lat="51.4251962785185" lon="5.4713416099548295"/>
+      <trkpt lat="51.425758219437796" lon="5.471856594085691"/>
+      <trkpt lat="51.426186360262" lon="5.471856594085691"/>
+      <trkpt lat="51.427658063750606" lon="5.47383069992065"/>
+      <trkpt lat="51.4291297198398" lon="5.475246906280519"/>
+      <trkpt lat="51.4288353924139" lon="5.4769206047058105"/>
+      <trkpt lat="51.429290261273" lon="5.478165149688719"/>
+      <trkpt lat="51.4305210601872" lon="5.4791951179504395"/>
+      <trkpt lat="51.43118995873451" lon="5.4788088798522905"/>
+      <trkpt lat="51.4314575154113" lon="5.47932386398315"/>
+      <trkpt lat="51.430574572431404" lon="5.479881763458251"/>
+      <trkpt lat="51.429852151846895" lon="5.4796242713928205"/>
+      <trkpt lat="51.429183233713495" lon="5.47902345657349"/>
+      <trkpt lat="51.4285143057869" lon="5.4782509803772"/>
+      <trkpt lat="51.4277918526265" lon="5.47709226608276"/>
+      <trkpt lat="51.426935597052" lon="5.476362705230709"/>
+      <trkpt lat="51.426079325432" lon="5.476362705230709"/>
+      <trkpt lat="51.425490629385706" lon="5.47696352005005"/>
+      <trkpt lat="51.425249796999" lon="5.47799348831177"/>
+      <trkpt lat="51.4248216473999" lon="5.4785084724426305"/>
+      <trkpt lat="51.4248751663192" lon="5.479495525360109"/>
+      <trkpt lat="51.42516951925481" lon="5.4800105094909695"/>
+      <trkpt lat="51.4256779425867" lon="5.479881763458251"/>
+      <trkpt lat="51.4260525666854" lon="5.48035383224487"/>
+      <trkpt lat="51.4260525666854" lon="5.48086881637573"/>
+      <trkpt lat="51.426534221728" lon="5.4811692237854"/>
+      <trkpt lat="51.4270961461944" lon="5.48177003860474"/>
+      <trkpt lat="51.427738337123095" lon="5.48275709152222"/>
+      <trkpt lat="51.427363726844895" lon="5.483572483062741"/>
+      <trkpt lat="51.4266947722806" lon="5.48413038253784"/>
+      <trkpt lat="51.426025807923004" lon="5.483744144439701"/>
+      <trkpt lat="51.425704701552796" lon="5.48271417617798"/>
+      <trkpt lat="51.425276556215806" lon="5.48177003860474"/>
+      <trkpt lat="51.4249554445806" lon="5.480911731719971"/>
+      <trkpt lat="51.424607571096104" lon="5.48052549362183"/>
+      <trkpt lat="51.424580811487594" lon="5.47940969467163"/>
+      <trkpt lat="51.424072375949" lon="5.47902345657349"/>
+      <trkpt lat="51.424447013210106" lon="5.47683477401733"/>
+      <trkpt lat="51.424580811487594" lon="5.47383069992065"/>
+      <trkpt lat="51.424794887916796" lon="5.472414493560789"/>
+      <trkpt lat="51.4236977356167" lon="5.47159910202026"/>
+      <trkpt lat="51.4229484457382" lon="5.47026872634888"/>
+      <trkpt lat="51.422011816113994" lon="5.472028255462651"/>
+      <trkpt lat="51.421021643924696" lon="5.473401546478271"/>
+      <trkpt lat="51.4203525965173" lon="5.4733157157897905"/>
+      <trkpt lat="51.4196835393161" lon="5.47456026077271"/>
+      <trkpt lat="51.421021643924696" lon="5.47902345657349"/>
+      <trkpt lat="51.421449829125606" lon="5.478723049163819"/>
+      <trkpt lat="51.421931532681604" lon="5.480740070343019"/>
+      <trkpt lat="51.421851249108194" lon="5.48146963119507"/>
+      <trkpt lat="51.4196567768243" lon="5.48164129257202"/>
+      <trkpt lat="51.4190412351888" lon="5.48177003860474"/>
+      <trkpt lat="51.4186933166845" lon="5.482499599456791"/>
+      <trkpt lat="51.4168733921209" lon="5.48069715499878"/>
+      <trkpt lat="51.4172213244779" lon="5.4776930809021"/>
+      <trkpt lat="51.4173551439101" lon="5.475246906280519"/>
+      <trkpt lat="51.417087504654" lon="5.47280073165894"/>
+      <trkpt lat="51.416819863830995" lon="5.47026872634888"/>
+      <trkpt lat="51.4170607406422" lon="5.466878414154049"/>
+      <trkpt lat="51.41831863225659" lon="5.46829462051392"/>
+      <trkpt lat="51.419630014316894" lon="5.46936750411987"/>
+      <trkpt lat="51.42086107344009" lon="5.46902418136597"/>
+      <trkpt lat="51.4216371588896" lon="5.4686808586120605"/>
+      <trkpt lat="51.4228681639511" lon="5.469152927398681"/>
+      <trkpt lat="51.423323092212996" lon="5.46958208084106"/>
+      <trkpt lat="51.4236977356167" lon="5.46876668930054"/>
+    </trkseg>
+  </trk>
+</gpx>

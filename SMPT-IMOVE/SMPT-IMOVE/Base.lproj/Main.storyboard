@@ -128,7 +128,7 @@
                                         <connections>
                                             <outlet property="kmLabel" destination="alB-PX-1U5" id="dn6-xI-jOp"/>
                                             <outlet property="routeLabel" destination="XkB-nT-bmz" id="7rZ-Fm-Wgr"/>
-                                            <segue destination="rV7-tK-HCO" kind="show" id="n9d-q0-IRO"/>
+                                            <segue destination="rV7-tK-HCO" kind="show" identifier="routeSegue" id="n9d-q0-IRO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,6 +144,7 @@
                     <navigationItem key="navigationItem" title="Map" id="nOW-bx-sYX"/>
                     <connections>
                         <outlet property="mapView" destination="TyS-0c-jsU" id="Bab-Or-IXF"/>
+                        <outlet property="tableView" destination="lLk-QH-lco" id="ELF-qY-hBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqo-M0-sWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,7 +172,7 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="p49-EW-yTx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="objectCell" id="p49-EW-yTx" customClass="ObjectTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="259" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p49-EW-yTx" id="sD4-qk-ymk">
@@ -189,10 +190,15 @@
                                             <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="objectNameLabel" destination="APU-Dz-3Dg" id="34k-MM-tA6"/>
                                             <segue destination="1RQ-68-NOD" kind="show" id="AgR-Jf-DMV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rV7-tK-HCO" id="Fkl-eG-66F"/>
+                                    <outlet property="delegate" destination="rV7-tK-HCO" id="cs1-LX-kJX"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;km&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Typ-G0-FBf">
                                 <rect key="frame" x="100" y="38" width="48" height="21"/>
@@ -213,7 +219,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cJN-4J-yvg" kind="show" id="fqP-Az-CVM"/>
+                                    <segue destination="cJN-4J-yvg" kind="show" identifier="runSegue" id="fqP-Az-CVM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jow-Nq-oPN">
@@ -232,6 +238,10 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Y7E-3k-nr2"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="DGV-Yh-pEf" id="5tY-Ik-XSy"/>
+                        <segue destination="aDP-VC-qEy" kind="show" identifier="objectVCSegue" id="AdO-if-bYK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbV-bo-6ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +250,7 @@
         <!--Objects-->
         <scene sceneID="5PJ-Tp-xZd">
             <objects>
-                <viewController title="Objects" id="aDP-VC-qEy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="objectVC" title="Objects" id="aDP-VC-qEy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYD-LP-YgT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1950,17 +1960,20 @@
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="-521.28935532233891"/>
         </scene>
-        <!--View Controller-->
+        <!--Run Route View Controller-->
         <scene sceneID="O2H-Uf-hJk">
             <objects>
-                <viewController id="cJN-4J-yvg" sceneMemberID="viewController">
+                <viewController id="cJN-4J-yvg" customClass="RunRouteViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gTR-kc-vSZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-Xj-s4z">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-Xj-s4z">
                                 <rect key="frame" x="16" y="20" width="343" height="285"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cJN-4J-yvg" id="f0S-ps-gjQ"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiW-Gm-4Zu">
                                 <rect key="frame" x="16" y="313" width="43" height="21"/>
@@ -1991,6 +2004,9 @@
                                 <state key="normal" title="RUN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startTapped:" destination="cJN-4J-yvg" eventType="touchUpInside" id="WNN-pe-HtB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmj-5e-B0a">
                                 <rect key="frame" x="226" y="423" width="133" height="60"/>
@@ -2000,23 +2016,27 @@
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopTapped:" destination="cJN-4J-yvg" eventType="touchUpInside" id="TZH-Ur-AJy"/>
+                                    <segue destination="9tZ-zu-Dvq" kind="show" id="ebb-Tl-QQs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Distance&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-PL-mDI">
-                                <rect key="frame" x="97" y="342" width="89" height="21"/>
+                                <rect key="frame" x="97" y="342" width="262" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Pace&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-BJ-5Ge">
-                                <rect key="frame" x="97" y="371" width="59" height="21"/>
+                                <rect key="frame" x="97" y="371" width="262" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Time&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJN-Tp-q5V">
-                                <rect key="frame" x="97" y="313" width="60" height="21"/>
+                                <rect key="frame" x="97" y="313" width="262" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2027,6 +2047,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="h1y-cc-F5O"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="fHW-PL-mDI" id="3M8-mz-dbE"/>
+                        <outlet property="mapView" destination="JMe-Xj-s4z" id="TGM-dC-cOy"/>
+                        <outlet property="paceLabel" destination="e4c-BJ-5Ge" id="8EU-iB-rHD"/>
+                        <outlet property="startButton" destination="m1K-4N-c0c" id="LNU-Cm-iyJ"/>
+                        <outlet property="stopButton" destination="Kmj-5e-B0a" id="DeE-UV-g6N"/>
+                        <outlet property="timeLabel" destination="hJN-Tp-q5V" id="sjR-mn-nQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKv-VT-l2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2051,7 +2079,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="3sk-Fs-OvO"/>
         <segue reference="cPv-SJ-9vF"/>
-        <segue reference="AgR-Jf-DMV"/>
+        <segue reference="e2p-Q2-cw6"/>
+        <segue reference="ebb-Tl-QQs"/>
+        <segue reference="AdO-if-bYK"/>
         <segue reference="KFN-bc-SJf"/>
     </inferredMetricsTieBreakers>
 </document>

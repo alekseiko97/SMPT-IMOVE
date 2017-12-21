@@ -9,9 +9,10 @@
 import UIKit
 import MapKit
 
-class RouteViewController: UIViewController, MKMapViewDelegate {
+class RouteViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Outlets
+
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var kmLabel: UILabel!
     
@@ -22,13 +23,11 @@ class RouteViewController: UIViewController, MKMapViewDelegate {
         
         mapView.delegate = self
         mapView.add((route.trackDrawer.getPolyline())!)
+        mapView.addAnnotations(route.objects)
         zoomToRoute()
-        kmLabel.text = String(describing: route.kmRoute)
+        //kmLabel.text = String(describing: route.kmRoute)
     }
     
-//    @IBAction func walkButton(_ sender: Any) {
-//        //performSegue(withIdentifier: "startRun", sender: self)
-//    }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let polyline = overlay as? MKPolyline else {
@@ -46,5 +45,67 @@ class RouteViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(region, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "runSegue"
+        {
+            let destVC = segue.destination as! RunRouteViewController
+            destVC.route = self.route
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? Object {
+            let identifier = "Object"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+                as? MKPinAnnotationView {
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            }
+            
+            
+            return view
+        }
+        return nil
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "objectCell", for: indexPath) as? ObjectTableViewCell else {
+            fatalError("The dequeued cell is not an instance of TableViewCell.")
+        }
+        
+        //cell.objectNameLabel.text = route
+        cell.objectNameLabel.text = route.objects[indexPath.row].title
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return route.objects.count
+    }
 
+    // annotation callout opens this mapItem in Maps app
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "objectVC")
+//        self.present(vc, animated:true, completion:nil)
+//        let location = view.annotation as! Object
+//        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+//        location.mapItem().openInMaps(launchOptions: launchOptions)
+        
+        performSegue(withIdentifier: "objectVCSegue", sender: self)
+
+    }
+    
 }
+
+

@@ -14,6 +14,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
    
     //MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
     
     // Location manager
     let manager = CLLocationManager()
@@ -28,7 +29,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         loadPOI()
-        routes.append(Route(nameR: "TestRoute", kmR: 7.2))
+        addRoutes()
+        
+    }
+    
+    func addRoutes()
+    {
+        let testRoute = Route(identifier: "1", nameR: "TestRoute", kmR: 7.2)
+        testRoute.addObjectToRoute(object: Object(title: "Bench", coordinate: CLLocationCoordinate2D(latitude: 51.452319, longitude: 5.497161)))
+        testRoute.addObjectToRoute(object: Object(title: "Treetrunk", coordinate: CLLocationCoordinate2D(latitude: 51.452095, longitude: 5.498478)))
+        routes.append(testRoute)
+        routes.append(Route(identifier: "2", nameR: "Glorieuxpark", kmR: 4.82))
+        routes.append(Route(identifier: "3", nameR: "Genneperpark zigzag", kmR: 7.58))
     }
     
     func loadPOI()
@@ -89,19 +101,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         return renderer
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedrow = indexPath.row
-        performSegue(withIdentifier: "routeSegue", sender: self)
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "routeSegue"
         {
-           
+            if let indexPath = tableView.indexPathForSelectedRow
+            {
             let destVC = segue.destination as! RouteViewController
-            destVC.route = routes[selectedrow]
-               
+            destVC.route = routes[indexPath.row]
+            }
         }
         
     }

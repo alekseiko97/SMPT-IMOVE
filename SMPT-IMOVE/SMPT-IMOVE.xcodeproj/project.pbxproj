@@ -20,6 +20,7 @@
 		C1A099C01FD044CB00C2A2EE /* LevelOfDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */; };
 		C1A099C21FD045A700C2A2EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099C11FD045A700C2A2EE /* Event.swift */; };
 		C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B9174C1FD169100021FE3E /* EventViewController.swift */; };
+		F50DE6C01FEBB20D001BB617 /* ObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DE6BF1FEBB20D001BB617 /* ObjectTableViewCell.swift */; };
 		F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DB9E1FD14465005B785C /* WorkoutViewController.swift */; };
 		F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */; };
 		F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */; };
@@ -33,6 +34,10 @@
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
 		F54B67541FD16919007CFD70 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67531FD16919007CFD70 /* POI.swift */; };
 		F54B67561FD17AE4007CFD70 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67551FD17AE4007CFD70 /* VCMapView.swift */; };
+		F5510C2C1FE28A88005CECEF /* Glorieuxpark.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F5510C2A1FE28A87005CECEF /* Glorieuxpark.gpx */; };
+		F5510C2D1FE28A88005CECEF /* Genneperpark zigzag.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F5510C2B1FE28A87005CECEF /* Genneperpark zigzag.gpx */; };
+		F5510C2F1FE2B56D005CECEF /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F5510C2E1FE2B56D005CECEF /* Location.gpx */; };
+		F5510C311FE3C031005CECEF /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5510C301FE3C031005CECEF /* Object.swift */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
 		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
 		F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56825721FCFFBF500AA7232 /* Assets.xcassets */; };
@@ -42,10 +47,10 @@
 		F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568259C1FD0337B00AA7232 /* FeedViewController.swift */; };
 		F57283761FDAB48E0072A9CF /* AddRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283751FDAB48E0072A9CF /* AddRouteViewController.swift */; };
 		F57283781FDABF670072A9CF /* RunRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283771FDABF670072A9CF /* RunRouteViewController.swift */; };
-		F572837A1FDAC0890072A9CF /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283791FDAC0880072A9CF /* FormatDisplay.swift */; };
-		F572837D1FDAC0D60072A9CF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F572837B1FDAC0D60072A9CF /* Model.xcdatamodeld */; };
-		F57283821FDAC8850072A9CF /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283801FDAC8840072A9CF /* UnitExtensions.swift */; };
-		F57283831FDAC8850072A9CF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283811FDAC8840072A9CF /* CoreDataStack.swift */; };
+		F57283931FDADC240072A9CF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F57283911FDADC230072A9CF /* Model.xcdatamodeld */; };
+		F57283971FDADC790072A9CF /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283941FDADC760072A9CF /* FormatDisplay.swift */; };
+		F57283981FDADC790072A9CF /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283951FDADC770072A9CF /* UnitExtensions.swift */; };
+		F57283991FDADC790072A9CF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283961FDADC780072A9CF /* CoreDataStack.swift */; };
 		F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574A7511FD9493E0026EFBE /* TrackDrawer.swift */; };
 		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 		F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */; };
@@ -82,6 +87,7 @@
 		C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOfDifficulty.swift; sourceTree = "<group>"; };
 		C1A099C11FD045A700C2A2EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C1B9174C1FD169100021FE3E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		F50DE6BF1FEBB20D001BB617 /* ObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewCell.swift; sourceTree = "<group>"; };
 		F519DB9E1FD14465005B785C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +103,10 @@
 		F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
 		F54B67531FD16919007CFD70 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		F54B67551FD17AE4007CFD70 /* VCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		F5510C2A1FE28A87005CECEF /* Glorieuxpark.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Glorieuxpark.gpx; sourceTree = "<group>"; };
+		F5510C2B1FE28A87005CECEF /* Genneperpark zigzag.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Genneperpark zigzag.gpx"; sourceTree = "<group>"; };
+		F5510C2E1FE2B56D005CECEF /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		F5510C301FE3C031005CECEF /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F56825701FCFFBF500AA7232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +126,10 @@
 		F572837C1FDAC0D60072A9CF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F57283801FDAC8840072A9CF /* UnitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 		F57283811FDAC8840072A9CF /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F57283921FDADC230072A9CF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F57283941FDADC760072A9CF /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		F57283951FDADC770072A9CF /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
+		F57283961FDADC780072A9CF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F574A7511FD9493E0026EFBE /* TrackDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDrawer.swift; sourceTree = "<group>"; };
 		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +170,7 @@
 				F519DBA71FD18708005B785C /* WeightInTrainingJournalTableViewCell.swift */,
 				F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */,
 				C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */,
+				F50DE6BF1FEBB20D001BB617 /* ObjectTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -163,14 +178,11 @@
 		F52A001A1FD9680100B38CE1 /* GPX */ = {
 			isa = PBXGroup;
 			children = (
+				F5510C2B1FE28A87005CECEF /* Genneperpark zigzag.gpx */,
+				F5510C2A1FE28A87005CECEF /* Glorieuxpark.gpx */,
 				F52A00201FD972CA00B38CE1 /* TestRoute.gpx */,
 				F52A001C1FD9708E00B38CE1 /* Eindhoven.gpx */,
-				F52A00221FD9797800B38CE1 /* Waypoint.gpx */,
-				F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */,
-				F52A00241FD9799F00B38CE1 /* Route.gpx */,
-				F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */,
-				F52A00261FD979C800B38CE1 /* Track.gpx */,
-				F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */,
+				F5510C2E1FE2B56D005CECEF /* Location.gpx */,
 			);
 			path = GPX;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 				F568258A1FCFFBF500AA7232 /* SMPT-IMOVEUITests */,
 				F56825691FCFFBF500AA7232 /* Products */,
 				F54B674B1FD151B2007CFD70 /* Frameworks */,
+				F572838B1FDAD79E0072A9CF /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +221,7 @@
 		F568256A1FCFFBF500AA7232 /* SMPT-IMOVE */ = {
 			isa = PBXGroup;
 			children = (
+				F572839A1FDADCA90072A9CF /* CoreData */,
 				F5F9AA871FDABFAC0053B8A6 /* Firebase */,
 				F5F9AA841FDABEFF0053B8A6 /* Enums */,
 				F5F9AA831FDABEC90053B8A6 /* Models */,
@@ -250,15 +264,37 @@
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
 				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F5333B261FD9884C004BE914 /* RouteViewController.swift */,
+				F57283771FDABF670072A9CF /* RunRouteViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 				F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */,
 				F57283751FDAB48E0072A9CF /* AddRouteViewController.swift */,
-				F57283771FDABF670072A9CF /* RunRouteViewController.swift */,
 				C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */,
 				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F572838B1FDAD79E0072A9CF /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				F57283811FDAC8840072A9CF /* CoreDataStack.swift */,
+				F57283791FDAC0880072A9CF /* FormatDisplay.swift */,
+				F572837B1FDAC0D60072A9CF /* Model.xcdatamodeld */,
+				F57283801FDAC8840072A9CF /* UnitExtensions.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		F572839A1FDADCA90072A9CF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F57283961FDADC780072A9CF /* CoreDataStack.swift */,
+				F57283941FDADC760072A9CF /* FormatDisplay.swift */,
+				F57283951FDADC770072A9CF /* UnitExtensions.swift */,
+				F57283911FDADC230072A9CF /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		F5F9AA821FDABE5D0053B8A6 /* MapViews */ = {
@@ -281,6 +317,7 @@
 				C1A099BD1FD043DB00C2A2EE /* Exercise.swift */,
 				C142AB501FD1455F00B6478F /* Quote.swift */,
 				C1A099C11FD045A700C2A2EE /* Event.swift */,
+				F5510C301FE3C031005CECEF /* Object.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,7 +466,10 @@
 			files = (
 				F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */,
 				F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */,
+				F5510C2F1FE2B56D005CECEF /* Location.gpx in Resources */,
+				F5510C2C1FE28A88005CECEF /* Glorieuxpark.gpx in Resources */,
 				F52A001D1FD9708F00B38CE1 /* Eindhoven.gpx in Resources */,
+				F5510C2D1FE28A88005CECEF /* Genneperpark zigzag.gpx in Resources */,
 				F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */,
 				F52A00211FD972CA00B38CE1 /* TestRoute.gpx in Resources */,
 			);
@@ -456,31 +496,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57283831FDAC8850072A9CF /* CoreDataStack.swift in Sources */,
+				F57283971FDADC790072A9CF /* FormatDisplay.swift in Sources */,
+				F57283981FDADC790072A9CF /* UnitExtensions.swift in Sources */,
+				F57283991FDADC790072A9CF /* CoreDataStack.swift in Sources */,
+				F57283931FDADC240072A9CF /* Model.xcdatamodeld in Sources */,
 				C1955B3A1FD94F8500FAEA2B /* EventTableViewCell.swift in Sources */,
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */,
 				F57283781FDABF670072A9CF /* RunRouteViewController.swift in Sources */,
-				F568256E1FCFFBF500AA7232 /* ViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
+				F5510C311FE3C031005CECEF /* Object.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
 				C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */,
 				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
+				F50DE6C01FEBB20D001BB617 /* ObjectTableViewCell.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */,
-				F572837A1FDAC0890072A9CF /* FormatDisplay.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
 				C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */,
 				C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */,
-				F572837D1FDAC0D60072A9CF /* Model.xcdatamodeld in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
 				F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */,
-				F57283821FDAC8850072A9CF /* UnitExtensions.swift in Sources */,
 				C12689EB1FDA7A3D009B4B49 /* ExerciseTableViewController.swift in Sources */,
 				C142AB4B1FD141DD00B6478F /* Route.swift in Sources */,
 				C1A099C21FD045A700C2A2EE /* Event.swift in Sources */,
@@ -801,6 +842,16 @@
 				F572837C1FDAC0D60072A9CF /* Model.xcdatamodel */,
 			);
 			currentVersion = F572837C1FDAC0D60072A9CF /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F57283911FDADC230072A9CF /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F57283921FDADC230072A9CF /* Model.xcdatamodel */,
+			);
+			currentVersion = F57283921FDADC230072A9CF /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

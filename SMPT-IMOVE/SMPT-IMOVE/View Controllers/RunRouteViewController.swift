@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
+class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -19,7 +20,10 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    
     private var run: Run!
+    var canStartRun: Bool = false
+    var route: Route!
     private var timer: Timer?
     private var seconds = 0
     private let locationManager = CLLocationManager()
@@ -30,13 +34,22 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.mapView.delegate = self
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        mapView.add(route.trackDrawer.getPolyline()!)
+        makeRadiusOverlay()
+        locationManager.startMonitoring(for: makeRegion())
+        DispatchQueue.main.async {
+            self.locationManager.startUpdatingLocation()
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        timer?.invalidate()
+        
         locationManager.stopUpdatingLocation()
     }
     
@@ -48,31 +61,90 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
             if let lastLocation = locationList.last {
                 let delta = newLocation.distance(from: lastLocation)
                 distance = distance + Measurement(value: delta, unit: UnitLength.meters)
-                let coordinates = [lastLocation.coordinate, newLocation.coordinate]
-                mapView.add(MKPolyline(coordinates: coordinates, count: 2))
+                //let coordinates = [lastLocation.coordinate, newLocation.coordinate]
+               // mapView.add(MKPolyline(coordinates: coordinates, count: 2))
                 let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500)
                 mapView.setRegion(region, animated: true)
+                self.mapView.showsUserLocation = true
             }
             
             locationList.append(newLocation)
+        }
+    }
+    
+    func makeRegion() -> CLCircularRegion
+    {
+        let region = CLCircularRegion(center: (route.trackDrawer.getPolyline()?.coordinate)!, radius: 500, identifier: route.identifier)
+        region.notifyOnEntry = true
+        region.notifyOnExit = true
+        return region
+    }
+    
+    func makeRadiusOverlay()
+    {
+        self.mapView.add(MKCircle(center: makeRegion().center, radius: makeRegion().radius))
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion)
+    {
+       // canStartRun = true
+        print("enter")
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion)
+    {
+       // canStartRun = false
+        print("exit")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        if state == .inside
+        {
+            canStartRun = true
+        }
+        if state == .outside
+        {
+            canStartRun = false
+            
         }
     }
 
     
     @IBAction func startTapped(_ sender: UIButton)
     {
-        startRun()
+        if canStartRun == true
+        {
+            startRun()
+        }
+        
     }
+    
     
     @IBAction func stopTapped(_ sender: UIButton)
     {
-        stopRun()
+        let alertController = UIAlertController(title: "End run?",
+                                                message: "Do you wish to end your run?",
+                                                preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alertController.addAction(UIAlertAction(title: "Save", style: .default) { _ in
+            self.stopRun()
+            self.saveRun()
+            self.performSegue(withIdentifier: '', sender: nil)
+        })
+        alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) { _ in
+            self.stopRun()
+            _ = self.navigationController?.popViewController(animated: true)
+        })
+        
+        present(alertController, animated: true)
     }
+    
     
     private func startRun() {
         startButton.isHidden = true
         stopButton.isHidden = false
-        mapView.removeOverlays(mapView.overlays)
+        //mapView.removeOverlays(mapView.overlays)
         
         seconds = 0
         distance = Measurement(value: 0, unit: UnitLength.meters)
@@ -87,7 +159,27 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
     private func stopRun() {
         startButton.isHidden = false
         stopButton.isHidden = true
+        timer?.invalidate()
         locationManager.stopUpdatingLocation()
+    }
+    
+    private func saveRun() {
+        let newRun = Run(context: CoreDataStack.context)
+        newRun.distance = distance.value
+        newRun.duration = Int16(seconds)
+        newRun.timestamp = Date()
+        
+        for location in locationList {
+            let locationObject = Location(context: CoreDataStack.context)
+            locationObject.timestamp = location.timestamp
+            locationObject.latitude = location.coordinate.latitude
+            locationObject.longitude = location.coordinate.longitude
+            newRun.addToLocations(locationObject)
+        }
+        
+        CoreDataStack.saveContext()
+        
+        run = newRun
     }
     
     func eachSecond() {
@@ -102,9 +194,9 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
                                                seconds: seconds,
                                                outputUnit: UnitSpeed.minutesPerMile)
         
-        distanceLabel.text = "Distance:  \(formattedDistance)"
-        timeLabel.text = "Time:  \(formattedTime)"
-        paceLabel.text = "Pace:  \(formattedPace)"
+        distanceLabel.text = formattedDistance
+        timeLabel.text = formattedTime
+        paceLabel.text = formattedPace
     }
     
     private func startLocationUpdates() {
@@ -113,5 +205,18 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.distanceFilter = 10
         locationManager.startUpdatingLocation()
     }
+    
+
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let polyline = overlay as? MKPolyline else {
+            return MKOverlayRenderer(overlay: overlay)
+        }
+        let renderer = MKPolylineRenderer(polyline: polyline)
+        renderer.strokeColor = .black
+        renderer.lineWidth = 3
+        return renderer
+    }
+    
     
 }

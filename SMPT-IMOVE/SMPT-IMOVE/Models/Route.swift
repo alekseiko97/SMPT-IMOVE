@@ -11,20 +11,23 @@ import MapKit
 import UIKit
 class Route {
     
+    var identifier: String
     var nameRoute: String
     var kmRoute: Double
     var trackDrawer: TrackDrawer
-    var events: [Event]
+    var objects: [Object]
     
-    init(nameR: String, kmR:Double){
+    init(identifier: String, nameR: String, kmR:Double){
+        self.identifier = identifier
         self.nameRoute = nameR
         self.kmRoute = kmR
         self.trackDrawer = TrackDrawer(fileName: nameR)
-        self.events = []
+        self.objects = []
     }
     
-
-    
-    
+    func addObjectToRoute(object: Object)
+    {
+        self.objects.append(object)
+    }
     
 }
