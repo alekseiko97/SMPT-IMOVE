@@ -48,7 +48,6 @@ class WeatherGetter {
                 catch let jsonError as NSError {
                     self.delegate.didNotGetWeather(error: jsonError)
                 }
-                
             }
         }
         dataTask.resume()
@@ -58,12 +57,10 @@ class WeatherGetter {
 struct Weather {
     
     let dateAndTime: NSDate
-    
     let city: String
     let country: String
     let longitude: Double
     let latitude: Double
-    
     let weatherID: Int
     let mainWeather: String
     let weatherDescription: String
@@ -86,7 +83,6 @@ struct Weather {
     let windSpeed: Double
     let windDirection: Double?
     let rainfallInLast3Hours: Double?
-    
     let sunrise: NSDate
     let sunset: NSDate
     
