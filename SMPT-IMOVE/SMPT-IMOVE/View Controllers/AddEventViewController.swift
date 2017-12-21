@@ -7,32 +7,140 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class AddEventViewController: UIViewController {
-    @IBOutlet weak var tb_DateTime: UITextField!
+//for showing address when a user chooses a location on the map
+extension CLPlacemark {
+    var compactAddress: String? {
+        if let name = name {
+            var result = name
+            if let street = thoroughfare {
+                result += ", \(street)"
+            }
+            if let city = locality {
+                result += ", \(city)"
+            }
+            if let country = country {
+                result += ", \(country)"
+            }
+            return result
+        }
+        return nil
+    }
+}
+class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var tb_descriptionEvent: UITextField!
+    @IBOutlet weak var tb_eventName: UITextField!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tb_DateTime: UITextField!
+    @IBOutlet weak var tb_workout: UITextField!
+    let dateTimePicker : UIDatePicker = UIDatePicker()
+    
+    lazy var geocoder = CLGeocoder()
+    var eventCoordinates = CLLocationCoordinate2DMake(0,0)
+    var eventsList: [Event] = []
+    let manager = CLLocationManager()
+    
+    @IBAction func addEvent(_ sender: Any) {
+        let lat = eventCoordinates.latitude
+        let lng = eventCoordinates.longitude
+        
+        // Create Location
+        let location = CLLocation(latitude: lat, longitude: lng)
+        
+        // Geocode Location
+        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            // Process Response
+            if let error = error {
+                print("Unable to Reverse Geocode Location (\(error))")
+            } else {
+               // print(#function, placemarks?.first?.compactAddress ?? "Default")
+                if (self.tb_eventName.text?.isEmpty ?? true)!  {
+                    self.createAlert(title: "Alert", message: "Please fill in all the fields!")
+                }
+                else {
+                    let newEvent = Event(
+                        name: String(describing: self.tb_eventName.text),
+                        evDescription:String(describing: self.tb_descriptionEvent.text),
+                        date: self.dateTimePicker.date,//taken from the datepicker
+                        locCoord:  self.eventCoordinates,
+                        locName: placemarks?.first?.compactAddress ?? "Default")
+                    self.eventsList.append(newEvent)
+                    print(newEvent.description)
+                }
+            }
+        }
+    }
+    //if the field event name is empty,an alert message is shown
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+        alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert,animated:true, completion: nil)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
+        mapView.setRegion(region, animated: true)
+        self.mapView.showsUserLocation = true
+    }
+    
+    @IBAction func revealRegionDetailsWithLongPressOnMap(sender: UITapGestureRecognizer) {
+        let touchLocation = sender.location(in: mapView)
+        let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
+        eventCoordinates = CLLocationCoordinate2DMake(locationCoordinate.latitude, locationCoordinate.longitude)
+        
+        //inserts all annotations, removes the previous and takes only the last 
+        for annotation in mapView.annotations {
+            mapView.removeAnnotation(annotation)
+        }
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: eventCoordinates.latitude, longitude: eventCoordinates.longitude)
+        mapView.addAnnotation(annotation)
+    }
+
+    func createDatePicker(){
+        
+        dateTimePicker.datePickerMode = .dateAndTime
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let donebutton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([donebutton], animated: false)
+        tb_DateTime.inputAccessoryView = toolbar
+        tb_DateTime.inputView = dateTimePicker
+    }
+
+    
+    @objc func donePressed(){
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = .short
+        dateformatter.timeStyle = .short
+        tb_DateTime.text = dateformatter.string(from: dateTimePicker.date)
+        self.view.endEditing(true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateTimePicker : UIDatePicker = UIDatePicker()
-        dateTimePicker.datePickerMode = UIDatePickerMode.dateAndTime
-        tb_DateTime.inputView = dateTimePicker
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        createDatePicker()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
 
+    func handleGesture(gestureRecognizer:UIGestureRecognizer) {
+       let touchPoint = gestureRecognizer.location(in: self.mapView)
+       let location = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
+       print("\(location.latitude), \(location.longitude)")
+    }
 }

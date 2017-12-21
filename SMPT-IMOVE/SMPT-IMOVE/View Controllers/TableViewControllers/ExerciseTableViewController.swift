@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  ExerciseTableViewController.swift
 //  SMPT-IMOVE
 //
-//  Created by Fhict on 30/11/2017.
+//  Created by Natalya Suslova on 08/12/2017.
 //  Copyright © 2017 Fhict. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ExerciseTableViewController: UITableViewController {
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - Table view data source
 
+   
+
+  
 }
-

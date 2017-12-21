@@ -8,12 +8,10 @@
 
 import Foundation
 import UIKit
+
 enum Object_Exercise {
-    
     case Bench
     case Treetrunk
     case Bar
-    
-    
 }
 
