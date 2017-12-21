@@ -406,6 +406,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="mapView" destination="iIc-Zv-RCR" id="SSd-K7-MJM"/>
                                             <segue destination="pEx-zt-b4q" kind="show" identifier="mapSegue" id="eq2-PC-33k"/>
                                         </connections>
                                     </tableViewCell>
