@@ -33,11 +33,13 @@ class AddWeightViewController: UIViewController {
             weight = Double(tb_NewWeight.text!)!
             weight += (Double(tb_NewWeightDecimal.text!)! / 10)
             print(weight)
+            self.navigationController?.popViewController(animated: true)
         }
         else if (tb_NewWeight.text! != "") {
             var weight : Double
             weight = Double(tb_NewWeight.text!)!
             print(weight)
+            self.navigationController?.popViewController(animated: true)
         }
         else { print("Stop that you stupid") }
     }
