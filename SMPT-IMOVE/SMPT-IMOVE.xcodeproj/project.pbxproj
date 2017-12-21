@@ -40,6 +40,9 @@
 		F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288311FE284BF00EED68B /* WeightViewController.swift */; };
 		F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */; };
 		F53288741FEBB31C00EED68B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F53288731FEBB31C00EED68B /* GoogleService-Info.plist */; };
+		F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */; };
+		F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288771FEBBCF200EED68B /* UserFirebase.swift */; };
+		F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288791FEBBF2900EED68B /* Firebase.swift */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
@@ -113,6 +116,9 @@
 		F53288311FE284BF00EED68B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
 		F53288731FEBB31C00EED68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
+		F53288771FEBBCF200EED68B /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
+		F53288791FEBBF2900EED68B /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -295,6 +301,7 @@
 				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
 				F53288311FE284BF00EED68B /* WeightViewController.swift */,
 				F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */,
+				F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -344,6 +351,8 @@
 		F5F9AA871FDABFAC0053B8A6 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				F53288771FEBBCF200EED68B /* UserFirebase.swift */,
+				F53288791FEBBF2900EED68B /* Firebase.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -673,16 +682,19 @@
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
 				C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */,
+				F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */,
 				F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */,
 				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
+				F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
+				F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */,
 				C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */,
 				C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
