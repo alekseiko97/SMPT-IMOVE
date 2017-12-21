@@ -1,0 +1,32 @@
+diff --cc SMPT-IMOVE/SMPT-IMOVE.xcodeproj/project.pbxproj
+index 11d3c1c,91a9089..0000000
+--- a/SMPT-IMOVE/SMPT-IMOVE.xcodeproj/project.pbxproj
++++ b/SMPT-IMOVE/SMPT-IMOVE.xcodeproj/project.pbxproj
+@@@ -36,7 -33,9 +36,13 @@@
+  		F52A00291FD97A0700B38CE1 /* Waypoint_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */; };
+  		F52A002B1FD97A1B00B38CE1 /* Route_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */; };
+  		F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */; };
+++<<<<<<< HEAD
+ +		F54454D61FE3E3C8007047B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F54454D51FE3E3C8007047B9 /* GoogleService-Info.plist */; };
+++=======
++ 		F53288301FE2802700EED68B /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532882F1FE2802700EED68B /* Weight.swift */; };
++ 		F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288311FE284BF00EED68B /* WeightViewController.swift */; };
++ 		F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */; };
+++>>>>>>> e9914ab00291758e9c1aebf4cb8059af84b61e1f
+  		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
+  		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
+  		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
+@@@ -107,7 -97,9 +113,13 @@@
+  		F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Waypoint_u.gpx; sourceTree = "<group>"; };
+  		F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Route_u.gpx; sourceTree = "<group>"; };
+  		F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Track_u.gpx; sourceTree = "<group>"; };
+++<<<<<<< HEAD
+ +		F54454D51FE3E3C8007047B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+++=======
++ 		F532882F1FE2802700EED68B /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
++ 		F53288311FE284BF00EED68B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
++ 		F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
+++>>>>>>> e9914ab00291758e9c1aebf4cb8059af84b61e1f
+  		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+  		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+  		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
