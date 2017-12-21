@@ -1,0 +1,123 @@
+    1  git pull
+    2  git pull origin master
+    3  git pull origin master
+    4  git status
+    5  git pull origin master
+    6  git pull origin master
+    7  git branch --set-upstream-to=origin/master
+    8  git status
+    9  git pull
+   10  ls
+   11  cd Documents/Emma/TrainGame/WebTry/
+   12  pot init
+   13  pod init
+   14  /Users/fhict bujk
+   15  j
+   16  /Users/fhict hvbvb
+   17  /Users/fhict jncd
+   18  uvj
+   19  bj
+   20  jvvk
+   21  man vin
+   22  vin
+   23  man vi
+   24  cd Documents/Emma/Proftaak/Git/SMPT-IMOVE/firebase\ try/
+   25  ls
+   26  cd Firebase\ try/
+   27  ls
+   28  pod install
+   29  cd Documents/Emma/Proftaak/Git/SMPT-IMOVE/git status
+   30  cd Documents/Emma/Proftaak/Git/SMPT-IMOVE/
+   31  git status
+   32  git reset HEAD "firebase try/Firebase try/Firebase try/Assets.xcassets/AppIcon.appiconset/Contents.json"
+   33  git branch
+   34  git pull origin develop
+   35  git status
+   36  git add .
+   37  git commit -m "stuff went away so now commiting in small steps in hope it will work."
+   38  git push origin developEmma
+   39  git pull
+   40  git pull origin develop
+   41  git status
+   42  git add .
+   43  git commit -m "add user"
+   44  git push origin developEmma
+   45  git status
+   46  git pull developEmma
+   47  git pull origin developEmma
+   48  git status
+   49  git fetch --all
+   50  git reset --hard origin/developEmma
+   51  git pull origin develop
+   52  git commit -m "iets leuks :D"
+   53  git status
+   54  git add .
+   55  git commit -m "you can add a person :D"
+   56  git push origin developEmma
+   57  git pull origin develop
+   58  git pull -origin develop
+   59  git pull origin develop
+   60  git status
+   61  git add .
+   62  git commit -m "logging works in the proef of concept"
+   63  git push origin developEmma
+   64  git pull origin develop
+   65  git reset --hard origin/develop
+   66  git reset --hard origin/develop
+   67  git pull -origin develop
+   68  git pull origin develop
+   69  git status
+   70  git add .
+   71  git commit -m "Just put the firebase in the project. Do remember to open the .xcworkspace file and not the .xcodeproj file. Or it will not compile"
+   72  git push origin developEmma
+   73  git pull origin developEmma
+   74  git push origin developEmma
+   75  git pull origin developEmma
+   76  git diff
+   77  git reset --hard origin/develop
+   78  git pull origin developEmma
+   79  git reset --hard origin/develop
+   80  git reset --hard origin/develop
+   81  git add .
+   82  git commit -m "hopefully the right xcode project"
+   83  git status
+   84  git push origin developEmma
+   85  git branch
+   86  git pull origin developEmma
+   87  git status
+   88  git add .
+   89  git commit -m "trying to get the right main project"
+   90  git push origin developEmma
+   91  git reset --hard origin/develop
+   92  git status
+   93  man git push
+   94  git log
+   95  git pull origin developEmma
+   96  git reset --soft origin/develop
+   97  git status
+   98  git status
+   99  git add .
+  100  git commit -m "some firebase stuff"
+  101  git push origin developEmma
+  102  git pull origin developEmma
+  103  git status
+  104  git reset --soft origin/develop
+  105  git status
+  106  git reset --hard origin/develop
+  107  git add .
+  108  git commit -m "try"
+  109  git status
+  110  git status
+  111  cat try.txt
+  112  touch try.txt
+  113  git status
+  114  git add . ]
+  115  git add . ]
+  116  git add . 
+  117  git commit -, "just trying something"
+  118  git commit -m "just trying something"
+  119  git push origin developEmma
+  120  git --force push origin developEmma
+  121  git push --force origin developEmma
+  122  git status
+  123  history > commandHistory.txt
