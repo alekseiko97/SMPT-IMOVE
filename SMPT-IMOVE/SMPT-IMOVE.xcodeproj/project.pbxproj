@@ -13,6 +13,7 @@
 		C142AB4D1FD142AC00B6478F /* TrainingJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */; };
 		C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4E1FD144F300B6478F /* Object_Exercise.swift */; };
 		C142AB511FD1455F00B6478F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB501FD1455F00B6478F /* Quote.swift */; };
+		C19077141FEBD42A007EB92D /* rateExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19077131FEBD42A007EB92D /* rateExerciseTableViewCell.swift */; };
 		C1955B3A1FD94F8500FAEA2B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */; };
 		C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */; };
 		C1A099BC1FD0363400C2A2EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099BB1FD0363400C2A2EE /* User.swift */; };
@@ -77,6 +78,7 @@
 		C142AB4C1FD142AC00B6478F /* TrainingJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingJournal.swift; sourceTree = "<group>"; };
 		C142AB4E1FD144F300B6478F /* Object_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object_Exercise.swift; sourceTree = "<group>"; };
 		C142AB501FD1455F00B6478F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		C19077131FEBD42A007EB92D /* rateExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rateExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSingleViewController.swift; sourceTree = "<group>"; };
 		C1A099BB1FD0363400C2A2EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
 				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
+				C19077131FEBD42A007EB92D /* rateExerciseTableViewCell.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 				F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */,
 				C1955B3B1FD95BE400FAEA2B /* EventSingleViewController.swift */,
@@ -479,6 +482,7 @@
 				F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
+				C19077141FEBD42A007EB92D /* rateExerciseTableViewCell.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
