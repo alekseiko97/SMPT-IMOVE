@@ -89,7 +89,7 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
         self.mapView.showsUserLocation = true
     }
     
-    @IBAction func revealRegionDetailsWithLongPressOnMap(sender: UITapGestureRecognizer) {
+    @IBAction func addPlaceToTheMap(sender: UILongPressGestureRecognizer) {
         let touchLocation = sender.location(in: mapView)
         let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
         eventCoordinates = CLLocationCoordinate2DMake(locationCoordinate.latitude, locationCoordinate.longitude)
@@ -132,6 +132,9 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
+        
+       
+        
     }
     
     override func didReceiveMemoryWarning() {

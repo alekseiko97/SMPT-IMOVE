@@ -770,9 +770,6 @@
                                 <rect key="frame" x="16" y="136" width="343" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="yfb-zv-ViJ" appends="YES" id="YjB-2O-sl0"/>
-                                </connections>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4S-AX-hAL">
                                 <rect key="frame" x="16" y="398" width="287" height="30"/>
@@ -857,15 +854,23 @@
                     <connections>
                         <outlet property="mapView" destination="efN-ZU-bMG" id="pMO-BX-1TG"/>
                         <outlet property="tb_DateTime" destination="w8I-lO-aTC" id="h3p-yA-grB"/>
+                        <outlet property="tb_descriptionEvent" destination="HBG-9K-X11" id="JCw-Kl-Bx3"/>
                         <outlet property="tb_eventName" destination="zBL-91-psY" id="Xmk-SS-mv7"/>
+                        <outlet property="tb_workout" destination="F4S-AX-hAL" id="dao-CP-CZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM6-QQ-Jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yfb-zv-ViJ">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="V9j-Xu-DLH">
                     <connections>
-                        <action selector="revealRegionDetailsWithLongPressOnMapWithSender:" destination="s67-eT-hVD" id="MpK-TD-Zw7"/>
+                        <action selector="addPlaceToTheMapWithSender:" destination="s67-eT-hVD" id="EAn-DH-SOo"/>
+                        <outlet property="delegate" destination="efN-ZU-bMG" id="VSc-x5-tS0"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="x90-rl-XcQ">
+                    <connections>
+                        <outlet property="delegate" destination="efN-ZU-bMG" id="RjW-Hw-6ow"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2028" y="-1290.4047976011996"/>
         </scene>
