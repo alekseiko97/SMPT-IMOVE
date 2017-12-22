@@ -8,28 +8,39 @@
 
 import UIKit
 
-class WorkoutViewController: UIViewController {
-   
+class WorkoutViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    //example exercises,real execises will be added from database
+    var exercises: [String] = ["exrs 1","exrs 2","exrs 3","exrs 4","exrs 5","exrs 6","exrs 7","exrs 8","exrs 9","exrs 10","exrs 11", "exrs 12"]
+    
     @IBOutlet weak var workoutTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        workoutTableView.delegate = self
+        workoutTableView.dataSource = self
         // Do any additional setup after loading the view.
-    }
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     var selectedrow: Int = 0
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return exercises.count
+    }
+    
+   func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell : WorkoutTableViewCell = workoutTableView.dequeueReusableCell(withIdentifier: "rateExerciseCell", for: indexPath) as!WorkoutTableViewCell
+      
+      cell.lbl_Exercise.text = exercises[indexPath.row]
+       return cell;
+   }
+   
+    
 
 }

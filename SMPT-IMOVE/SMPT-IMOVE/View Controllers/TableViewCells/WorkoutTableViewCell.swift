@@ -20,7 +20,7 @@ class WorkoutTableViewCell: UITableViewCell {
         btn_Good.tintColor = UIColor(red:1.00, green:0.31, blue:0.00, alpha:1.0);
         btn_Neutral.tintColor = UIColor(red:1.00, green:0.31, blue:0.00, alpha:1.0);
         btn_Bad.tintColor = UIColor(red:1.00, green:0.31, blue:0.00, alpha:1.0);
-        // Initialization code
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,4 +29,19 @@ class WorkoutTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func btn_NeutralPushed(_ sender: Any) {
+        self.btn_Good.tintColor = UIColor.white;
+        self.btn_Neutral.tintColor = UIColor(red:1.00, green:0.31, blue:0.00, alpha:1.0);
+        self.btn_Bad.tintColor = UIColor.white;
+    }
+    @IBAction func btn_BadPushed(_ sender: Any) {
+        self.btn_Good.tintColor = UIColor.white;
+        self.btn_Neutral.tintColor = UIColor.white;
+        self.btn_Bad.tintColor = UIColor(red:1.00, green:0.31, blue:0.00, alpha:1.0);
+    }
+    @IBAction func btn_GoodPushed(_ sender: Any) {
+        self.btn_Good.tintColor = UIColor(red:1.00, green:0.31, blue:0.00, alpha:1.0);
+        self.btn_Neutral.tintColor = UIColor.white;
+        self.btn_Bad.tintColor = UIColor.white;
+    }
 }
