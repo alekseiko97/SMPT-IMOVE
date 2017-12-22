@@ -369,6 +369,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="mapView" destination="iIc-Zv-RCR" id="SSd-K7-MJM"/>
                                             <segue destination="pEx-zt-b4q" kind="show" identifier="mapSegue" id="eq2-PC-33k"/>
                                         </connections>
                                     </tableViewCell>
@@ -768,6 +769,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="efN-ZU-bMG">
                                 <rect key="frame" x="16" y="136" width="343" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yfb-zv-ViJ" appends="YES" id="YjB-2O-sl0"/>
+                                </connections>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4S-AX-hAL">
                                 <rect key="frame" x="16" y="398" width="287" height="30"/>
@@ -843,19 +848,24 @@
                         <viewLayoutGuide key="safeArea" id="hFC-05-Ez7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Event" id="oUl-7x-f8N">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="rV1-bN-BFJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="rV1-bN-BFJ">
+                            <connections>
+                                <action selector="addEvent:" destination="s67-eT-hVD" id="NhQ-VA-Meg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapView" destination="efN-ZU-bMG" id="pMO-BX-1TG"/>
                         <outlet property="tb_DateTime" destination="w8I-lO-aTC" id="h3p-yA-grB"/>
-                        <outlet property="tb_Description" destination="HBG-9K-X11" id="7Ag-Fp-Yrc"/>
+                        <outlet property="tb_eventName" destination="zBL-91-psY" id="Xmk-SS-mv7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM6-QQ-Jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nfy-dm-ShX">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yfb-zv-ViJ">
                     <connections>
-                        <outlet property="delegate" destination="efN-ZU-bMG" id="ohq-Ei-bhG"/>
+                        <action selector="revealRegionDetailsWithLongPressOnMapWithSender:" destination="s67-eT-hVD" id="MpK-TD-Zw7"/>
                     </connections>
-                </tapGestureRecognizer>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2028" y="-1290.4047976011996"/>
         </scene>
@@ -881,14 +891,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Event Name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0M-hb-l3m">
-                                                    <rect key="frame" x="15" y="11" width="124" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="234" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Location&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqB-09-WgI">
-                                                    <rect key="frame" x="15" y="39" width="91" height="21"/>
+                                                    <rect key="frame" x="15" y="39" width="137" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -957,7 +967,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Date&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpE-24-sti">
-                                <rect key="frame" x="146" y="44" width="83" height="29"/>
+                                <rect key="frame" x="16" y="44" width="335" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -976,7 +986,7 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qxu-wx-571" customClass="ExerciseTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" id="qxu-wx-571" customClass="ExerciseTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxu-wx-571" id="R9v-yz-qcd">
@@ -1004,7 +1014,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypq-Yx-lNq">
-                                <rect key="frame" x="149" y="325" width="76" height="21"/>
+                                <rect key="frame" x="16" y="325" width="335" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1018,7 +1028,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Event Name&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d72-LZ-C85">
-                                <rect key="frame" x="84" y="0.0" width="207" height="36"/>
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1381,7 +1391,7 @@
         <!--Weight-->
         <scene sceneID="cng-er-xH9">
             <objects>
-                <viewController title="Weight" id="3sR-Qa-0Cr" customClass="WeightViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weight" id="3sR-Qa-0Cr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWO-91-Rhc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1453,12 +1463,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="lbl_CurrentWeight" destination="NCc-I8-CHw" id="k3i-4c-zTS"/>
-                        <outlet property="lbl_LastWeight" destination="gor-vC-IOb" id="aNv-6l-dX6"/>
-                        <outlet property="lbl_MontlyAverage" destination="TGi-Oi-xfS" id="0u5-L7-ed4"/>
-                        <outlet property="lbl_WeeklyAverage" destination="UDa-du-mdb" id="DcZ-tf-f4K"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqk-RE-0Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1467,7 +1471,7 @@
         <!--Weight In-->
         <scene sceneID="wL0-aB-CLO">
             <objects>
-                <viewController id="BGU-ML-vF8" customClass="AddWeightViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BGU-ML-vF8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAv-L0-RnY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1479,13 +1483,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="right" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-Ib-u5c">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-Ib-u5c">
                                 <rect key="frame" x="84" y="64" width="100" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ4-tu-Q4C">
                                 <rect key="frame" x="192" y="106" width="9" height="36"/>
@@ -1499,8 +1503,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-q3-Uxn">
                                 <rect key="frame" x="46" y="227" width="282" height="45"/>
@@ -1510,23 +1514,14 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="btn_SubmitWeight:" destination="BGU-ML-vF8" eventType="touchUpInside" id="Glx-83-AiI"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="haZ-B9-0Hd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weight In" id="e0W-kn-V2u"/>
-                    <connections>
-                        <outlet property="tb_NewWeight" destination="G0K-Ib-u5c" id="Co9-Mm-AAh"/>
-                        <outlet property="tb_NewWeightDecimal" destination="mMf-qo-ucp" id="iZY-Mf-7Ah"/>
-                        <segue destination="Fu0-ud-kcO" kind="unwind" identifier="unwindToWeight" unwindAction="unwindToWeight:" id="2he-N9-1gs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrq-SS-LVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Fu0-ud-kcO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1089" y="2810"/>
         </scene>

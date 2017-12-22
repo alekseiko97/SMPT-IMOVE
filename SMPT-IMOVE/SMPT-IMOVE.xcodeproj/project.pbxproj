@@ -51,6 +51,7 @@
 		F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568259C1FD0337B00AA7232 /* FeedViewController.swift */; };
 		F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574A7511FD9493E0026EFBE /* TrackDrawer.swift */; };
 		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
+		F5F5B1411FDAD4260075942D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F5B1401FDAD4260075942D /* Social.framework */; };
 		F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,7 @@
 		F568259C1FD0337B00AA7232 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F574A7511FD9493E0026EFBE /* TrackDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDrawer.swift; sourceTree = "<group>"; };
 		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
+		F5F5B1401FDAD4260075942D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F5B1411FDAD4260075942D /* Social.framework in Frameworks */,
 				F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +188,7 @@
 		F54B674B1FD151B2007CFD70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5F5B1401FDAD4260075942D /* Social.framework */,
 				F54B674D1FD156C4007CFD70 /* MapKit.framework */,
 				F54B674C1FD151B3007CFD70 /* CoreLocation.framework */,
 			);
