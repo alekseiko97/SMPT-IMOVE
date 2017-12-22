@@ -41,7 +41,9 @@ class LoginRegisterViewController: UIViewController {
                 self.lbl_Email.text = error.localizedDescription
             }
             else if let user = user {
-                self.lbl_Email.text = user.email
+                UserFirebase.logInUser(id: user.uid, email: user.email!, username: "", weight: nil, goal: "", gender: "", age: nil)
+                self.lbl_Email.text = UserFirebase.user.email
+                self.performSegue(withIdentifier: "gogogo", sender: self)
             }
         }
     }
@@ -57,17 +59,14 @@ class LoginRegisterViewController: UIViewController {
                         if let error = error {
                             self.lbl_Email.text = error.localizedDescription
                         }
-                        self.publish(UserId: user.uid, Email: email)
+                        UserFirebase.publish(UserId: user.uid, Email: email)
                     }
+                    self.performSegue(withIdentifier: "gogogo", sender: self)
                 }
                 else if let error = error {
                     self.lbl_Email.text = error.localizedDescription
                 }
             }
         }
-    }
-    
-    func publish(UserId id:String!, Email email:String!) {
-        FirebaseConfig.ref.child("users/\(id!)").child("Email").setValue(email);
     }
 }

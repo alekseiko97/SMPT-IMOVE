@@ -10,18 +10,24 @@ import Foundation
 import Firebase
 
 public class UserFirebase {
-    static var error : String!
     static var user : User!
     
-    static func signIn(email:String, password:String) {
-        Auth.auth().signIn(withEmail: email, password: password) {
-            (user, error) in
-            if let error = error {
-                UserFirebase.error = error.localizedDescription
-            }
-            if let user = user {
-                
-            }
-        }
+    static func logInUser(id: String, email: String, username: String?, weight: Weight?, goal:String?, gender:String?, age:Int?) {
+        user = User(id: id, email: email)
+    }
+    
+    static func registerUser(id: String, email:String) {
+        user.id = id
+        user.email = email
+    }
+    
+    static func publish(UserId id:String!, Email email:String!) {
+        FirebaseConfig.ref.child("users/\(id!)").child("Email").setValue(email);
+    }
+    
+    static func publish(UserId id:String!, Username name:String!, Gender gender:String!, Age age:Int!) {
+        FirebaseConfig.ref.child("users/\(id!)").child("Username").setValue(name)
+        FirebaseConfig.ref.child("users/\(id!)").child("Gender").setValue(gender)
+        FirebaseConfig.ref.child("users/\(id!)").child("Age").setValue(age)
     }
 }

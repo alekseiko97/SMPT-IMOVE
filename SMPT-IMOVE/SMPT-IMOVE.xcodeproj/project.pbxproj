@@ -43,6 +43,7 @@
 		F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */; };
 		F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288771FEBBCF200EED68B /* UserFirebase.swift */; };
 		F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288791FEBBF2900EED68B /* Firebase.swift */; };
+		F532887C1FEBE0DC00EED68B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887B1FEBE0DC00EED68B /* RegisterViewController.swift */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
@@ -119,6 +120,7 @@
 		F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
 		F53288771FEBBCF200EED68B /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		F53288791FEBBF2900EED68B /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		F532887B1FEBE0DC00EED68B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -302,6 +304,7 @@
 				F53288311FE284BF00EED68B /* WeightViewController.swift */,
 				F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */,
 				F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */,
+				F532887B1FEBE0DC00EED68B /* RegisterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
+				F532887C1FEBE0DC00EED68B /* RegisterViewController.swift in Sources */,
 				F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
