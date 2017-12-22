@@ -770,6 +770,9 @@
                                 <rect key="frame" x="16" y="136" width="343" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="V9j-Xu-DLH" appends="YES" id="2Mn-wE-vv2"/>
+                                </connections>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4S-AX-hAL">
                                 <rect key="frame" x="16" y="398" width="287" height="30"/>
@@ -862,15 +865,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM6-QQ-Jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="V9j-Xu-DLH">
                     <connections>
-                        <action selector="addPlaceToTheMapWithSender:" destination="s67-eT-hVD" id="EAn-DH-SOo"/>
+                        <action selector="addPin:" destination="s67-eT-hVD" id="hRs-vr-uBi"/>
                         <outlet property="delegate" destination="efN-ZU-bMG" id="VSc-x5-tS0"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <tapGestureRecognizer id="x90-rl-XcQ">
-                    <connections>
-                        <outlet property="delegate" destination="efN-ZU-bMG" id="RjW-Hw-6ow"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2028" y="-1290.4047976011996"/>
         </scene>

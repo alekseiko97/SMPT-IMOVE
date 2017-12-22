@@ -89,23 +89,21 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
         self.mapView.showsUserLocation = true
     }
     
-    @IBAction func addPlaceToTheMap(sender: UILongPressGestureRecognizer) {
-        let touchLocation = sender.location(in: mapView)
-        let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
+    @IBAction func addPin(_ sender: UILongPressGestureRecognizer) {
+        let touchLocation = sender.location(in: self.mapView)
+        let locationCoordinate = self.mapView.convert(touchLocation, toCoordinateFrom: mapView)
         eventCoordinates = CLLocationCoordinate2DMake(locationCoordinate.latitude, locationCoordinate.longitude)
         
-        //inserts all annotations, removes the previous and takes only the last 
+        //inserts all annotations, removes the previous and takes only the last
         for annotation in mapView.annotations {
             mapView.removeAnnotation(annotation)
         }
-
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: eventCoordinates.latitude, longitude: eventCoordinates.longitude)
         mapView.addAnnotation(annotation)
     }
-
+    
     func createDatePicker(){
-        
         dateTimePicker.datePickerMode = .dateAndTime
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -132,18 +130,11 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
-        
-       
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    func handleGesture(gestureRecognizer:UIGestureRecognizer) {
-       let touchPoint = gestureRecognizer.location(in: self.mapView)
-       let location = self.mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
-       print("\(location.latitude), \(location.longitude)")
-    }
+    
 }
