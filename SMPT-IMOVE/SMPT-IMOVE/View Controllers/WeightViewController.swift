@@ -20,7 +20,7 @@ class WeightViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get user from firebase
-        user = User(name: "Roos", email: "roos@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
+        // user = User(name: "Roos", email: "roos@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
         lbl_CurrentWeight.text = String(format: "%.1f", (user?.weight?.currentWeight)!)
         // Get last weight from user database
         lbl_LastWeight.text = String(format: "%.1f", 57.6)

@@ -22,7 +22,8 @@ class TrainingJournal {
     
     init(quote:Quote, exerc:Exercise, date:Date,km:Double,startT: String, endT:String,location: CLLocationCoordinate2D){
         
-        self.quote = quote
+        //self.quote = quote
+        self.quote = Quotes[randomNumber]
         self.exercise = exerc
         self.date = date
         self.km = km
