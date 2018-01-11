@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C42FB624FDF7E888017D56 /* Pods_SMPT_IMOVE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA543E774D2A9D18CE395CC6 /* Pods_SMPT_IMOVE.framework */; };
+		7AB49E21EF7A8F941137C5B3 /* Pods_SMPT_IMOVEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0144C2C613FD99AE86747969 /* Pods_SMPT_IMOVEUITests.framework */; };
+		A99E3BBAE7E7FA2CD2716D06 /* Pods_SMPT_IMOVETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB2EC73DDD244F6F43E4A6A /* Pods_SMPT_IMOVETests.framework */; };
 		C12689EB1FDA7A3D009B4B49 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */; };
 		C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */; };
 		C142AB4B1FD141DD00B6478F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4A1FD141DD00B6478F /* Route.swift */; };
@@ -33,10 +36,17 @@
 		F52A00291FD97A0700B38CE1 /* Waypoint_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */; };
 		F52A002B1FD97A1B00B38CE1 /* Route_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */; };
 		F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */; };
+		F52A1E2D200761A50056281E /* StateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52A1E2C200761A50056281E /* StateGoalViewController.swift */; };
 		F53288301FE2802700EED68B /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532882F1FE2802700EED68B /* Weight.swift */; };
 		F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288311FE284BF00EED68B /* WeightViewController.swift */; };
 		F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */; };
 		F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */; };
+		F53288741FEBB31C00EED68B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F53288731FEBB31C00EED68B /* GoogleService-Info.plist */; };
+		F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */; };
+		F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288771FEBBCF200EED68B /* UserFirebase.swift */; };
+		F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288791FEBBF2900EED68B /* Firebase.swift */; };
+		F532887C1FEBE0DC00EED68B /* AdditionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */; };
+		F53288801FED334500EED68B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887F1FED334500EED68B /* RegisterViewController.swift */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
@@ -73,6 +83,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0144C2C613FD99AE86747969 /* Pods_SMPT_IMOVEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMPT_IMOVEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19964DCD16FBC40C7B4755A4 /* Pods-SMPT-IMOVEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVEUITests/Pods-SMPT-IMOVEUITests.release.xcconfig"; sourceTree = "<group>"; };
+		23201A745163E6F746E7F58B /* Pods-SMPT-IMOVE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVE/Pods-SMPT-IMOVE.debug.xcconfig"; sourceTree = "<group>"; };
+		4EB2EC73DDD244F6F43E4A6A /* Pods_SMPT_IMOVETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMPT_IMOVETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		720E7E84C4A3E26C11FD7A43 /* Pods-SMPT-IMOVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVEUITests/Pods-SMPT-IMOVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73393774CB3D0823D1A86B6F /* Pods-SMPT-IMOVE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVE/Pods-SMPT-IMOVE.release.xcconfig"; sourceTree = "<group>"; };
 		C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		C142AB4A1FD141DD00B6478F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -86,6 +102,8 @@
 		C1A099BF1FD044CB00C2A2EE /* LevelOfDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOfDifficulty.swift; sourceTree = "<group>"; };
 		C1A099C11FD045A700C2A2EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C1B9174C1FD169100021FE3E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		DA543E774D2A9D18CE395CC6 /* Pods_SMPT_IMOVE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMPT_IMOVE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F36A6B62B98E895DF4DCB79A /* Pods-SMPT-IMOVETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVETests/Pods-SMPT-IMOVETests.debug.xcconfig"; sourceTree = "<group>"; };
 		F519DB9E1FD14465005B785C /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
 		F519DBA51FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,10 +117,17 @@
 		F52A00281FD97A0700B38CE1 /* Waypoint_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Waypoint_u.gpx; sourceTree = "<group>"; };
 		F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Route_u.gpx; sourceTree = "<group>"; };
 		F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Track_u.gpx; sourceTree = "<group>"; };
+		F52A1E2C200761A50056281E /* StateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateGoalViewController.swift; sourceTree = "<group>"; };
 		F532882F1FE2802700EED68B /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		F53288311FE284BF00EED68B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
 		F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		F53288731FEBB31C00EED68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
+		F53288771FEBBCF200EED68B /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
+		F53288791FEBBF2900EED68B /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionInfoViewController.swift; sourceTree = "<group>"; };
+		F532887F1FED334500EED68B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +152,7 @@
 		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		F5F5B1401FDAD4260075942D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		F8753CEFB12AA13E5B76F0FA /* Pods-SMPT-IMOVETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVETests/Pods-SMPT-IMOVETests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +162,7 @@
 			files = (
 				F5F5B1411FDAD4260075942D /* Social.framework in Frameworks */,
 				F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */,
+				05C42FB624FDF7E888017D56 /* Pods_SMPT_IMOVE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99E3BBAE7E7FA2CD2716D06 /* Pods_SMPT_IMOVETests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,12 +178,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB49E21EF7A8F941137C5B3 /* Pods_SMPT_IMOVEUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FC5034A8320C27BA36F06A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23201A745163E6F746E7F58B /* Pods-SMPT-IMOVE.debug.xcconfig */,
+				73393774CB3D0823D1A86B6F /* Pods-SMPT-IMOVE.release.xcconfig */,
+				F36A6B62B98E895DF4DCB79A /* Pods-SMPT-IMOVETests.debug.xcconfig */,
+				F8753CEFB12AA13E5B76F0FA /* Pods-SMPT-IMOVETests.release.xcconfig */,
+				720E7E84C4A3E26C11FD7A43 /* Pods-SMPT-IMOVEUITests.debug.xcconfig */,
+				19964DCD16FBC40C7B4755A4 /* Pods-SMPT-IMOVEUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F519DBA21FD1861E005B785C /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +233,9 @@
 				F5F5B1401FDAD4260075942D /* Social.framework */,
 				F54B674D1FD156C4007CFD70 /* MapKit.framework */,
 				F54B674C1FD151B3007CFD70 /* CoreLocation.framework */,
+				DA543E774D2A9D18CE395CC6 /* Pods_SMPT_IMOVE.framework */,
+				4EB2EC73DDD244F6F43E4A6A /* Pods_SMPT_IMOVETests.framework */,
+				0144C2C613FD99AE86747969 /* Pods_SMPT_IMOVEUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +248,7 @@
 				F568258A1FCFFBF500AA7232 /* SMPT-IMOVEUITests */,
 				F56825691FCFFBF500AA7232 /* Products */,
 				F54B674B1FD151B2007CFD70 /* Frameworks */,
+				8FC5034A8320C27BA36F06A1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +265,7 @@
 		F568256A1FCFFBF500AA7232 /* SMPT-IMOVE */ = {
 			isa = PBXGroup;
 			children = (
+				F53288731FEBB31C00EED68B /* GoogleService-Info.plist */,
 				F5F9AA871FDABFAC0053B8A6 /* Firebase */,
 				F5F9AA841FDABEFF0053B8A6 /* Enums */,
 				F5F9AA831FDABEC90053B8A6 /* Models */,
@@ -267,6 +314,10 @@
 				C1B9174C1FD169100021FE3E /* EventViewController.swift */,
 				F53288311FE284BF00EED68B /* WeightViewController.swift */,
 				F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */,
+				F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */,
+				F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */,
+				F532887F1FED334500EED68B /* RegisterViewController.swift */,
+				F52A1E2C200761A50056281E /* StateGoalViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -316,6 +367,8 @@
 		F5F9AA871FDABFAC0053B8A6 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				F53288771FEBBCF200EED68B /* UserFirebase.swift */,
+				F53288791FEBBF2900EED68B /* Firebase.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -327,9 +380,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F56825901FCFFBF500AA7232 /* Build configuration list for PBXNativeTarget "SMPT-IMOVE" */;
 			buildPhases = (
+				4A4AF8B6FD514EFF67362E92 /* [CP] Check Pods Manifest.lock */,
 				F56825641FCFFBF500AA7232 /* Sources */,
 				F56825651FCFFBF500AA7232 /* Frameworks */,
 				F56825661FCFFBF500AA7232 /* Resources */,
+				ED271C4CC0F103BE39EC2A81 /* [CP] Embed Pods Frameworks */,
+				9B53C0AB46764E40FDF0251D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,9 +400,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F56825931FCFFBF500AA7232 /* Build configuration list for PBXNativeTarget "SMPT-IMOVETests" */;
 			buildPhases = (
+				19C2878CC41E7804A5FF19EB /* [CP] Check Pods Manifest.lock */,
 				F56825781FCFFBF500AA7232 /* Sources */,
 				F56825791FCFFBF500AA7232 /* Frameworks */,
 				F568257A1FCFFBF500AA7232 /* Resources */,
+				E3BAC95D75DA111D1BE1B4EA /* [CP] Embed Pods Frameworks */,
+				316E21663F0CD97EE575BF1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,9 +421,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F56825961FCFFBF500AA7232 /* Build configuration list for PBXNativeTarget "SMPT-IMOVEUITests" */;
 			buildPhases = (
+				B569E1B87BE0DF44904128BD /* [CP] Check Pods Manifest.lock */,
 				F56825831FCFFBF500AA7232 /* Sources */,
 				F56825841FCFFBF500AA7232 /* Frameworks */,
 				F56825851FCFFBF500AA7232 /* Resources */,
+				F7E01FE4C539D97D64DC779D /* [CP] Embed Pods Frameworks */,
+				4E233AB260008ABE416985AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -443,6 +505,7 @@
 				F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */,
 				F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */,
 				F52A00291FD97A0700B38CE1 /* Waypoint_u.gpx in Resources */,
+				F53288741FEBB31C00EED68B /* GoogleService-Info.plist in Resources */,
 				F52A00251FD9799F00B38CE1 /* Route.gpx in Resources */,
 				F52A00271FD979C800B38CE1 /* Track.gpx in Resources */,
 				F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */,
@@ -468,6 +531,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19C2878CC41E7804A5FF19EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMPT-IMOVETests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		316E21663F0CD97EE575BF1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVETests/Pods-SMPT-IMOVETests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A4AF8B6FD514EFF67362E92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMPT-IMOVE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E233AB260008ABE416985AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVEUITests/Pods-SMPT-IMOVEUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B53C0AB46764E40FDF0251D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVE/Pods-SMPT-IMOVE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B569E1B87BE0DF44904128BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMPT-IMOVEUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BAC95D75DA111D1BE1B4EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVETests/Pods-SMPT-IMOVETests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED271C4CC0F103BE39EC2A81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVE/Pods-SMPT-IMOVE-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVE/Pods-SMPT-IMOVE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7E01FE4C539D97D64DC779D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPT-IMOVEUITests/Pods-SMPT-IMOVEUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F56825641FCFFBF500AA7232 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -477,19 +696,25 @@
 				F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */,
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
+				F52A1E2D200761A50056281E /* StateGoalViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
 				C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */,
+				F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */,
 				F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */,
 				F519DBAA1FD18B8E005B785C /* TrainingJournalViewController.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
 				F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
+				F532887C1FEBE0DC00EED68B /* AdditionInfoViewController.swift in Sources */,
+				F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
+				F53288801FED334500EED68B /* RegisterViewController.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
+				F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */,
 				C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */,
 				C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
@@ -668,13 +893,14 @@
 		};
 		F56825911FCFFBF500AA7232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23201A745163E6F746E7F58B /* Pods-SMPT-IMOVE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SMPT-IMOVE/SMPT-IMOVE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WTA29Q4MZ8;
 				INFOPLIST_FILE = "SMPT-IMOVE/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SM.SMPT-IMOVE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -685,13 +911,14 @@
 		};
 		F56825921FCFFBF500AA7232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73393774CB3D0823D1A86B6F /* Pods-SMPT-IMOVE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SMPT-IMOVE/SMPT-IMOVE.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WTA29Q4MZ8;
 				INFOPLIST_FILE = "SMPT-IMOVE/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SM.SMPT-IMOVE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -702,6 +929,7 @@
 		};
 		F56825941FCFFBF500AA7232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36A6B62B98E895DF4DCB79A /* Pods-SMPT-IMOVETests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,6 +947,7 @@
 		};
 		F56825951FCFFBF500AA7232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8753CEFB12AA13E5B76F0FA /* Pods-SMPT-IMOVETests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -736,6 +965,7 @@
 		};
 		F56825971FCFFBF500AA7232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 720E7E84C4A3E26C11FD7A43 /* Pods-SMPT-IMOVEUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -752,6 +982,7 @@
 		};
 		F56825981FCFFBF500AA7232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19964DCD16FBC40C7B4755A4 /* Pods-SMPT-IMOVEUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
