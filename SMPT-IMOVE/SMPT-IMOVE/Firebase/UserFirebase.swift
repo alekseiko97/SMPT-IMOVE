@@ -25,9 +25,13 @@ public class UserFirebase {
         FirebaseConfig.ref.child("users/\(id!)").child("Email").setValue(email);
     }
     
-    static func publish(UserId id:String!, Username name:String!, Gender gender:String!, Age age:Int!) {
+    static func publish(UserId id:String!, Username name:String!, Gender gender:String!, Age age:String!) {
         FirebaseConfig.ref.child("users/\(id!)").child("Username").setValue(name)
         FirebaseConfig.ref.child("users/\(id!)").child("Gender").setValue(gender)
         FirebaseConfig.ref.child("users/\(id!)").child("Age").setValue(age)
+    }
+    
+    static func publish(UserId id:String!, Goal goal:String!) {
+        FirebaseConfig.ref.child("users/\(id!)").child("Goal").setValue(goal);
     }
 }

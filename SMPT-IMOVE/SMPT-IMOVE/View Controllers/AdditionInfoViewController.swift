@@ -12,8 +12,9 @@ import Firebase
 class AdditionalInfoViewController: UIViewController {
     @IBOutlet weak var tb_username: UITextField!
     @IBOutlet weak var tb_gender: UITextField!
-    @IBOutlet weak var tb_age: UITextField!
+    @IBOutlet weak var tb_birthday: UITextField!
     let datepicker : UIDatePicker = UIDatePicker()
+    @IBOutlet weak var lbl_error: UILabel!
     
     override func viewDidLoad() {
         createDatePicker()
@@ -27,11 +28,14 @@ class AdditionalInfoViewController: UIViewController {
     }
     
     @IBAction func btn_Next(_ sender: Any) {
-        
-        
-        UserFirebase.publish(UserId: Auth.auth().currentUser?.uid, Username: tb_username.text!, Gender: tb_gender.text!, Age: Int(tb_age.text!))
+        if tb_username.text == "" || tb_gender.text == "" || tb_birthday.text == "" {
+            lbl_error.text = "You have to fill in all the fields."
+        }
+        else {
+            UserFirebase.publish(UserId: Auth.auth().currentUser?.uid, Username: tb_username.text!, Gender: tb_gender.text!, Age: tb_birthday.text!)
+            performSegue(withIdentifier: "additionalInfo", sender: self)
+        }
     }
-    
     func createDatePicker(){
         datepicker.datePickerMode = .date
         let toolbar = UIToolbar()
@@ -39,14 +43,14 @@ class AdditionalInfoViewController: UIViewController {
         
         let donebutton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolbar.setItems([donebutton], animated: false)
-        tb_age.inputAccessoryView = toolbar
-        tb_age.inputView = datepicker
+        tb_birthday.inputAccessoryView = toolbar
+        tb_birthday.inputView = datepicker
     }
     
     @objc func donePressed(){
         let dateformatter = DateFormatter()
         dateformatter.dateStyle = .short
-        tb_age.text = dateformatter.string(from: datepicker.date)
+        tb_birthday.text = dateformatter.string(from: datepicker.date)
         self.view.endEditing(true)
     }
     /*

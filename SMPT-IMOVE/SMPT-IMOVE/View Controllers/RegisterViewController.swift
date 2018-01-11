@@ -28,11 +28,11 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func btn_Register(_ sender: Any) {
-        if let email = tb_Email.text, let password = tb_Password.text, let confirmedPassword = tb_ConfirmPassword.text {
-            register(email: email, password: password, confirmedPassword: confirmedPassword)
+        if tb_Email.text! == "" || tb_Password.text! == "" || tb_ConfirmPassword.text! == "" {
+            lbl_Error.text = "Fill in all the fields"
         }
         else {
-            lbl_Error.text = "Fill in all the fields"
+            register(email: tb_Email.text!, password: tb_Password.text!, confirmedPassword: tb_ConfirmPassword.text!);
         }
     }
     
