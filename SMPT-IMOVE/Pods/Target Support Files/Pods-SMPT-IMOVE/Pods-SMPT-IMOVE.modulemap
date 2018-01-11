@@ -1,0 +1,6 @@
+framework module Pods_SMPT_IMOVE {
+  umbrella header "Pods-SMPT-IMOVE-umbrella.h"
+
+  export *
+  module * { export * }
+}

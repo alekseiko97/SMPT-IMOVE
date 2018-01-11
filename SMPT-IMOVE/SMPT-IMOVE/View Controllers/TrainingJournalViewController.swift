@@ -14,20 +14,7 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
     let delegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var tableview: UITableView!
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        var height:CGFloat = CGFloat()
-//                if indexPath.row == 1 {
-//                    height = 250
-//                }
-//                else if indexPath.row == 2 {
-//                    height = 150
-//                }
-//                else
-//                {
-//                    height = 50
-//                }
-//        return height
-//    }
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return(3)
@@ -42,20 +29,17 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
         if(indexPath.row == 0)
         {
             self.tableview.rowHeight = 200
-            //MapTrainingCell.textLabel?.text = MapTrainingTest[0]
             return(MapTrainingCell)
         }
 
         else if(indexPath.row == 1)
         {
             self.tableview.rowHeight = 155
-            //WorkoutTrainingCell.textLabel?.text = WorkoutTest[0]
             return(WorkoutTrainingCell)
         }
         else
         {
             self.tableview.rowHeight = 44
-            //WeightTrainingCell.textLabel?.text = WeightTest[0]
             return(WeightTrainingCell)
         }
         
@@ -87,17 +71,10 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
         
         self.tableview.delegate = self
         self.tableview.dataSource = self
-        //self.tableview.rowHeight = 200
-
-//        self.tableview.rowHeight = UITableViewAutomaticDimension
-//        self.tableview.estimatedRowHeight = 150
-//        self.tableview.reloadData()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

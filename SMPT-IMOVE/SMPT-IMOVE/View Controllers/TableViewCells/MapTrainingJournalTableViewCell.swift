@@ -8,18 +8,25 @@
 
 import UIKit
 import MapKit
-import CoreData
+import CoreLocation
 
-class MapTrainingJournalTableViewCell: UITableViewCell, MKMapViewDelegate {
-    
+class MapTrainingJournalTableViewCell: UITableViewCell, CLLocationManagerDelegate, MKMapViewDelegate
+{
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var walkedLabel: UILabel!
+    var locationManager: CLLocationManager = CLLocationManager()
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        locationManager.delegate = self
+        mapView.delegate = self
+        
+        let lat = 51.44
+        let lon = 5.48
+        let coord = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        let region = MKCoordinateRegionMakeWithDistance(coord, 5000, 5000)
+        
+        mapView.setRegion(region, animated: true)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
