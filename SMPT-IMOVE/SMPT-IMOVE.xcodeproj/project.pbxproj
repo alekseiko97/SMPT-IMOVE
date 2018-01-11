@@ -38,14 +38,16 @@
 		F53288301FE2802700EED68B /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532882F1FE2802700EED68B /* Weight.swift */; };
 		F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288311FE284BF00EED68B /* WeightViewController.swift */; };
 		F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */; };
-		F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5333B261FD9884C004BE914 /* RouteViewController.swift */; };
-		F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */; };
 		F53288741FEBB31C00EED68B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F53288731FEBB31C00EED68B /* GoogleService-Info.plist */; };
 		F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */; };
 		F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288771FEBBCF200EED68B /* UserFirebase.swift */; };
 		F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288791FEBBF2900EED68B /* Firebase.swift */; };
 		F532887C1FEBE0DC00EED68B /* AdditionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */; };
+		F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */; };
 		F53288801FED334500EED68B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887F1FED334500EED68B /* RegisterViewController.swift */; };
+		F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5333B261FD9884C004BE914 /* RouteViewController.swift */; };
+		F542F6A6200796C900B2C84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F542F6A5200796C900B2C84A /* Main.storyboard */; };
+		F542F6A820079F3B00B2C84A /* StateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542F6A720079F3B00B2C84A /* StateGoalViewController.swift */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
 		F54B67511FD16263007CFD70 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */; };
@@ -56,7 +58,6 @@
 		F5510C2F1FE2B56D005CECEF /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F5510C2E1FE2B56D005CECEF /* Location.gpx */; };
 		F5510C311FE3C031005CECEF /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5510C301FE3C031005CECEF /* Object.swift */; };
 		F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F568256B1FCFFBF500AA7232 /* AppDelegate.swift */; };
-		F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F568256F1FCFFBF500AA7232 /* Main.storyboard */; };
 		F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56825721FCFFBF500AA7232 /* Assets.xcassets */; };
 		F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */; };
 		F56825811FCFFBF500AA7232 /* SMPT_IMOVETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56825801FCFFBF500AA7232 /* SMPT_IMOVETests.swift */; };
@@ -128,14 +129,16 @@
 		F532882F1FE2802700EED68B /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		F53288311FE284BF00EED68B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
-		F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		F53288731FEBB31C00EED68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
 		F53288771FEBBCF200EED68B /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		F53288791FEBBF2900EED68B /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionInfoViewController.swift; sourceTree = "<group>"; };
+		F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		F532887F1FED334500EED68B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F5333B261FD9884C004BE914 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		F542F6A5200796C900B2C84A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F542F6A720079F3B00B2C84A /* StateGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateGoalViewController.swift; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F54B674D1FD156C4007CFD70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -149,7 +152,6 @@
 		F5510C301FE3C031005CECEF /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		F56825681FCFFBF500AA7232 /* SMPT-IMOVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMPT-IMOVE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F568256B1FCFFBF500AA7232 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F56825701FCFFBF500AA7232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F56825721FCFFBF500AA7232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F56825751FCFFBF500AA7232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F56825771FCFFBF500AA7232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,7 +299,7 @@
 				F52A001A1FD9680100B38CE1 /* GPX */,
 				F56825991FD032AF00AA7232 /* View Controllers */,
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
-				F568256F1FCFFBF500AA7232 /* Main.storyboard */,
+				F542F6A5200796C900B2C84A /* Main.storyboard */,
 				F56825721FCFFBF500AA7232 /* Assets.xcassets */,
 				F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */,
 				F56825771FCFFBF500AA7232 /* Info.plist */,
@@ -346,7 +348,7 @@
 				F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */,
 				F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */,
 				F532887F1FED334500EED68B /* RegisterViewController.swift */,
-				F52A1E2C200761A50056281E /* StateGoalViewController.swift */,
+				F542F6A720079F3B00B2C84A /* StateGoalViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -554,15 +556,13 @@
 			files = (
 				F56825761FCFFBF500AA7232 /* LaunchScreen.storyboard in Resources */,
 				F53288741FEBB31C00EED68B /* GoogleService-Info.plist in Resources */,
-				F52A00251FD9799F00B38CE1 /* Route.gpx in Resources */,
-				F52A00271FD979C800B38CE1 /* Track.gpx in Resources */,
 				F56825731FCFFBF500AA7232 /* Assets.xcassets in Resources */,
 				F5510C2F1FE2B56D005CECEF /* Location.gpx in Resources */,
 				F5510C2C1FE28A88005CECEF /* Glorieuxpark.gpx in Resources */,
+				F542F6A6200796C900B2C84A /* Main.storyboard in Resources */,
 				F52A001D1FD9708F00B38CE1 /* Eindhoven.gpx in Resources */,
 				F5510C2D1FE28A88005CECEF /* Genneperpark zigzag.gpx in Resources */,
 				F5169D75200773A400666F89 /* test2.gpx in Resources */,
-				F56825711FCFFBF500AA7232 /* Main.storyboard in Resources */,
 				F52A00211FD972CA00B38CE1 /* TestRoute.gpx in Resources */,
 				F5169D732007738500666F89 /* test1.gpx in Resources */,
 			);
@@ -754,7 +754,6 @@
 				F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */,
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
-				F52A1E2D200761A50056281E /* StateGoalViewController.swift in Sources */,
 				F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */,
 				F57283781FDABF670072A9CF /* RunRouteViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
@@ -773,6 +772,7 @@
 				F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F53288801FED334500EED68B /* RegisterViewController.swift in Sources */,
+				F542F6A820079F3B00B2C84A /* StateGoalViewController.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
@@ -828,15 +828,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F568256F1FCFFBF500AA7232 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F56825701FCFFBF500AA7232 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-			usesTabs = 0;
-		};
 		F56825741FCFFBF500AA7232 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
