@@ -27,7 +27,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let firstEvent = Event(
             name: "Strong legs",
             evDescription: "Running and doing exercises",
-            date: Date(timeIntervalSince1970: 1512835200),//using time converter,
+            date: Date(timeIntervalSince1970: 1516871700),//using time converter,
             locCoord: eindhoven2,
             locName: "Stadswandelpark")
         events.append(firstEvent)
@@ -35,7 +35,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let secondEvent = Event(
             name: "Running",
             evDescription: "Running competition",
-            date: Date(timeIntervalSince1970: 1512906323),//using time converter,
+            date: Date(timeIntervalSince1970: 1517408100),//using time converter,
             locCoord: eindhoven3,
             locName: "Jacob Oppenheimerpark")
         events.append(secondEvent)
@@ -43,7 +43,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let thirdEvent = Event(
             name: "Group competition",
             evDescription: "Using bench and doing exercises",
-            date: Date(timeIntervalSince1970: 1513103400),//using time converter,
+            date: Date(timeIntervalSince1970: 1517487300),//using time converter,
             locCoord: eindhoven,
             locName: "Philips Stadium")
         events.append(thirdEvent)
