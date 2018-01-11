@@ -69,6 +69,24 @@ class Event: CustomStringConvertible {
     
 
     var description: String {
-        return "name event: \(eventName)\("\n")details: \(eventDescription)\("\n")when: \(date)\("\n")users: \(usersParticipating.count)\("\n")location: \(locationCoordinates)\("\n")place: \(locationName)\("\n")number of exercises: \(workoutExercises.count)\("\n")"
+        return "name event: \(eventName)\("\n")description: \(eventDescription)\("\n")when: \(date)\("\n")location: \(locationCoordinates)\("\n")"
+    }
+   
+    //for easy way to send data into database
+    func toDictionary() -> [String:Any] {
+        let coordin : [String:Any] = [
+            "latitdude":self.locationCoordinates.latitude,
+            "longitude":self.locationCoordinates.longitude]
+        
+      
+        let eventDictionary: [String:Any] = [
+            "Name event":self.eventName,
+            "Location": self.locationName,
+            "Date":getDateAsString(),
+            "Time":getTimeAsString(),
+            "Description": self.eventDescription,
+            "Coordinates": coordin]
+        return eventDictionary
+        
     }
 }

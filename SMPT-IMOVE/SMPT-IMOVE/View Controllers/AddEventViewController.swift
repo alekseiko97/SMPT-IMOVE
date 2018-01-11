@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Firebase
 
 //for showing address when a user chooses a location on the map
 extension CLPlacemark {
@@ -69,6 +70,11 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
                         locName: placemarks?.first?.compactAddress ?? "Default")
                     self.eventsList.append(newEvent)
                     print(newEvent.description)
+                   let id = Auth.auth().currentUser?.uid
+                UserFirebase.publish(UserId: id, Event: newEvent)
+              
+                    
+                    
                 }
             }
         }

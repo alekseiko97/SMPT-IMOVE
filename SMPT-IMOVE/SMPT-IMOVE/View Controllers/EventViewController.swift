@@ -9,9 +9,10 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Firebase
 
 class EventViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
-  
+  var ref: DatabaseReference? = nil
     var events : [Event] = []
     var selectedrow: Int = 0
     
@@ -54,6 +55,24 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         eventTableView.delegate = self
         eventTableView.dataSource = self
         CreateNewEvent()
+         let id = Auth.auth().currentUser?.uid
+        ref = Database.database().reference().child(id!).child("Events")
+        ref?.observe(.childAdded,with: { snapshot in
+            for Events in snapshot.children.allObjects as! [DataSnapshot]
+            {
+                if let eventObject = Events.value as? [String:Any],
+                    let nameEvent = eventObject["Name event"] as? String,
+                    let coordinates = eventObject["Coordinates"] as? CLLocationCoordinate2D,
+                    let desc = eventObject["Description"] as? String,
+                    let nameLoc = eventObject["Location"] as? String,
+                    let date = eventObject["Date"] as? Date
+                {
+                    let databaseEvent =  Event(name: nameEvent, evDescription: desc, date: date, locCoord: coordinates, locName: nameLoc)
+                print(databaseEvent)
+                }
+            }
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
