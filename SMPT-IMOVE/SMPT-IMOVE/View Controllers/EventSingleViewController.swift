@@ -40,8 +40,8 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
         //assigning the information of the event to the labels of the screen
         if let showEvent = userChoseEvent {
             self.eventName.text = showEvent.eventName
-            self.timeEvent.text = showEvent.getTimeAsString()
-            self.dateEvent.text = showEvent.getDateAsString()
+            self.timeEvent.text = showEvent.date.getTimeAsString()
+            self.dateEvent.text = showEvent.date.getDateAsString()
             self.locationEvent.text = String(showEvent.locationName)
             self.mapLocation.addAnnotation(POI(title: showEvent.locationName, identifier: 1, coordinate:showEvent.locationCoordinates, type: .Park))
             

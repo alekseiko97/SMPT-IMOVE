@@ -12,7 +12,7 @@ import MapKit
 import Firebase
 
 class EventViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
-  var ref: DatabaseReference? = nil
+
     var events : [Event] = []
     var selectedrow: Int = 0
     
@@ -49,31 +49,43 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
             locName: "Philips Stadium")
         events.append(thirdEvent)
     }
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLoad()  {
         eventTableView.delegate = self
         eventTableView.dataSource = self
-        CreateNewEvent()
-         let id = Auth.auth().currentUser?.uid
-        ref = Database.database().reference().child(id!).child("Events")
-        ref?.observe(.childAdded,with: { snapshot in
-            for Events in snapshot.children.allObjects as! [DataSnapshot]
-            {
-                if let eventObject = Events.value as? [String:Any],
-                    let nameEvent = eventObject["Name event"] as? String,
-                    let coordinates = eventObject["Coordinates"] as? CLLocationCoordinate2D,
+       // CreateNewEvent()
+        
+        FirebaseConfig.ref.child("Events").observe(.childAdded, with: { snapshot in
+            
+//            print("snapshot:", snapshot.value)
+            
+                if let eventObject = snapshot.value as? [String:AnyObject],
+                    let name = eventObject["Name event"] as? String,
                     let desc = eventObject["Description"] as? String,
-                    let nameLoc = eventObject["Location"] as? String,
-                    let date = eventObject["Date"] as? Date
+                    let loc = eventObject["Location"] as? String,
+                    let coords = eventObject["Coordinates"] as? [String:Any],
+                    let latitude = coords["latitude"] as? Double,
+                    let longitude = coords["longitude"] as? Double,
+                    let date = eventObject["Date"] as? String
                 {
-                    let databaseEvent =  Event(name: nameEvent, evDescription: desc, date: date, locCoord: coordinates, locName: nameLoc)
-                print(databaseEvent)
+                    
+                    let newEvent = Event(
+                        name: name,
+                        evDescription: desc,
+                        date: date,
+                        latitude: latitude,
+                        longitude: longitude,
+                        locName: loc)
+                    self.events.append(newEvent)
+                    print("event loaded:", newEvent)
+                    self.eventTableView.reloadData()
                 }
-            }
-        })
+                else {
+                    print("problem loading from database")
+                }
+            })
         
     }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -91,7 +103,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let cell : EventTableViewCell = eventTableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
         cell.lbl_EventName.text = String(describing: events[indexPath.row].eventName)
         cell.lbl_Location.text = String(describing: events[indexPath.row].locationName)
-        cell.lbl_Date.text = events[indexPath.row].getDateAsString() + " " +  events[indexPath.row].getTimeAsString()
+        cell.lbl_Date.text = events[indexPath.row].date.getDateAsString() + " " +  events[indexPath.row].date.getTimeAsString()
         cell.lbl_Description.text = String(describing: events[indexPath.row].eventDescription)
         return cell;
     }

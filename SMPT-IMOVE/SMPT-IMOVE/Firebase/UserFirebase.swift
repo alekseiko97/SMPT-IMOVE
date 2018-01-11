@@ -41,4 +41,8 @@ public class UserFirebase {
        // FirebaseConfig.ref.child("users/\(id!)").child("Events").child("Descriptions:").setValue(event.eventDescription);
        
     }
+    static func publish(Event event:Event) {
+        FirebaseConfig.ref.child("Events").child(event.eventName).setValue(event.toDictionary());
+    
+    }
 }

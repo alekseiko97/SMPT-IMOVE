@@ -58,20 +58,25 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
                 print("Unable to Reverse Geocode Location (\(error))")
             } else {
                // print(#function, placemarks?.first?.compactAddress ?? "Default")
-                if (self.tb_eventName.text?.isEmpty ?? true)!  {
+                
+                let name = self.tb_eventName.text ?? ""
+                let desc = self.tb_descriptionEvent.text ?? ""
+                
+                if (name.isEmpty || desc.isEmpty)  {
                     self.createAlert(title: "Alert", message: "Please fill in all the fields!")
                 }
                 else {
                     let newEvent = Event(
-                        name: String(describing: self.tb_eventName.text),
-                        evDescription:String(describing: self.tb_descriptionEvent.text),
+                        name: name,
+                        evDescription:desc,
                         date: self.dateTimePicker.date,//taken from the datepicker
                         locCoord:  self.eventCoordinates,
                         locName: placemarks?.first?.compactAddress ?? "Default")
                     self.eventsList.append(newEvent)
                     print(newEvent.description)
-                   let id = Auth.auth().currentUser?.uid
-                UserFirebase.publish(UserId: id, Event: newEvent)
+                //   let id = Auth.auth().currentUser?.uid
+                //UserFirebase.publish(UserId: id, Event: newEvent)
+                     UserFirebase.publish(Event: newEvent)
               
                     
                     
