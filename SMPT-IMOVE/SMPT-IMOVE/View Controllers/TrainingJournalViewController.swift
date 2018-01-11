@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var tableview: UITableView!
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,6 +58,20 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
             //WeightTrainingCell.textLabel?.text = WeightTest[0]
             return(WeightTrainingCell)
         }
+        
+        //MapTrainingCell.mapView.add(delegate.completedRouteRuns[indexPath.row].trackDrawer.getPolyline()!)
+        
+    }
+    
+    private func getRuns() -> [Run] {
+        let fetchRequest: NSFetchRequest<Run> = Run.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Run.timestamp), ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        do {
+            return try CoreDataStack.context.fetch(fetchRequest)
+        } catch {
+            return []
+        }
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -83,15 +100,6 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

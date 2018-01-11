@@ -191,7 +191,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="objectNameLabel" destination="APU-Dz-3Dg" id="34k-MM-tA6"/>
-                                            <segue destination="1RQ-68-NOD" kind="show" id="AgR-Jf-DMV"/>
+                                            <segue destination="aDP-VC-qEy" kind="show" id="h4D-M3-lIo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -222,7 +222,7 @@
                                     <segue destination="cJN-4J-yvg" kind="show" identifier="runSegue" id="fqP-Az-CVM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jow-Nq-oPN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objects:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jow-Nq-oPN">
                                 <rect key="frame" x="16" y="370" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -378,11 +378,16 @@
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-Zv-RCR">
                                                     <rect key="frame" x="15" y="35" width="313" height="154"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9tZ-zu-Dvq" id="0hV-XY-gcP"/>
+                                                    </connections>
                                                 </mapView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="mapView" destination="iIc-Zv-RCR" id="A1L-P7-kE8"/>
+                                            <outlet property="walkedLabel" destination="9aM-VJ-hxh" id="Csi-5p-koG"/>
                                             <segue destination="pEx-zt-b4q" kind="show" identifier="mapSegue" id="eq2-PC-33k"/>
                                         </connections>
                                     </tableViewCell>
@@ -2087,7 +2092,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKv-VT-l2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.8" y="-521.28935532233891"/>
+            <point key="canvasLocation" x="1089" y="-476"/>
         </scene>
     </scenes>
     <resources>
@@ -2108,7 +2113,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="3sk-Fs-OvO"/>
         <segue reference="cPv-SJ-9vF"/>
-        <segue reference="e2p-Q2-cw6"/>
+        <segue reference="mnc-VG-KTX"/>
         <segue reference="ebb-Tl-QQs"/>
         <segue reference="AdO-if-bYK"/>
         <segue reference="KFN-bc-SJf"/>

@@ -18,6 +18,7 @@ class RouteViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
     
     var route: Route!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +26,7 @@ class RouteViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         mapView.add((route.trackDrawer.getPolyline())!)
         mapView.addAnnotations(route.objects)
         zoomToRoute()
-        //kmLabel.text = String(describing: route.kmRoute)
+        //kmLabel.text = String(route.kmRoute)
     }
     
     
@@ -94,14 +95,6 @@ class RouteViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
 
     // annotation callout opens this mapItem in Maps app
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        let vc = storyBoard.instantiateViewController(withIdentifier: "objectVC")
-//        self.present(vc, animated:true, completion:nil)
-//        let location = view.annotation as! Object
-//        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
-//        location.mapItem().openInMaps(launchOptions: launchOptions)
-        
         performSegue(withIdentifier: "objectVCSegue", sender: self)
 
     }

@@ -16,6 +16,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     // Location manager
     let manager = CLLocationManager()
     var routes = [Route]()

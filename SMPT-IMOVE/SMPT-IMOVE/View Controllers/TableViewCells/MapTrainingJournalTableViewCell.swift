@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import MapKit
+import CoreData
 
-class MapTrainingJournalTableViewCell: UITableViewCell {
+class MapTrainingJournalTableViewCell: UITableViewCell, MKMapViewDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var walkedLabel: UILabel!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +26,5 @@ class MapTrainingJournalTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-
+    
 }
