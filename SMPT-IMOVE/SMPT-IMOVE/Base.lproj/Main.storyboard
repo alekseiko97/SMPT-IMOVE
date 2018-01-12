@@ -675,7 +675,7 @@
         <!--Objects-->
         <scene sceneID="5PJ-Tp-xZd">
             <objects>
-                <viewController title="Objects" id="aDP-VC-qEy" sceneMemberID="viewController">
+                <viewController title="Objects" id="aDP-VC-qEy" customClass="ObjectViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYD-LP-YgT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -686,15 +686,15 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dbr-TJ-xEh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ObjectCell" id="dbr-TJ-xEh" customClass="ObjectTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="185" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbr-TJ-xEh" id="uEq-ub-buu">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Object&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV1-IC-vgz">
-                                                    <rect key="frame" x="15" y="12" width="73" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV1-IC-vgz">
+                                                    <rect key="frame" x="7" y="12" width="170" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -704,6 +704,9 @@
                                             <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="object_name" destination="yV1-IC-vgz" id="Rpx-5B-QUF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -713,14 +716,14 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Zhk-9J-T2h">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="objectExercName" id="Zhk-9J-T2h" customClass="ObjectExerciseTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="185" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zhk-9J-T2h" id="ffc-r6-nM4">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Exercise&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-d5-klC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-d5-klC">
                                                     <rect key="frame" x="15" y="12" width="86" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -753,6 +756,10 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="6V7-g4-Taq"/>
                     </view>
+                    <connections>
+                        <outlet property="objectExerciseTableView" destination="MLo-1x-k6t" id="yQh-Du-zYy"/>
+                        <outlet property="object_table_view" destination="0Gm-1Y-oyv" id="xiI-m6-TQI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGz-Ix-1br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -771,7 +778,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Motivational Quote of the Day&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juk-3h-UJn">
-                                        <rect key="frame" x="47" y="15" width="249" height="21"/>
+                                        <rect key="frame" x="0.0" y="15" width="370" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -794,7 +801,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You walked &lt;x&gt; km on &lt;date&gt;!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-VJ-hxh">
-                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="348" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -809,6 +816,7 @@
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="mapView" destination="iIc-Zv-RCR" id="SSd-K7-MJM"/>
+                                            <outlet property="walking_distance_info" destination="9aM-VJ-hxh" id="aXw-EV-lEQ"/>
                                             <segue destination="pEx-zt-b4q" kind="show" identifier="mapSegue" id="eq2-PC-33k"/>
                                         </connections>
                                     </tableViewCell>
@@ -820,28 +828,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You performed this workout on &lt;date&gt;!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba1-QY-OsP">
-                                                    <rect key="frame" x="15" y="11" width="301" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="348" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Exercise 1&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCv-e8-4u8">
-                                                    <rect key="frame" x="15" y="40" width="97" height="21"/>
+                                                    <rect key="frame" x="15" y="40" width="301" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Exercise 2&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e7-bH-YaN">
-                                                    <rect key="frame" x="15" y="69" width="100" height="21"/>
+                                                    <rect key="frame" x="15" y="69" width="301" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Exercise 3&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNM-7R-gGy">
-                                                    <rect key="frame" x="15" y="98" width="100" height="21"/>
+                                                    <rect key="frame" x="15" y="98" width="301" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -858,6 +866,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="exerc_1" destination="QCv-e8-4u8" id="k6b-bg-d0K"/>
+                                            <outlet property="exerc_2" destination="8e7-bH-YaN" id="Coq-D4-zmM"/>
+                                            <outlet property="exerc_3" destination="nNM-7R-gGy" id="56h-kt-7gr"/>
+                                            <outlet property="perform_info" destination="Ba1-QY-OsP" id="IdJ-Yx-pKg"/>
                                             <segue destination="SF8-SK-3ph" kind="show" identifier="workoutSegue" id="CdN-Je-KMM"/>
                                         </connections>
                                     </tableViewCell>
@@ -869,7 +881,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You weighted in at &lt;kg&gt;KG on &lt;date&gt;!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y36-lP-PvS">
-                                                    <rect key="frame" x="15" y="11" width="295" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="363" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -879,6 +891,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="weight_info" destination="Y36-lP-PvS" id="l3O-Kp-r7O"/>
                                             <segue destination="TQR-a6-XMt" kind="show" identifier="weightInSegue" id="pyp-ga-ISZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -890,6 +903,7 @@
                         <viewLayoutGuide key="safeArea" id="DIN-O2-zkL"/>
                     </view>
                     <connections>
+                        <outlet property="quote_label" destination="juk-3h-UJn" id="DVR-Md-Fo1"/>
                         <outlet property="tableview" destination="LN3-4O-ccX" id="gDp-ua-Rqr"/>
                     </connections>
                 </viewController>
@@ -2278,6 +2292,6 @@
         <segue reference="fNh-MB-fwM"/>
         <segue reference="AgR-Jf-DMV"/>
         <segue reference="KFN-bc-SJf"/>
-        <segue reference="2nk-Ai-jGS"/>
+        <segue reference="Lzl-LH-SML"/>
     </inferredMetricsTieBreakers>
 </document>
