@@ -244,7 +244,7 @@ class FeedViewController: UIViewController, WeatherGetterDelegate
         content.title = "Make sure to do your exercises today!"
         content.badge = 1
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)

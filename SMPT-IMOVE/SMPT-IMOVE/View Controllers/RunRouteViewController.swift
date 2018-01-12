@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
 
 class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -19,6 +20,7 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    
     
     
     private var run: Run!
@@ -37,6 +39,7 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stopButton.isHidden = true
         self.mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -71,6 +74,8 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
             
             locationList.append(newLocation)
         }
+        let region = MKCoordinateRegionMakeWithDistance(locations[0].coordinate, 500, 500)
+        mapView.setRegion(region, animated: true)
     }
     
     func makeRegion() -> CLCircularRegion
@@ -121,7 +126,6 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
     }
     
-    
     @IBAction func stopTapped(_ sender: UIButton)
     {
         let alertController = UIAlertController(title: "End run?",
@@ -132,7 +136,7 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
             self.stopRun()
             self.saveRun()
             self.delegate.completedRouteRuns.append(self.route)
-            self.performSegue(withIdentifier: "", sender: nil)
+            self.performSegue(withIdentifier: "runDetails", sender: nil)
         })
         alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) { _ in
             self.stopRun()
@@ -143,11 +147,12 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     }
     
     
+    
+    
     private func startRun() {
         startButton.isHidden = true
         stopButton.isHidden = false
         //mapView.removeOverlays(mapView.overlays)
-        
         seconds = 0
         distance = Measurement(value: 0, unit: UnitLength.meters)
         locationList.removeAll()
@@ -182,6 +187,10 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
         CoreDataStack.saveContext()
         
         run = newRun
+        
+        let runHistory = RunHistory(routeName: route.nameRoute, time: newRun.duration, distance: newRun.distance, date: newRun.timestamp!)
+        let id = Auth.auth().currentUser?.uid
+        UserFirebase.publish(id: id, Run: runHistory)
     }
     
     func eachSecond() {                 
@@ -204,84 +213,12 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     private func startLocationUpdates() {
         locationManager.delegate = self
         locationManager.activityType = .fitness
-        locationManager.distanceFilter = 10
+        locationManager.distanceFilter = 5
         locationManager.startUpdatingLocation()
     }
     
-    private func polyLine() -> [MulticolorPolyline] {
-        
-        // 1
-        let locations = run.locations?.array as! [Location]
-        var coordinates: [(CLLocation, CLLocation)] = []
-        var speeds: [Double] = []
-        var minSpeed = Double.greatestFiniteMagnitude
-        var maxSpeed = 0.0
-        
-        // 2
-        for (first, second) in zip(locations, locations.dropFirst()) {
-            let start = CLLocation(latitude: first.latitude, longitude: first.longitude)
-            let end = CLLocation(latitude: second.latitude, longitude: second.longitude)
-            coordinates.append((start, end))
-            
-            //3
-            let distance = end.distance(from: start)
-            let time = second.timestamp!.timeIntervalSince(first.timestamp! as Date)
-            let speed = time > 0 ? distance / time : 0
-            speeds.append(speed)
-            minSpeed = min(minSpeed, speed)
-            maxSpeed = max(maxSpeed, speed)
-        }
-        
-        //4
-        let midSpeed = speeds.reduce(0, +) / Double(speeds.count)
-        
-        //5
-        var segments: [MulticolorPolyline] = []
-        for ((start, end), speed) in zip(coordinates, speeds) {
-            let coords = [start.coordinate, end.coordinate]
-            let segment = MulticolorPolyline(coordinates: coords, count: 2)
-            segment.color = segmentColor(speed: speed,
-                                         midSpeed: midSpeed,
-                                         slowestSpeed: minSpeed,
-                                         fastestSpeed: maxSpeed)
-            segments.append(segment)
-        }
-        return segments
-    }
+   
     
-    private func segmentColor(speed: Double, midSpeed: Double, slowestSpeed: Double, fastestSpeed: Double) -> UIColor {
-        enum BaseColors {
-            static let r_red: CGFloat = 1
-            static let r_green: CGFloat = 20 / 255
-            static let r_blue: CGFloat = 44 / 255
-            
-            static let y_red: CGFloat = 1
-            static let y_green: CGFloat = 215 / 255
-            static let y_blue: CGFloat = 0
-            
-            static let g_red: CGFloat = 0
-            static let g_green: CGFloat = 146 / 255
-            static let g_blue: CGFloat = 78 / 255
-        }
-        
-        let red, green, blue: CGFloat
-        
-        if speed < midSpeed {
-            let ratio = CGFloat((speed - slowestSpeed) / (midSpeed - slowestSpeed))
-            red = BaseColors.r_red + ratio * (BaseColors.y_red - BaseColors.r_red)
-            green = BaseColors.r_green + ratio * (BaseColors.y_green - BaseColors.r_green)
-            blue = BaseColors.r_blue + ratio * (BaseColors.y_blue - BaseColors.r_blue)
-        } else {
-            let ratio = CGFloat((speed - midSpeed) / (fastestSpeed - midSpeed))
-            red = BaseColors.y_red + ratio * (BaseColors.g_red - BaseColors.y_red)
-            green = BaseColors.y_green + ratio * (BaseColors.g_green - BaseColors.y_green)
-            blue = BaseColors.y_blue + ratio * (BaseColors.g_blue - BaseColors.y_blue)
-        }
-        
-        return UIColor(red: red, green: green, blue: blue, alpha: 1)
-    }
-    
-
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let polyline = overlay as? MKPolyline else {
@@ -291,6 +228,14 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
         renderer.strokeColor = .black
         renderer.lineWidth = 3
         return renderer
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "runDetails"
+        {
+            let destination = segue.destination as! RunOverviewViewController
+            destination.run = self.run
+        }
     }
     
     

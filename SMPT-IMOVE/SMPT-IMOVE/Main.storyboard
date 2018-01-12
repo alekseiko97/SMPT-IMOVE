@@ -611,7 +611,7 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="p49-EW-yTx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="objectCell" id="p49-EW-yTx" customClass="ObjectTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="294" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p49-EW-yTx" id="sD4-qk-ymk">
@@ -2195,6 +2195,66 @@
             </objects>
             <point key="canvasLocation" x="79.710144927536234" y="-521.73913043478262"/>
         </scene>
+        <!--Run Overview View Controller-->
+        <scene sceneID="rc4-hH-X6Y">
+            <objects>
+                <viewController id="zJR-1q-YfW" customClass="RunOverviewViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E17-ne-NjA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-4o-n7n">
+                                <rect key="frame" x="20" y="20" width="374" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zJR-1q-YfW" id="Lvl-Os-ehY"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2h-im-pjp">
+                                <rect key="frame" x="20" y="397" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCY-W3-RY1">
+                                <rect key="frame" x="20" y="487" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBA-bV-3SB">
+                                <rect key="frame" x="20" y="533" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-dZ-IUK">
+                                <rect key="frame" x="20" y="435" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="syi-7e-yKP"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="AFk-dZ-IUK" id="FLX-Ln-1eh"/>
+                        <outlet property="distanceLabel" destination="a2h-im-pjp" id="a8x-BE-4mf"/>
+                        <outlet property="mapView" destination="gUG-4o-n7n" id="CjV-9a-4bU"/>
+                        <outlet property="paceLabel" destination="tBA-bV-3SB" id="13x-f0-MuF"/>
+                        <outlet property="timeLabel" destination="cCY-W3-RY1" id="n9F-fg-OAa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUD-Ps-ou4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086.9565217391305" y="-1290.4891304347827"/>
+        </scene>
         <!--Run Route View Controller-->
         <scene sceneID="O2H-Uf-hJk">
             <objects>
@@ -2203,7 +2263,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-Xj-s4z">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-Xj-s4z">
                                 <rect key="frame" x="17" y="0.0" width="377" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -2272,6 +2332,9 @@
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopTapped:" destination="cJN-4J-yvg" eventType="touchUpInside" id="hMb-JO-Axd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -2283,8 +2346,9 @@
                         <outlet property="mapView" destination="JMe-Xj-s4z" id="TGM-dC-cOy"/>
                         <outlet property="paceLabel" destination="e4c-BJ-5Ge" id="8EU-iB-rHD"/>
                         <outlet property="startButton" destination="m1K-4N-c0c" id="LNU-Cm-iyJ"/>
-                        <outlet property="stopButton" destination="Kmj-5e-B0a" id="DeE-UV-g6N"/>
+                        <outlet property="stopButton" destination="Kmj-5e-B0a" id="ezb-Aw-4DA"/>
                         <outlet property="timeLabel" destination="hJN-Tp-q5V" id="sjR-mn-nQh"/>
+                        <segue destination="zJR-1q-YfW" kind="show" identifier="runDetails" id="fP7-JW-mt0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKv-VT-l2S" userLabel="First Responder" sceneMemberID="firstResponder"/>

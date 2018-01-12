@@ -38,3 +38,11 @@ extension UnitSpeed {
         return UnitSpeed(symbol: "min/mi", converter: UnitConverterPace(coefficient: 60.0 / 1609.34))
     }
 }
+
+//extension UnitLength
+//{
+//    static var milesToKilometres: UnitLength{
+//        return UnitLength(symbol: "km", converter: UnitConverterPace(coefficient: <#T##Double#>))
+//    }
+//}
+

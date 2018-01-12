@@ -73,6 +73,8 @@
 		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
 		F5F5B1411FDAD4260075942D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F5B1401FDAD4260075942D /* Social.framework */; };
 		F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */; };
+		F5FD2E6E2008A8B900CD549A /* RunOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E6D2008A8B900CD549A /* RunOverviewViewController.swift */; };
+		F5FD2E702008CC6B00CD549A /* RunHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E6F2008CC6B00CD549A /* RunHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +178,8 @@
 		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
 		F5F5B1401FDAD4260075942D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		F5FD2E6D2008A8B900CD549A /* RunOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunOverviewViewController.swift; sourceTree = "<group>"; };
+		F5FD2E6F2008CC6B00CD549A /* RunHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunHistory.swift; sourceTree = "<group>"; };
 		F8753CEFB12AA13E5B76F0FA /* Pods-SMPT-IMOVETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVETests/Pods-SMPT-IMOVETests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,11 +295,11 @@
 			isa = PBXGroup;
 			children = (
 				F53288731FEBB31C00EED68B /* GoogleService-Info.plist */,
+				F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */,
 				F572839A1FDADCA90072A9CF /* CoreData */,
 				F5F9AA871FDABFAC0053B8A6 /* Firebase */,
 				F5F9AA841FDABEFF0053B8A6 /* Enums */,
 				F5F9AA831FDABEC90053B8A6 /* Models */,
-				F54B674F1FD156E4007CFD70 /* SMPT-IMOVE.entitlements */,
 				F52A001A1FD9680100B38CE1 /* GPX */,
 				F56825991FD032AF00AA7232 /* View Controllers */,
 				F568256B1FCFFBF500AA7232 /* AppDelegate.swift */,
@@ -337,6 +341,7 @@
 				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F5333B261FD9884C004BE914 /* RouteViewController.swift */,
 				F57283771FDABF670072A9CF /* RunRouteViewController.swift */,
+				F5FD2E6D2008A8B900CD549A /* RunOverviewViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
 				F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */,
@@ -397,6 +402,7 @@
 				C1A099C11FD045A700C2A2EE /* Event.swift */,
 				F5510C301FE3C031005CECEF /* Object.swift */,
 				F532882F1FE2802700EED68B /* Weight.swift */,
+				F5FD2E6F2008CC6B00CD549A /* RunHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -753,9 +759,11 @@
 				C1955B3A1FD94F8500FAEA2B /* EventTableViewCell.swift in Sources */,
 				F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */,
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
+				F5FD2E702008CC6B00CD549A /* RunHistory.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F5333B271FD9884C004BE914 /* RouteViewController.swift in Sources */,
 				F57283781FDABF670072A9CF /* RunRouteViewController.swift in Sources */,
+				F5FD2E6E2008A8B900CD549A /* RunOverviewViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F5510C311FE3C031005CECEF /* Object.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
