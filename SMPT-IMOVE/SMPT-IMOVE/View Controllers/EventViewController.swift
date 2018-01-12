@@ -9,9 +9,10 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Firebase
 
 class EventViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
-  
+
     var events : [Event] = []
     var selectedrow: Int = 0
     
@@ -22,12 +23,12 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     let eindhoven2 = CLLocationCoordinate2DMake(51.426622, 5.481357)
     let eindhoven3 = CLLocationCoordinate2DMake(51.441722, 5.445506)
     
-    //creating new 3 Event objects
+    //creating new 3 Event objects, as an example before using firebase
     func CreateNewEvent(){
         let firstEvent = Event(
             name: "Strong legs",
             evDescription: "Running and doing exercises",
-            date: Date(timeIntervalSince1970: 1512835200),//using time converter,
+            date: Date(timeIntervalSince1970: 1516871700),//using time converter,
             locCoord: eindhoven2,
             locName: "Stadswandelpark")
         events.append(firstEvent)
@@ -35,7 +36,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let secondEvent = Event(
             name: "Running",
             evDescription: "Running competition",
-            date: Date(timeIntervalSince1970: 1512906323),//using time converter,
+            date: Date(timeIntervalSince1970: 1517408100),//using time converter,
             locCoord: eindhoven3,
             locName: "Jacob Oppenheimerpark")
         events.append(secondEvent)
@@ -43,19 +44,44 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let thirdEvent = Event(
             name: "Group competition",
             evDescription: "Using bench and doing exercises",
-            date: Date(timeIntervalSince1970: 1513103400),//using time converter,
+            date: Date(timeIntervalSince1970: 1517487300),//using time converter,
             locCoord: eindhoven,
             locName: "Philips Stadium")
         events.append(thirdEvent)
     }
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLoad()  {
         eventTableView.delegate = self
         eventTableView.dataSource = self
-        CreateNewEvent()
+       // CreateNewEvent() //for mock events
+        
+        FirebaseConfig.ref.child("Events").observe(.childAdded, with: { snapshot in
+                if let eventObject = snapshot.value as? [String:AnyObject],
+                    let name = eventObject["Name event"] as? String,
+                    let desc = eventObject["Description"] as? String,
+                    let loc = eventObject["Location"] as? String,
+                    let coords = eventObject["Coordinates"] as? [String:Any],
+                    let latitude = coords["latitude"] as? Double,
+                    let longitude = coords["longitude"] as? Double,
+                    let date = eventObject["Date"] as? String
+                {
+                    
+                    let newEvent = Event(
+                        name: name,
+                        evDescription: desc,
+                        date: date,
+                        latitude: latitude,
+                        longitude: longitude,
+                        locName: loc)
+                    self.events.append(newEvent)
+                    print("event loaded:", newEvent)
+                    self.eventTableView.reloadData()
+                }
+                else {
+                    print("problem loading from database")
+                }
+            })
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -72,7 +98,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
         let cell : EventTableViewCell = eventTableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
         cell.lbl_EventName.text = String(describing: events[indexPath.row].eventName)
         cell.lbl_Location.text = String(describing: events[indexPath.row].locationName)
-        cell.lbl_Date.text = events[indexPath.row].getDateAsString() + " " +  events[indexPath.row].getTimeAsString()
+        cell.lbl_Date.text = events[indexPath.row].date.getDateAsString() + " " +  events[indexPath.row].date.getTimeAsString()
         cell.lbl_Description.text = String(describing: events[indexPath.row].eventDescription)
         return cell;
     }

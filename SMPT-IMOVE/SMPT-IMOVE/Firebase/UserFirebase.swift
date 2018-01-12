@@ -34,4 +34,15 @@ public class UserFirebase {
     static func publish(UserId id:String!, Goal goal:String!) {
         FirebaseConfig.ref.child("users/\(id!)").child("Goal").setValue(goal);
     }
+    static func publish(UserId id:String!, Event event:Event) {
+         FirebaseConfig.ref.child("users/\(id!)").child("Events").child(event.eventName).setValue(event.toDictionary());
+      //  FirebaseConfig.ref.child("users/\(id!)").child("Events").child("Event name:").setValue(event.eventName);
+       // FirebaseConfig.ref.child("users/\(id!)").child("Events").child("Location name:").setValue(event.locationName);
+       // FirebaseConfig.ref.child("users/\(id!)").child("Events").child("Descriptions:").setValue(event.eventDescription);
+       
+    }
+    static func publish(Event event:Event) {
+        FirebaseConfig.ref.child("Events").child(event.eventName).setValue(event.toDictionary());
+    
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class WorkoutViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     //example exercises,real execises will be added from database
-    var exercises: [String] = ["exrs 1","exrs 2","exrs 3","exrs 4","exrs 5","exrs 6","exrs 7","exrs 8","exrs 9","exrs 10","exrs 11", "exrs 12"]
+    var exercises: [String] = ["exers 1","exers 2","exers 3","exers 4","exers 5","exers 6","exers 7","exers 8","exers 9","exers 10","exers 11", "exers 12"]
     
     @IBOutlet weak var workoutTableView: UITableView!
     override func viewDidLoad() {
