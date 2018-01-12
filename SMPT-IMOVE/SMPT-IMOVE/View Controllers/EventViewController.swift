@@ -23,7 +23,7 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     let eindhoven2 = CLLocationCoordinate2DMake(51.426622, 5.481357)
     let eindhoven3 = CLLocationCoordinate2DMake(51.441722, 5.445506)
     
-    //creating new 3 Event objects
+    //creating new 3 Event objects, as an example before using firebase
     func CreateNewEvent(){
         let firstEvent = Event(
             name: "Strong legs",
@@ -52,12 +52,9 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
     override func viewDidLoad()  {
         eventTableView.delegate = self
         eventTableView.dataSource = self
-       // CreateNewEvent()
+       // CreateNewEvent() //for mock events
         
         FirebaseConfig.ref.child("Events").observe(.childAdded, with: { snapshot in
-            
-//            print("snapshot:", snapshot.value)
-            
                 if let eventObject = snapshot.value as? [String:AnyObject],
                     let name = eventObject["Name event"] as? String,
                     let desc = eventObject["Description"] as? String,
@@ -83,10 +80,8 @@ class EventViewController: UIViewController, CLLocationManagerDelegate, UITableV
                     print("problem loading from database")
                 }
             })
-        
     }
    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

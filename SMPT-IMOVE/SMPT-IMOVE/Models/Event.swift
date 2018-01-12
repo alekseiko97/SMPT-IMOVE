@@ -74,24 +74,6 @@ class Event: CustomStringConvertible {
         self.workoutExercises = []
     }
 
-    func addExerciseToTheWorkout(exerc:Exercise){
-        
-        self.workoutExercises.append(exerc)
-    }
-    
-    func addUserToTheEvent(user:User){
-        
-        self.usersParticipating.append(user)
-    }
-    
-    func showAllUsersForTheEvent() -> Int {
-        return self.usersParticipating.count
-        
-    }
-
-    func removeUserFromTheEvent(user:User){
-        
-    }
 
     var description: String {
         return "name event: \(eventName)\("\n")description: \(eventDescription)\("\n")when: \(date)\("\n")location: \(locationCoordinates)\("\n")"

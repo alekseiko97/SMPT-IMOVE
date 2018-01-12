@@ -74,12 +74,9 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
                         locName: placemarks?.first?.compactAddress ?? "Default")
                     self.eventsList.append(newEvent)
                     print(newEvent.description)
-                //   let id = Auth.auth().currentUser?.uid
+                // let id = Auth.auth().currentUser?.uid //if we want to save events for each user
                 //UserFirebase.publish(UserId: id, Event: newEvent)
                      UserFirebase.publish(Event: newEvent)
-              
-                    
-                    
                 }
             }
         }
