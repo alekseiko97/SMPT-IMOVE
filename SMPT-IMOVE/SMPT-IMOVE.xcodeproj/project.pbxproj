@@ -10,6 +10,8 @@
 		05C42FB624FDF7E888017D56 /* Pods_SMPT_IMOVE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA543E774D2A9D18CE395CC6 /* Pods_SMPT_IMOVE.framework */; };
 		7AB49E21EF7A8F941137C5B3 /* Pods_SMPT_IMOVEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0144C2C613FD99AE86747969 /* Pods_SMPT_IMOVEUITests.framework */; };
 		A99E3BBAE7E7FA2CD2716D06 /* Pods_SMPT_IMOVETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB2EC73DDD244F6F43E4A6A /* Pods_SMPT_IMOVETests.framework */; };
+		C1146172200F96A40081577D /* WorkoutTrainingJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1146171200F96A40081577D /* WorkoutTrainingJournalViewController.swift */; };
+		C1146176200F98310081577D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1146175200F98310081577D /* WorkoutCell.swift */; };
 		C12689EB1FDA7A3D009B4B49 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */; };
 		C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */; };
 		C142AB4B1FD141DD00B6478F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142AB4A1FD141DD00B6478F /* Route.swift */; };
@@ -92,6 +94,8 @@
 		4EB2EC73DDD244F6F43E4A6A /* Pods_SMPT_IMOVETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMPT_IMOVETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		720E7E84C4A3E26C11FD7A43 /* Pods-SMPT-IMOVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVEUITests/Pods-SMPT-IMOVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		73393774CB3D0823D1A86B6F /* Pods-SMPT-IMOVE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVE/Pods-SMPT-IMOVE.release.xcconfig"; sourceTree = "<group>"; };
+		C1146171200F96A40081577D /* WorkoutTrainingJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrainingJournalViewController.swift; sourceTree = "<group>"; };
+		C1146175200F98310081577D /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		C12689EA1FDA7A3D009B4B49 /* ExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewController.swift; sourceTree = "<group>"; };
 		C12689EC1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		C142AB4A1FD141DD00B6478F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 				F54B67501FD16263007CFD70 /* RouteTableViewCell.swift */,
 				C1955B391FD94F8500FAEA2B /* EventTableViewCell.swift */,
 				F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */,
+				C1146175200F98310081577D /* WorkoutCell.swift */,
 				C1D2A96E2008CD4900D235E4 /* ObjectExerciseTableViewCell.swift */,
 			);
 			path = TableViewCells;
@@ -326,6 +331,7 @@
 				F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */,
 				F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */,
 				F532887F1FED334500EED68B /* RegisterViewController.swift */,
+				C1146171200F96A40081577D /* WorkoutTrainingJournalViewController.swift */,
 				F52A1E2C200761A50056281E /* StateGoalViewController.swift */,
 			);
 			path = "View Controllers";
@@ -706,6 +712,7 @@
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F52A1E2D200761A50056281E /* StateGoalViewController.swift in Sources */,
+				C1146172200F96A40081577D /* WorkoutTrainingJournalViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
 				C1955B3C1FD95BE400FAEA2B /* EventSingleViewController.swift in Sources */,
@@ -715,6 +722,7 @@
 				C1D2A96B2008C38500D235E4 /* ObjectTableViewCell.swift in Sources */,
 				F599529D1FD031320038202D /* WeatherGetter.swift in Sources */,
 				C1A099BE1FD043DB00C2A2EE /* Exercise.swift in Sources */,
+				C1146176200F98310081577D /* WorkoutCell.swift in Sources */,
 				F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */,
 				F568259D1FD0337B00AA7232 /* FeedViewController.swift in Sources */,
 				F532887C1FEBE0DC00EED68B /* AdditionInfoViewController.swift in Sources */,
