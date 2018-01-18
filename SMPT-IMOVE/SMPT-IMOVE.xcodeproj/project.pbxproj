@@ -40,12 +40,12 @@
 		F53288301FE2802700EED68B /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532882F1FE2802700EED68B /* Weight.swift */; };
 		F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288311FE284BF00EED68B /* WeightViewController.swift */; };
 		F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */; };
-		F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */; };
 		F53288741FEBB31C00EED68B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F53288731FEBB31C00EED68B /* GoogleService-Info.plist */; };
 		F53288761FEBBC4A00EED68B /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */; };
 		F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288771FEBBCF200EED68B /* UserFirebase.swift */; };
 		F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288791FEBBF2900EED68B /* Firebase.swift */; };
 		F532887C1FEBE0DC00EED68B /* AdditionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */; };
+		F532887E1FECF8E600EED68B /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */; };
 		F53288801FED334500EED68B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532887F1FED334500EED68B /* RegisterViewController.swift */; };
 		F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54B67491FD150F2007CFD70 /* MapViewController.swift */; };
 		F54B674E1FD156C4007CFD70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54B674D1FD156C4007CFD70 /* MapKit.framework */; };
@@ -121,12 +121,12 @@
 		F532882F1FE2802700EED68B /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		F53288311FE284BF00EED68B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
-		F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		F53288731FEBB31C00EED68B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F53288751FEBBC4A00EED68B /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
 		F53288771FEBBCF200EED68B /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		F53288791FEBBF2900EED68B /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		F532887B1FEBE0DC00EED68B /* AdditionInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionInfoViewController.swift; sourceTree = "<group>"; };
+		F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		F532887F1FED334500EED68B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F54B67491FD150F2007CFD70 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F54B674C1FD151B3007CFD70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -459,7 +459,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -896,14 +896,16 @@
 			baseConfigurationReference = 23201A745163E6F746E7F58B /* Pods-SMPT-IMOVE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SMPT-IMOVE/SMPT-IMOVE.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWTAA8VL2P;
+				DEVELOPMENT_TEAM = 2R9BB8JNP5;
 				INFOPLIST_FILE = "SMPT-IMOVE/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SM.SMPT-IMOVE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -914,14 +916,15 @@
 			baseConfigurationReference = 73393774CB3D0823D1A86B6F /* Pods-SMPT-IMOVE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SMPT-IMOVE/SMPT-IMOVE.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UWTAA8VL2P;
+				DEVELOPMENT_TEAM = 2R9BB8JNP5;
 				INFOPLIST_FILE = "SMPT-IMOVE/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SM.SMPT-IMOVE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

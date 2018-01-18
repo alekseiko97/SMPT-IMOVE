@@ -57,4 +57,4 @@ class User {
     }
 }
 
-var user = User(name: "Shadowphoenix", email: "fontys@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
+var user = User(id: "1", name: "Shadowphoenix", email: "fontys@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
