@@ -12,12 +12,13 @@ import CoreLocation
 
 class MapTrainingJournalTableViewCell: UITableViewCell, CLLocationManagerDelegate, MKMapViewDelegate
 {
+    @IBOutlet weak var walking_distance_info: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager = CLLocationManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        walking_distance_info.text = "You walked 7 km on 21/03/2018"
         locationManager.delegate = self
         mapView.delegate = self
         
