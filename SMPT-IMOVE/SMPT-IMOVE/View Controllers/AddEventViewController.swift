@@ -95,6 +95,7 @@ class AddEventViewController: UIViewController, CLLocationManagerDelegate, UIGes
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
         mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
+        manager.stopUpdatingLocation()
     }
     
     @IBAction func addPin(_ sender: UILongPressGestureRecognizer) {
