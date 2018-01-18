@@ -26,7 +26,6 @@
 		C1A099C21FD045A700C2A2EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A099C11FD045A700C2A2EE /* Event.swift */; };
 		C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B9174C1FD169100021FE3E /* EventViewController.swift */; };
 		C1D2A96B2008C38500D235E4 /* ObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2A96A2008C38500D235E4 /* ObjectTableViewCell.swift */; };
-		C1D2A96D2008CB5900D235E4 /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2A96C2008CB5900D235E4 /* ObjectViewController.swift */; };
 		C1D2A96F2008CD4900D235E4 /* ObjectExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2A96E2008CD4900D235E4 /* ObjectExerciseTableViewCell.swift */; };
 		F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DB9E1FD14465005B785C /* WorkoutViewController.swift */; };
 		F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519DBA31FD1868C005B785C /* MapTrainingJournalTableViewCell.swift */; };
@@ -42,6 +41,7 @@
 		F52A002B1FD97A1B00B38CE1 /* Route_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */; };
 		F52A002D1FD97A2F00B38CE1 /* Track_u.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */; };
 		F52A1E2D200761A50056281E /* StateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52A1E2C200761A50056281E /* StateGoalViewController.swift */; };
+		F52A1E2F20108F930056281E /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52A1E2E20108F930056281E /* ObjectViewController.swift */; };
 		F53288301FE2802700EED68B /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532882F1FE2802700EED68B /* Weight.swift */; };
 		F53288321FE284BF00EED68B /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53288311FE284BF00EED68B /* WeightViewController.swift */; };
 		F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */; };
@@ -110,7 +110,6 @@
 		C1A099C11FD045A700C2A2EE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C1B9174C1FD169100021FE3E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C1D2A96A2008C38500D235E4 /* ObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTableViewCell.swift; sourceTree = "<group>"; };
-		C1D2A96C2008CB5900D235E4 /* ObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectViewController.swift; path = "/Users/natalya/Documents/SMPT-IMOVE/SMPT-IMOVE/SMPT-IMOVE/View Controllers/ObjectViewController.swift"; sourceTree = "<absolute>"; };
 		C1D2A96E2008CD4900D235E4 /* ObjectExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		DA543E774D2A9D18CE395CC6 /* Pods_SMPT_IMOVE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMPT_IMOVE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36A6B62B98E895DF4DCB79A /* Pods-SMPT-IMOVETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPT-IMOVETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPT-IMOVETests/Pods-SMPT-IMOVETests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		F52A002A1FD97A1B00B38CE1 /* Route_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Route_u.gpx; sourceTree = "<group>"; };
 		F52A002C1FD97A2F00B38CE1 /* Track_u.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Track_u.gpx; sourceTree = "<group>"; };
 		F52A1E2C200761A50056281E /* StateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateGoalViewController.swift; sourceTree = "<group>"; };
+		F52A1E2E20108F930056281E /* ObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 		F532882F1FE2802700EED68B /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		F53288311FE284BF00EED68B /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		F532886F1FE2ADFF00EED68B /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 				F5F9AA821FDABE5D0053B8A6 /* MapViews */,
 				F519DBA21FD1861E005B785C /* TableViewCells */,
 				F568259C1FD0337B00AA7232 /* FeedViewController.swift */,
-				C1D2A96C2008CB5900D235E4 /* ObjectViewController.swift */,
+				F52A1E2E20108F930056281E /* ObjectViewController.swift */,
 				F54B67491FD150F2007CFD70 /* MapViewController.swift */,
 				F519DB9E1FD14465005B785C /* WorkoutViewController.swift */,
 				F519DBA91FD18B8E005B785C /* TrainingJournalViewController.swift */,
@@ -712,6 +712,7 @@
 				F519DB9F1FD14465005B785C /* WorkoutViewController.swift in Sources */,
 				F54B67541FD16919007CFD70 /* POI.swift in Sources */,
 				F52A1E2D200761A50056281E /* StateGoalViewController.swift in Sources */,
+				F52A1E2F20108F930056281E /* ObjectViewController.swift in Sources */,
 				C1146172200F96A40081577D /* WorkoutTrainingJournalViewController.swift in Sources */,
 				F519DBA41FD1868C005B785C /* MapTrainingJournalTableViewCell.swift in Sources */,
 				F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */,
@@ -729,7 +730,6 @@
 				F53288781FEBBCF200EED68B /* UserFirebase.swift in Sources */,
 				F568256C1FCFFBF500AA7232 /* AppDelegate.swift in Sources */,
 				F53288801FED334500EED68B /* RegisterViewController.swift in Sources */,
-				C1D2A96D2008CB5900D235E4 /* ObjectViewController.swift in Sources */,
 				F54B674A1FD150F2007CFD70 /* MapViewController.swift in Sources */,
 				F53288701FE2ADFF00EED68B /* AddWeightViewController.swift in Sources */,
 				C142AB4F1FD144F300B6478F /* Object_Exercise.swift in Sources */,
