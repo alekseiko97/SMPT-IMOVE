@@ -1,21 +1,19 @@
 //
-//  WeightInTrainingJournalTableViewCell.swift
+//  ObjectExerciseTableViewCell.swift
 //  SMPT-IMOVE
 //
-//  Created by Fhict on 01/12/2017.
-//  Copyright © 2017 Fhict. All rights reserved.
+//  Created by Natalya Suslova on 12/01/2018.
+//  Copyright © 2018 Fhict. All rights reserved.
 //
 
 import UIKit
 
-class WeightInTrainingJournalTableViewCell: UITableViewCell {
+class ObjectExerciseTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var weight_info: UILabel!
+    @IBOutlet weak var object_exerc_name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        weight_info.text = "You weighted 65 kg on 21/03/2018"
         // Initialization code
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

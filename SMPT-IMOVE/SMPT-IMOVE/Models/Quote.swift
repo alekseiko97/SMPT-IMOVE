@@ -19,7 +19,7 @@ class Quote: CustomStringConvertible {
         return "\(quote)"
     }
 }
-
+//An array with quotes, and a random number generator, made globally in the Quote class.
 var Quotes = [Quote(quote: "I can accept failure, everyone fails at something. But I can’t accept not trying again. - Michael Jordan"),
               Quote(quote:"You are never a loser until you quit trying"),
               Quote(quote:"It never gets easier, you just get better."),
