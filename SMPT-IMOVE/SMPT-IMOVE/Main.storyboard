@@ -678,6 +678,7 @@
                         <viewLayoutGuide key="safeArea" id="Y7E-3k-nr2"/>
                     </view>
                     <connections>
+                        <outlet property="kmLabel" destination="Typ-G0-FBf" id="yRH-0h-bSw"/>
                         <outlet property="mapView" destination="DGV-Yh-pEf" id="5tY-Ik-XSy"/>
                         <segue destination="aDP-VC-qEy" kind="show" identifier="objectVCSegue" id="AdO-if-bYK"/>
                     </connections>
@@ -689,7 +690,7 @@
         <!--Objects-->
         <scene sceneID="5PJ-Tp-xZd">
             <objects>
-                <viewController storyboardIdentifier="objectVC" title="Objects" id="aDP-VC-qEy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="objectVC" title="Objects" id="aDP-VC-qEy" customClass="ObjectViewController" customModule="SMPT_IMOVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYD-LP-YgT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -700,7 +701,7 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dbr-TJ-xEh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ObjectCell" id="dbr-TJ-xEh" customClass="ObjectObjectTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="185" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbr-TJ-xEh" id="uEq-ub-buu">
@@ -718,6 +719,9 @@
                                             <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="objectNameLabel" destination="yV1-IC-vgz" id="7aM-Ov-e4h"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -727,7 +731,7 @@
                                 <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Zhk-9J-T2h">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="objectExercName" id="Zhk-9J-T2h" customClass="ObjectExerciseTableViewCell" customModule="SMPT_IMOVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="185" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zhk-9J-T2h" id="ffc-r6-nM4">
@@ -745,6 +749,9 @@
                                             <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="object_exerc_name" destination="QvZ-d5-klC" id="6it-XM-KfO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -767,6 +774,10 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="6V7-g4-Taq"/>
                     </view>
+                    <connections>
+                        <outlet property="objectExerciseTableView" destination="MLo-1x-k6t" id="32A-JR-Eh2"/>
+                        <outlet property="object_table_view" destination="0Gm-1Y-oyv" id="8De-Xb-vTQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGz-Ix-1br" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -876,6 +887,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="exerc_1" destination="QCv-e8-4u8" id="Q2T-BA-ABr"/>
+                                            <outlet property="exerc_2" destination="8e7-bH-YaN" id="YcG-yC-Ks5"/>
+                                            <outlet property="exerc_3" destination="nNM-7R-gGy" id="HPY-nZ-gTc"/>
+                                            <outlet property="perform_info" destination="Ba1-QY-OsP" id="yD6-6F-Bzb"/>
                                             <segue destination="SF8-SK-3ph" kind="show" identifier="workoutSegue" id="CdN-Je-KMM"/>
                                         </connections>
                                     </tableViewCell>
@@ -897,6 +912,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="weight_info" destination="Y36-lP-PvS" id="x6s-jL-FBE"/>
                                             <segue destination="TQR-a6-XMt" kind="show" identifier="weightInSegue" id="pyp-ga-ISZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -908,6 +924,7 @@
                         <viewLayoutGuide key="safeArea" id="DIN-O2-zkL"/>
                     </view>
                     <connections>
+                        <outlet property="quote_label" destination="juk-3h-UJn" id="2tv-L6-62a"/>
                         <outlet property="tableview" destination="LN3-4O-ccX" id="gDp-ua-Rqr"/>
                     </connections>
                 </viewController>

@@ -26,7 +26,7 @@ class RouteViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         mapView.add((route.trackDrawer.getPolyline())!)
         mapView.addAnnotations(route.objects)
         zoomToRoute()
-        //kmLabel.text = String(route.kmRoute)
+        kmLabel.text = String(route.kmRoute)
     }
     
     

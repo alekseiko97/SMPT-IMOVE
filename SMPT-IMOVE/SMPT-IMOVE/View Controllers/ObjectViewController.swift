@@ -54,7 +54,7 @@ class ObjectViewController: UIViewController,UITableViewDelegate, UITableViewDat
         var cell : UITableViewCell?
         
         if tableView == self.object_table_view {
-            cell = tableView.dequeueReusableCell(withIdentifier: "ObjectCell", for: indexPath) as!ObjectTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "ObjectCell", for: indexPath) as! ObjectObjectTableViewCell
             let object = objects[indexPath.row]
             cell!.textLabel?.text = object
         }
