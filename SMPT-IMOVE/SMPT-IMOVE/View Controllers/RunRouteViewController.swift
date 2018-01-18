@@ -76,6 +76,7 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
         }
         let region = MKCoordinateRegionMakeWithDistance(locations[0].coordinate, 500, 500)
         mapView.setRegion(region, animated: true)
+        locationManager.stopUpdatingLocation()
     }
     
     func makeRegion() -> CLCircularRegion

@@ -62,6 +62,7 @@ class EventSingleViewController: UIViewController,CLLocationManagerDelegate,MKMa
        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 5000, 5000)
        mapLocation.setRegion(region, animated: true)
        self.mapLocation.showsUserLocation = true
+        manager.stopUpdatingLocation()
     }
     
     func zoomToEvent() {

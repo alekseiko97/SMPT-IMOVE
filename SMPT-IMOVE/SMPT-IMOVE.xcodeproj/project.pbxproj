@@ -77,6 +77,7 @@
 		F57283991FDADC790072A9CF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57283961FDADC780072A9CF /* CoreDataStack.swift */; };
 		F574A7521FD9493E0026EFBE /* TrackDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F574A7511FD9493E0026EFBE /* TrackDrawer.swift */; };
 		F599529D1FD031320038202D /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599529C1FD031320038202D /* WeatherGetter.swift */; };
+		F5DF40A52010A1A500D4B022 /* ObjectObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF40A42010A1A500D4B022 /* ObjectObjectTableViewCell.swift */; };
 		F5F5B1411FDAD4260075942D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F5B1401FDAD4260075942D /* Social.framework */; };
 		F5F9AA811FD96B370053B8A6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */; };
 		F5FD2E6E2008A8B900CD549A /* RunOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E6D2008A8B900CD549A /* RunOverviewViewController.swift */; };
@@ -186,6 +187,7 @@
 		F57283961FDADC780072A9CF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F574A7511FD9493E0026EFBE /* TrackDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDrawer.swift; sourceTree = "<group>"; };
 		F599529C1FD031320038202D /* WeatherGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
+		F5DF40A42010A1A500D4B022 /* ObjectObjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectObjectTableViewCell.swift; sourceTree = "<group>"; };
 		F5F5B1401FDAD4260075942D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F5F9AA801FD96B370053B8A6 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		F5FD2E6D2008A8B900CD549A /* RunOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunOverviewViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				F532887D1FECF8E600EED68B /* WorkoutTableViewCell.swift */,
 				C1146175200F98310081577D /* WorkoutCell.swift */,
 				C1D2A96E2008CD4900D235E4 /* ObjectExerciseTableViewCell.swift */,
+				F5DF40A42010A1A500D4B022 /* ObjectObjectTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				F532887A1FEBBF2900EED68B /* Firebase.swift in Sources */,
 				F5169D7120076C3A00666F89 /* LocationManager.swift in Sources */,
 				C1B9174D1FD169100021FE3E /* EventViewController.swift in Sources */,
+				F5DF40A52010A1A500D4B022 /* ObjectObjectTableViewCell.swift in Sources */,
 				C12689ED1FDA7B2B009B4B49 /* ExerciseTableViewCell.swift in Sources */,
 				C1A099BC1FD0363400C2A2EE /* User.swift in Sources */,
 				F519DBA61FD186F5005B785C /* WorkoutTrainingJournalTableViewCell.swift in Sources */,

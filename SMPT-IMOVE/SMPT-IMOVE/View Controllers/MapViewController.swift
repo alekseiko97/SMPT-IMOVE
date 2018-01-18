@@ -63,6 +63,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 5000, 5000)
         mapView.setRegion(region, animated: true)
         self.mapView.showsUserLocation = true
+        manager.stopUpdatingLocation()
         
     }
     
