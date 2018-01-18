@@ -14,12 +14,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
    
     //MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     
     // Location manager
     let manager = CLLocationManager()
-    let routes = [Route]()
-    var trackDrawer = TrackDrawer(fileNames: ["TestRoute"])
-
+    var routes = [Route]()
+    var selectedrow: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +31,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         manager.requestAlwaysAuthorization()
         manager.startUpdatingLocation()
         loadPOI()
-        mapView.addOverlays(trackDrawer.getPolygons()!)
-//        addRoute()
+        addRoutes()
+        
+    }
+    
+    func addRoutes()
+    {
+        let testRoute = Route(identifier: "1", nameR: "TestRoute", kmR: 7.2)
+        testRoute.addObjectToRoute(object: Object(title: "Bench", coordinate: CLLocationCoordinate2D(latitude: 51.452319, longitude: 5.497161)))
+        testRoute.addObjectToRoute(object: Object(title: "Treetrunk", coordinate: CLLocationCoordinate2D(latitude: 51.452095, longitude: 5.498478)))
+        routes.append(testRoute)
+        routes.append(Route(identifier: "2", nameR: "Glorieuxpark", kmR: 4.82))
+        routes.append(Route(identifier: "3", nameR: "Genneperpark zigzag", kmR: 7.58))
     }
     
     func loadPOI()
@@ -58,6 +70,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         print("Error: \(error)")
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return routes.count
@@ -70,7 +87,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         }
         
         cell.routeLabel.text = routes[indexPath.row].nameRoute
-        let km = String(format:"%f", routes[indexPath.row].kmRoute!)
+        let km = String(routes[indexPath.row].kmRoute)
         cell.kmLabel.text = km
         
         return cell
@@ -86,29 +103,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         return renderer
     }
     
-//    func addRoute() {
-//
-//        //let Path = Bundle.main.path(forResource: "test_route", ofType: "gpx") // Not sure on this part
-//        let thePath = Bundle.main.path(forResource: "Eindhoven", ofType: "gpx")
-//        let pointsArray = NSArray(contentsOfFile: thePath!)
-//
-//        let pointsCount = pointsArray!.count
-//
-//        var pointsToUse: [CLLocationCoordinate2D] = []
-//
-//        for i in 0...pointsCount-1 {
-//            let p = CGPointFromString(pointsArray![i] as! String)
-//            pointsToUse += [CLLocationCoordinate2DMake(CLLocationDegrees(p.x), CLLocationDegrees(p.y))]
-//        }
-//
-//        let myPolyline = MKPolyline(coordinates: &pointsToUse, count: pointsCount)
-//
-//        self.mapView.add(myPolyline)
-//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "routeSegue"
+        {
+            if let indexPath = tableView.indexPathForSelectedRow
+            {
+            let destVC = segue.destination as! RouteViewController
+            destVC.route = routes[indexPath.row]
+            }
+        }
+        
+    }
+    
+
     
     
-    
-    
+
     
 
 }

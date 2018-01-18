@@ -12,21 +12,20 @@ import MapKit
 //NSXMLParserDelegate needed for parsing the gpx files and NSObject is needed by NSXMLParserDelegate
 class TrackDrawer: NSObject, XMLParserDelegate {
     //All filenames will be checked and if found and if it's a gpx file it will generate a polygon
-    var fileNames: [String]! = [String]()
+    var fileName: String!
     
-    init(fileNames: [String]) {
-        self.fileNames = fileNames
+    init(fileName: String) {
+        self.fileName = fileName
     }
     
     //Needs to be a global variable due to the parser function which can't return a value
     private var boundaries = [CLLocationCoordinate2D]()
     
     //Create a polygon for each string there is in fileNames
-    func getPolygons() -> [MKPolyline]? {
+    func getPolyline() -> MKPolyline? {
         //The list that will be returned
-        var polyList: [MKPolyline] = [MKPolyline]()
+        var polyLine: MKPolyline
         
-        for fileName in fileNames! {
             //Reset the list so it won't have the points from the previous polygon
             boundaries = [CLLocationCoordinate2D]()
             
@@ -35,7 +34,7 @@ class TrackDrawer: NSObject, XMLParserDelegate {
             
             if filePath == nil {
                 print ("File \"\(fileName).gpx\" does not exist in the project. Please make sure you imported the file and dont have any spelling errors")
-                continue
+                
             }
             
             //Setup the parser and initialize it with the filepath's data
@@ -51,10 +50,10 @@ class TrackDrawer: NSObject, XMLParserDelegate {
                 print ("Failed to parse the following file: \(fileName).gpx")
             }
             //Create the polygon with the points generated from the parsing process
-            polyList.append(MKPolyline(coordinates: &boundaries, count: boundaries.count))
-            
-        }
-        return polyList
+        
+            polyLine = MKPolyline(coordinates: &boundaries, count: boundaries.count)
+        
+        return polyLine
     }
     
     func getFilePath(fileName: String) -> String? {

@@ -7,22 +7,27 @@
 //
 
 import Foundation
-import  CoreLocation
+import MapKit
 import UIKit
 class Route {
     
-    var nameRoute: String?
-    var kmRoute: Double?
-    var events: [Event]
-    var location: CLLocationCoordinate2D
+    var identifier: String
+    var nameRoute: String
+    var kmRoute: Double
+    var trackDrawer: TrackDrawer
+    var objects: [Object]
     
-    init(nameR: String, kmR:Double, location:CLLocationCoordinate2D ){
+    init(identifier: String, nameR: String, kmR:Double){
+        self.identifier = identifier
         self.nameRoute = nameR
         self.kmRoute = kmR
-        self.events = []
-        self.location = location
+        self.trackDrawer = TrackDrawer(fileName: nameR)
+        self.objects = []
     }
     
-    
+    func addObjectToRoute(object: Object)
+    {
+        self.objects.append(object)
+    }
     
 }

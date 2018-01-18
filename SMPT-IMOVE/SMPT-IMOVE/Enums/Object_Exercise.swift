@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-enum Object_Exercise {
-    case Bench
-    case Treetrunk
-    case Bar
+enum Object_Exercise: String {
+    case Bench = "Bench"
+    case Treetrunk = "Treetrunk"
+    case Bar = "Bar"
+    
 }
 

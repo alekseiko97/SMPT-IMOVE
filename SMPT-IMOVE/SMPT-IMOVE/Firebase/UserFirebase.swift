@@ -45,4 +45,18 @@ public class UserFirebase {
         FirebaseConfig.ref.child("Events").child(event.eventName).setValue(event.toDictionary());
     
     }
+    
+    static func publish(UserId id:String!, Route route: String!, Time time: String!, Distance distance: String!, Date date: String!)
+    {
+         FirebaseConfig.ref.child("users/\(id!)").child("Route").setValue(route);
+         FirebaseConfig.ref.child("users/\(id!)").child("Time").setValue(time);
+         FirebaseConfig.ref.child("users/\(id!)").child("Distance").setValue(distance);
+         FirebaseConfig.ref.child("users/\(id!)").child("Date").setValue(date);
+    }
+    
+    static func publish(id: String!, Run run:RunHistory) {
+        FirebaseConfig.ref.child("users/\(id!)").child("Routes").child(run.convertDateToString()).setValue(run.toDictionary());
+        
+    }
+
 }
