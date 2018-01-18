@@ -27,7 +27,7 @@ class LoginRegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func btn_Login(_ sender: Any) {
-        signIn(email: "alekseiko@gmail.com", password: "055597707")
+        signIn(email: tb_email.text!, password: tb_password.text!)
     }
     
     func signIn(email:String, password:String) {

@@ -45,11 +45,6 @@ class RunHistory
         return (distance / 1000 * divisor).rounded() / divisor
     }
     
-//    func formatDistance() -> Double {
-//        let formattedDistance = pow(distance, 2)
-//        return formattedDistance
-//    }
-    
     func toDictionary() -> [String:Any] {
         
         let runDictionary: [String:Any] = [

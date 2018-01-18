@@ -147,6 +147,10 @@ class RunRouteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     }
     
     
+    @IBAction func cleanButton(_ sender: UIButton)
+    {
+      mapView.removeOverlays(mapView.overlays)
+    }
     
     
     private func startRun() {
