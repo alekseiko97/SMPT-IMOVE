@@ -18,7 +18,7 @@ class AddWeightViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Get user from db
-        user = User(id: "1", name: "Roos", email: "roos@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
+        //user = User(id: "1", name: "Roos", email: "roos@shadowphoenix.nl", weight: Weight(currentWeight: 57.5))
         // Do any additional setup after loading the view.
     }
 

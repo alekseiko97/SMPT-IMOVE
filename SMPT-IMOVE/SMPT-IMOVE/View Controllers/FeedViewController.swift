@@ -28,22 +28,7 @@ class FeedViewController: UIViewController, WeatherGetterDelegate
     var bft = 0
 
     let colour = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0);
-    
-    var Quotes = ["I can accept failure, everyone fails at something. But I can’t accept not trying again. - Michael Jordan",
-                  "You are never a loser until you quit trying",
-                  "It never gets easier, you just get better.",
-                  "Success isn’t given. It’s earned. On the track, on the field, in the gym. With blood, sweat, and the occasional tear.",
-                  "Winners never quit and quitters never win. - Vince Lombardi",
-                  "Most people give up just when they’re about to achieve success. They quit on the one yard line. They give up at the last minute of the game one foot from a winning touchdown.– Ross Perot",
-                  "No matter how slow you go, you are still lapping everybody on the couch.",
-                  "You can’t always be the best, but you can do your best.",
-                  "Failure is only the opportunity to begin again. Only this time, more wisely.",
-                  "I don’t count my sit-ups; I only start counting when it starts hurting because they’re the only ones that count - Mohammed Ali",
-                  "Don’t think you should’ve started a long time ago. Be glad you’re doing it now.",
-                  "A ship in the harbor is safe. But that’s not what ships are for.",
-                  "We all must suffer one of two things: the pain of discipline or the pain of regret.",
-                  "Stop being afraid of what could go wrong, and start being excited about what could go right."]
-    
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -174,29 +159,28 @@ class FeedViewController: UIViewController, WeatherGetterDelegate
             weather.windSpeed <= 20.7)
         {
             bft = 8
-            dangerousWind = true
         }
         else if(weather.windSpeed > 20.7 &&
             weather.windSpeed <= 24.4)
         {
             bft = 9
-            dangerousWind = true
         }
         else if(weather.windSpeed > 24.4 &&
             weather.windSpeed <= 28.4)
         {
             bft = 10
-            dangerousWind = true
         }
         else if(weather.windSpeed > 28.4 &&
             weather.windSpeed <= 32.6)
         {
             bft = 11
-            dangerousWind = true
         }
         else
         {
             bft = 12
+        }
+        if bft >= 8
+        {
             dangerousWind = true
         }
     }
@@ -237,10 +221,8 @@ class FeedViewController: UIViewController, WeatherGetterDelegate
     
     func makeNotification()
     {
-        let randomNumber = Int(arc4random_uniform(14))
-        
         let content = UNMutableNotificationContent()
-        content.body = Quotes[randomNumber]
+        content.body = Quotes[randomNumber].quote
         content.title = "Make sure to do your exercises today!"
         content.badge = 1
         

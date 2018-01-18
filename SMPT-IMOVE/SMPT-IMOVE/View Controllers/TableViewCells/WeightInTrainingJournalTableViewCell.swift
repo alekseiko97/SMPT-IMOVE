@@ -10,9 +10,12 @@ import UIKit
 
 class WeightInTrainingJournalTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var weight_info: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        weight_info.text = "You weighted 65 kg on 21/03/2018"
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

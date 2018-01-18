@@ -17,6 +17,8 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBOutlet weak var tableview: UITableView!
 
+    
+    @IBOutlet weak var quote_label: UILabel!
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return(3)
@@ -45,7 +47,13 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
         let WorkoutTrainingCell: WorkoutTrainingJournalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableCell", for: indexPath) as! WorkoutTrainingJournalTableViewCell
         let WeightTrainingCell: WeightInTrainingJournalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "WeightInTableCell", for: indexPath) as! WeightInTrainingJournalTableViewCell
         
-
+        if let weight = user.weight?.currentWeight
+        {
+            let text = String(describing: weight)
+            WeightTrainingCell.textLabel?.text = "You weighted in at: \(text) kg."
+        }
+        WeightTrainingCell.textLabel?.textColor = UIColor.white
+        
         if(indexPath.row == 0)
         {
             self.tableview.rowHeight = 200
@@ -95,7 +103,7 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.quote_label.text = Quotes[randomNumber].quote
         self.tableview.delegate = self
         self.tableview.dataSource = self
     }

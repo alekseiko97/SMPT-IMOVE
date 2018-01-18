@@ -1,5 +1,5 @@
 //
-//  ObjectTableViewCell.swift
+//  ObjectExerciseTableViewCell.swift
 //  SMPT-IMOVE
 //
 //  Created by Natalya Suslova on 12/01/2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ObjectTableViewCell: UITableViewCell {
+class ObjectExerciseTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var object_name: UILabel!
+    @IBOutlet weak var object_exerc_name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
