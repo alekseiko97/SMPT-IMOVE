@@ -36,4 +36,3 @@ var Quotes = [Quote(quote: "I can accept failure, everyone fails at something. B
               Quote(quote:"Stop being afraid of what could go wrong, and start being excited about what could go right.")]
 
 let randomNumber = Int(arc4random_uniform(14))
-

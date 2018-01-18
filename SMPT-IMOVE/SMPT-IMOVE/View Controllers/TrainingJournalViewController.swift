@@ -24,7 +24,14 @@ class TrainingJournalViewController: UIViewController, UITableViewDelegate, UITa
         let MapTrainingCell: MapTrainingJournalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MapTrainingCell", for: indexPath) as! MapTrainingJournalTableViewCell
         let WorkoutTrainingCell: WorkoutTrainingJournalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableCell", for: indexPath) as! WorkoutTrainingJournalTableViewCell
         let WeightTrainingCell: WeightInTrainingJournalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "WeightInTableCell", for: indexPath) as! WeightInTrainingJournalTableViewCell
-
+        
+        if let weight = user.weight?.currentWeight
+        {
+            let text = String(describing: weight)
+            WeightTrainingCell.textLabel?.text = "You weighted in at: \(text) kg."
+        }
+        WeightTrainingCell.textLabel?.textColor = UIColor.white
+        
         if(indexPath.row == 0)
         {
             self.tableview.rowHeight = 200
