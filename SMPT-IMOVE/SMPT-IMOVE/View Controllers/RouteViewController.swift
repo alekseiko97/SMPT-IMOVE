@@ -85,7 +85,7 @@ class RouteViewController: UIViewController, MKMapViewDelegate, UITableViewDeleg
         }
         
         //cell.objectNameLabel.text = route
-        cell.objectNameLabel.text = route.objects[indexPath.row].title
+        cell.object_name.text = route.objects[indexPath.row].title
         return cell
     }
     
